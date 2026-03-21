@@ -4,52 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-itunes-app" content="app-id=6760240442">
-    <title>WalkUp Songs</title>
+    <meta name="description" content="Walk-up music for youth baseball & softball. Give every player their big-league moment.">
+    <meta property="og:title" content="WalkUp Songs">
+    <meta property="og:description" content="Walk-up music for youth baseball & softball">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupapp.github.io">
+    <title>WalkUp Songs — Walk-up Music for Youth Baseball</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 720px;
-            margin: 0 auto;
+            color: #e8e8e8;
+            background: #151b25;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 2rem 1.5rem;
-            background: #fafafa;
             text-align: center;
         }
-        h1 { font-size: 2.2rem; margin-top: 3rem; margin-bottom: 0.25rem; }
-        .tagline { color: #666; font-size: 1.1rem; margin-bottom: 2rem; }
-        .emoji { font-size: 4rem; margin-bottom: 1rem; }
-        .links { margin-top: 2rem; }
+        .container {
+            max-width: 480px;
+            width: 100%;
+        }
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            margin: 0 auto 1.5rem;
+            background: #242b39;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: #fff;
+        }
+        .tagline {
+            color: #8a9bb5;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+        .description {
+            color: #a0aec0;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .feature {
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 0.85rem;
+            font-size: 0.85rem;
+            color: #c0cde0;
+        }
+        .feature span { margin-right: 0.4rem; }
+        .download {
+            margin-bottom: 2rem;
+        }
+        .download img {
+            height: 50px;
+            transition: opacity 0.2s;
+        }
+        .download a:hover img { opacity: 0.8; }
+        .links {
+            margin-bottom: 2rem;
+        }
         .links a {
             display: inline-block;
-            margin: 0.5rem 1rem;
-            color: #0066cc;
-            font-size: 1rem;
+            margin: 0.25rem 0.75rem;
+            color: #5b9cf5;
+            font-size: 0.9rem;
+            text-decoration: none;
         }
-        footer { margin-top: 4rem; font-size: 0.85rem; color: #999; border-top: 1px solid #ddd; padding-top: 1rem; }
+        .links a:hover { text-decoration: underline; }
+        footer {
+            font-size: 0.8rem;
+            color: #4a5568;
+            border-top: 1px solid #2d3748;
+            padding-top: 1rem;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        @media (max-width: 400px) {
+            h1 { font-size: 1.7rem; }
+            .features { grid-template-columns: 1fr; }
+            .icon { width: 100px; height: 100px; font-size: 3rem; border-radius: 22px; }
+        }
     </style>
 </head>
 <body>
-    <div class="emoji">⚾🎵</div>
-    <h1>WalkUp Songs</h1>
-    <p class="tagline">Walk-up music for youth baseball &amp; softball</p>
+    <div class="container">
+        <div class="icon">⚾</div>
+        <h1>WalkUp Songs</h1>
+        <p class="tagline">Walk-up music for youth baseball &amp; softball</p>
+        <p class="description">Give every player their big-league moment. Set up your lineup, pick songs from Apple Music, and tap to play on game day.</p>
 
-    <p>Give every player their big-league moment. Set up your lineup, pick songs from Apple Music, and tap to play on game day.</p>
-<br>
-    <div class="download">
-        <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
-            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" style="height: 54px;">
-        </a>
+        <div class="features">
+            <div class="feature"><span>🎵</span> Apple Music integration</div>
+            <div class="feature"><span>📢</span> Announcer intros</div>
+            <div class="feature"><span>🔊</span> Soundboard effects</div>
+            <div class="feature"><span>☁️</span> iCloud sync</div>
+        </div>
+
+        <div class="download">
+            <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store">
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="/support/">Support &amp; FAQ</a>
+            <a href="/privacy/">Privacy Policy</a>
+        </div>
+
+        <footer>
+            &copy; 2026 WalkUp Songs. All rights reserved.
+        </footer>
     </div>
-
-    <div class="links">
-        <a href="/support/">Support &amp; FAQ</a>
-        <a href="/privacy/">Privacy Policy</a>
-    </div>
-
-    <footer>
-        &copy; 2026 WalkUp Songs. All rights reserved.
-    </footer>
 </body>
 </html>
