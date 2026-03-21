@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk-Up Songs — Team Import</title>
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta property="og:title" content="Walk-Up Songs — Team Shared With You">
+    <meta property="og:description" content="Tap to import this team into Walk-Up Songs.">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: #1a2035;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+        .icon { font-size: 64px; margin-bottom: 16px; }
+        h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .team-name {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fbbf24;
+            margin-bottom: 24px;
+        }
+        .status {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        .store-btn {
+            display: inline-block;
+            background: #fff;
+            color: #1a2035;
+            font-weight: 700;
+            font-size: 17px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 8px;
+            transition: transform 0.1s;
+        }
+        .store-btn:active { transform: scale(0.97); }
+        .store-btn img { height: 20px; vertical-align: middle; margin-right: 6px; }
+        .footer {
+            margin-top: 48px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+        .roster {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            text-align: left;
+            max-width: 320px;
+            width: 100%;
+        }
+        .roster h3 {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .roster .player {
+            font-size: 15px;
+            padding: 4px 0;
+            color: rgba(255,255,255,0.85);
+        }
+        .roster .player .num {
+            color: #fbbf24;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="icon">&#9918;</div>
+    <h1>Walk-Up Songs</h1>
+    <div class="team-name" id="teamName">Team Shared With You</div>
+    <div class="roster hidden" id="roster">
+        <h3>Roster</h3>
+        <div id="rosterList"></div>
+    </div>
+    <p class="status" id="status">Opening Walk-Up Songs…</p>
+    <a class="store-btn hidden" id="storeBtn"
+       href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+        Download on the App Store
+    </a>
+    <p class="footer">Walk-Up Songs &copy; 2026</p>
+
+    <script>
+        (function() {
+            var STORE_URL = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
+            var teamData = null;
+
+            // Decode team from URL fragment
+            try {
+                var hash = window.location.hash.substring(1);
+                if (hash) {
+                    var json = atob(hash);
+                    teamData = JSON.parse(json);
+                }
+            } catch(e) {
+                // Couldn't decode — that's fine, show generic message
+            }
+
+            // Display team info if available
+            if (teamData && teamData.name) {
+                document.getElementById('teamName').textContent = teamData.name;
+                document.title = 'Walk-Up Songs — ' + teamData.name;
+
+                if (teamData.players && teamData.players.length > 0) {
+                    var roster = document.getElementById('roster');
+                    var list = document.getElementById('rosterList');
+                    var players = teamData.players.filter(function(p) { return p.inLineup; });
+                    if (players.length === 0) players = teamData.players;
+                    
+                    players.slice(0, 12).forEach(function(p) {
+                        var div = document.createElement('div');
+                        div.className = 'player';
+                        div.innerHTML = '<span class="num">#' + p.number + '</span>' +
+                            p.firstName + ' ' + p.lastName;
+                        list.appendChild(div);
+                    });
+                    if (teamData.players.length > 12) {
+                        var more = document.createElement('div');
+                        more.className = 'player';
+                        more.style.color = 'rgba(255,255,255,0.4)';
+                        more.textContent = '+ ' + (teamData.players.length - 12) + ' more';
+                        list.appendChild(more);
+                    }
+                    roster.classList.remove('hidden');
+                }
+            }
+
+            // Try to open in app via universal link (this page IS the universal link)
+            // If the app is installed, iOS will intercept before this page loads.
+            // If we're here, the app is NOT installed. Show the App Store button.
+            setTimeout(function() {
+                document.getElementById('status').textContent =
+                    'Don\u2019t have Walk-Up Songs yet? Get it free on the App Store.';
+                document.getElementById('storeBtn').classList.remove('hidden');
+            }, 1500);
+        })();
+    </script>
+</body>
+</html>

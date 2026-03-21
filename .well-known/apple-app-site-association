@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "QNLTJP653X.com.peteandkrista.WalkupSongs",
+        "paths": ["/share", "/share/*"]
+      }
+    ]
+  }
+}
