@@ -104,11 +104,12 @@
             var STORE_URL = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
             var teamData = null;
 
-            // Decode team from URL fragment
+            // Decode team from query parameter (?data=) or fragment (#) for backward compat
             try {
-                var hash = window.location.hash.substring(1);
-                if (hash) {
-                    var json = atob(hash);
+                var params = new URLSearchParams(window.location.search);
+                var encoded = params.get('data') || window.location.hash.substring(1);
+                if (encoded) {
+                    var json = atob(encoded);
                     teamData = JSON.parse(json);
                 }
             } catch(e) {
