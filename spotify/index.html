@@ -144,6 +144,7 @@
             list-style: none;
             counter-reset: step;
             margin: 1rem 0 1.5rem;
+            padding-left: 0;
         }
         .steps li {
             counter-increment: step;
@@ -157,10 +158,11 @@
         }
         .steps li::before {
             content: counter(step);
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             min-width: 28px;
+            width: 28px;
             height: 28px;
             background: #5b9cf5;
             color: #fff;
@@ -168,7 +170,7 @@
             font-size: 0.8rem;
             font-weight: 700;
             flex-shrink: 0;
-            margin-top: 1px;
+            margin-top: 2px;
         }
         .steps li strong {
             color: #e8e8e8;
@@ -362,11 +364,11 @@
 
         <h2>Setup Steps</h2>
         <ol class="steps">
-            <li><strong>Connect your speaker</strong> to both devices via Bluetooth or AirPlay. Device 2 will play Spotify music; Device 1 will play announcer intros and effects.</li>
-            <li><strong>Open Spotify</strong> on Device 2 and play any song briefly to make sure audio goes to the speaker. You can pause it after.</li>
-            <li>On your main device (Device 1), open <strong>WalkUp Songs → Settings</strong> and turn on <strong>Spotify</strong>. Log in with the <strong>same Spotify account</strong> you're using on Device 2.</li>
-            <li><strong>Pick songs</strong> for your players from the Spotify library. Set the start offset so each song begins at the perfect moment.</li>
-            <li>On game day, make sure Spotify is <strong>open, in the foreground, and connected to the speaker</strong> on Device 2 before heading into Play Ball mode. Disable auto-lock on Device 2 so the screen stays on.</li>
+            <li><span><strong>Connect your speaker</strong> to both devices via Bluetooth or AirPlay. Device 2 will play Spotify music; Device 1 will play announcer intros and effects.</span></li>
+            <li><span><strong>Open Spotify</strong> on Device 2 and play any song briefly to make sure audio goes to the speaker. You can pause it after.</span></li>
+            <li><span>On your main device (Device 1), open <strong>WalkUp Songs → Settings</strong> and turn on <strong>Spotify</strong>. Log in with the <strong>same Spotify account</strong> you're using on Device 2.</span></li>
+            <li><span><strong>Pick songs</strong> for your players from the Spotify library. Set the start offset so each song begins at the perfect moment.</span></li>
+            <li><span>On game day, make sure Spotify is <strong>open, in the foreground, and connected to the speaker</strong> on Device 2 before heading into Play Ball mode. Disable auto-lock on Device 2 so the screen stays on.</span></li>
         </ol>
 
         <div class="tip">
