@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta name="description" content="How to use Spotify with WalkUp Songs — two-device setup guide for walk-up music at youth baseball & softball games.">
+    <meta property="og:title" content="WalkUp Songs — Spotify Setup Guide">
+    <meta property="og:description" content="Learn how to use Spotify with WalkUp Songs for walk-up music at your games.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app/spotify">
+    <title>WalkUp Songs — Spotify Setup Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #e8e8e8;
+            background: #151b25;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 560px;
+            width: 100%;
+        }
+
+        /* Header */
+        .back-link {
+            display: inline-block;
+            color: #5b9cf5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .back-link::before { content: "← "; }
+
+        .page-icon {
+            font-size: 3rem;
+            margin-bottom: 0.75rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+        .subtitle {
+            color: #8a9bb5;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Callout box */
+        .callout {
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+        .callout-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+        .callout p {
+            color: #c0cde0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .callout strong {
+            color: #e8e8e8;
+        }
+
+        /* Section */
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            margin-top: 2rem;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        p {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        /* Device diagram */
+        .diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+            flex-wrap: wrap;
+        }
+        .device-card {
+            background: #1e2636;
+            border-radius: 14px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            width: 150px;
+            flex-shrink: 0;
+        }
+        .device-card .emoji {
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .device-card .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+        .device-card .detail {
+            font-size: 0.75rem;
+            color: #8a9bb5;
+            line-height: 1.4;
+        }
+        .connector {
+            font-size: 1.5rem;
+            color: #4a5568;
+            flex-shrink: 0;
+        }
+        .speaker-card {
+            background: linear-gradient(135deg, #1e2636 0%, #243044 100%);
+            border: 1px solid #2d3748;
+        }
+
+        /* Steps */
+        .steps {
+            list-style: none;
+            counter-reset: step;
+            margin: 1rem 0 1.5rem;
+        }
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #c0cde0;
+            line-height: 1.6;
+        }
+        .steps li::before {
+            content: counter(step);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            height: 28px;
+            background: #5b9cf5;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .steps li strong {
+            color: #e8e8e8;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .faq-q {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .faq-a {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            line-height: 1.6;
+        }
+
+        /* Tip box */
+        .tip {
+            background: rgba(91, 156, 245, 0.1);
+            border-left: 3px solid #5b9cf5;
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .tip p {
+            color: #c0cde0;
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        .tip strong {
+            color: #5b9cf5;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta p {
+            color: #8a9bb5;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .cta a img {
+            height: 50px;
+            transition: opacity 0.2s;
+        }
+        .cta a:hover img { opacity: 0.8; }
+
+        /* Footer */
+        .links {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0.25rem 0.75rem;
+            color: #5b9cf5;
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+        .links a:hover { text-decoration: underline; }
+        footer {
+            font-size: 0.8rem;
+            color: #4a5568;
+            border-top: 1px solid #2d3748;
+            padding-top: 1rem;
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+        }
+
+        @media (max-width: 420px) {
+            h1 { font-size: 1.5rem; }
+            .diagram { gap: 0.5rem; }
+            .device-card { width: 120px; padding: 1rem 0.75rem; }
+            .device-card .emoji { font-size: 1.75rem; }
+            .connector { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">WalkUp Songs</a>
+
+        <div class="page-icon">🎵</div>
+        <h1>Spotify Setup</h1>
+        <p class="subtitle">Use Spotify for your walk-up songs on game day</p>
+
+        <div class="callout">
+            <span class="callout-icon">⚡</span>
+            <p><strong>Spotify Premium required.</strong> Spotify's free tier doesn't allow remote playback control, which WalkUp Songs uses to play music through your speaker.</p>
+        </div>
+
+        <h2>How It Works</h2>
+        <p>Because of how iOS handles background apps, Spotify playback works best with two devices — one running WalkUp Songs and another running Spotify, both connected to the same speaker.</p>
+
+        <div class="diagram">
+            <div class="device-card">
+                <div class="emoji">📱</div>
+                <div class="label">Device 1</div>
+                <div class="detail">Runs WalkUp Songs</div>
+            </div>
+            <div class="connector">→</div>
+            <div class="device-card speaker-card">
+                <div class="emoji">🔊</div>
+                <div class="label">Speaker</div>
+                <div class="detail">Bluetooth or AirPlay</div>
+            </div>
+            <div class="connector">←</div>
+            <div class="device-card">
+                <div class="emoji">📱</div>
+                <div class="label">Device 2</div>
+                <div class="detail">Runs Spotify</div>
+            </div>
+        </div>
+
+        <p>WalkUp Songs controls Spotify remotely — picking the right song, starting at the right offset, and fading out when it's time. The second device just needs Spotify open and connected.</p>
+
+        <h2>Setup Steps</h2>
+        <ol class="steps">
+            <li><strong>Connect your speaker</strong> to the device that will run Spotify (Device 2) via Bluetooth or AirPlay.</li>
+            <li><strong>Open Spotify</strong> on Device 2 and play any song briefly to make sure audio goes to the speaker. You can pause it after.</li>
+            <li>On your main device (Device 1), open <strong>WalkUp Songs → Settings</strong> and turn on <strong>Spotify</strong>. Log in when prompted.</li>
+            <li><strong>Pick songs</strong> for your players from the Spotify library. Set the start offset so each song begins at the perfect moment.</li>
+            <li>On game day, make sure Spotify is <strong>open and connected</strong> on Device 2 before heading into Play Ball mode.</li>
+        </ol>
+
+        <div class="tip">
+            <p><strong>Tip:</strong> An old phone, iPad, or iPod touch works great as Device 2. It just needs Spotify installed, a Wi-Fi or cellular connection, and Bluetooth for the speaker.</p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">Why do I need two devices?</div>
+            <div class="faq-a">iOS suspends apps that aren't in the foreground. If Spotify and WalkUp Songs are on the same device, Spotify loses its connection to the speaker when WalkUp Songs is active. A second device keeps Spotify running and connected.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">What if I only have one device?</div>
+            <div class="faq-a">You can still use Apple Music songs, which play directly on the device without needing a second phone. Spotify requires the two-device setup for reliable playback.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Does it work with Bluetooth speakers?</div>
+            <div class="faq-a">Yes! Bluetooth speakers, AirPlay speakers, and wired speakers all work. Just make sure Device 2 (running Spotify) is the one connected to the speaker.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Do both devices need internet?</div>
+            <div class="faq-a">Yes. Device 1 needs internet to send playback commands to Spotify, and Device 2 needs internet to stream the music. Wi-Fi or cellular both work.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Why does it say "No active device found"?</div>
+            <div class="faq-a">This means Spotify isn't active on Device 2. Open Spotify, play a song briefly so it registers as a device, and try again from WalkUp Songs.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Can I use a computer for Device 2?</div>
+            <div class="faq-a">Yes! The Spotify desktop app on a Mac or PC works great as Device 2. Just make sure it's connected to your speaker and Spotify is open.</div>
+        </div>
+
+        <div class="cta">
+            <p>Ready to set up your lineup?</p>
+            <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store">
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="/support/">Support &amp; FAQ</a>
+            <a href="/privacy/">Privacy Policy</a>
+        </div>
+
+        <footer>
+            &copy; 2026 WalkUp Songs. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
