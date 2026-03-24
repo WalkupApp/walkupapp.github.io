@@ -6,7 +6,10 @@
         "components": [
           { "/": "/share" },
           { "/": "/share/" },
-          { "/": "/share/*" }
+          { "/": "/share/*" },
+          { "/": "/player" },
+          { "/": "/player/" },
+          { "/": "/player/*" }
         ]
       }
     ]

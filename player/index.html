@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk-Up Songs — Player Shared With You</title>
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta property="og:title" content="Walk-Up Songs — Player Shared With You">
+    <meta property="og:description" content="Tap to import this player into Walk-Up Songs.">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: #1a2035;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+        .icon { font-size: 64px; margin-bottom: 16px; }
+        h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .player-name {
+            font-size: 28px;
+            font-weight: 800;
+            color: #60a5fa;
+            margin-bottom: 4px;
+        }
+        .player-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 16px;
+        }
+        .song-info {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            max-width: 320px;
+            width: 100%;
+        }
+        .song-info .label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .song-info .song-name {
+            font-size: 17px;
+            font-weight: 600;
+            color: #f472b6;
+        }
+        .song-info .artist {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 2px;
+        }
+        .status {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        .store-btn {
+            display: inline-block;
+            background: #fff;
+            color: #1a2035;
+            font-weight: 700;
+            font-size: 17px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 8px;
+            transition: transform 0.1s;
+        }
+        .store-btn:active { transform: scale(0.97); }
+        .footer {
+            margin-top: 48px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="icon">&#9918;</div>
+    <h1>Walk-Up Songs</h1>
+    <div class="player-number hidden" id="playerNumber"></div>
+    <div class="player-name" id="playerName">Player Shared With You</div>
+    <div class="song-info hidden" id="songInfo">
+        <div class="label">Walk-Up Song</div>
+        <div class="song-name" id="songName"></div>
+        <div class="artist" id="songArtist"></div>
+    </div>
+    <p class="status" id="status">Opening Walk-Up Songs…</p>
+    <a class="store-btn hidden" id="storeBtn"
+       href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+        Download on the App Store
+    </a>
+    <p class="footer">Walk-Up Songs &copy; 2025</p>
+
+    <script>
+        (function() {
+            var playerData = null;
+
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var encoded = params.get('data') || window.location.hash.substring(1);
+                if (encoded) {
+                    var json = atob(encoded);
+                    playerData = JSON.parse(json);
+                }
+            } catch(e) {}
+
+            if (playerData) {
+                var name = ((playerData.firstName || '') + ' ' + (playerData.lastName || '')).trim();
+                if (name) {
+                    document.getElementById('playerName').textContent = name;
+                    document.title = 'Walk-Up Songs — ' + name;
+                }
+                if (playerData.number !== undefined) {
+                    var numEl = document.getElementById('playerNumber');
+                    numEl.textContent = '#' + playerData.number;
+                    numEl.classList.remove('hidden');
+                }
+                if (playerData.songName) {
+                    var songInfo = document.getElementById('songInfo');
+                    document.getElementById('songName').textContent = playerData.songName;
+                    if (playerData.songArtist) {
+                        document.getElementById('songArtist').textContent = playerData.songArtist;
+                    }
+                    songInfo.classList.remove('hidden');
+                }
+            }
+
+            setTimeout(function() {
+                document.getElementById('status').textContent =
+                    'Don\u2019t have Walk-Up Songs yet? Get it free on the App Store.';
+                document.getElementById('storeBtn').classList.remove('hidden');
+            }, 1500);
+        })();
+    </script>
+</body>
+</html>
