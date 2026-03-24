@@ -210,6 +210,37 @@
             color: #5b9cf5;
         }
 
+        /* Checklist */
+        .checklist {
+            margin: 1rem 0 1.5rem;
+        }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+            margin-bottom: 0.6rem;
+        }
+        .check-icon {
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            line-height: 1.5;
+        }
+        .check-item strong {
+            display: block;
+            color: #fff;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+        .check-detail {
+            display: block;
+            color: #a0aec0;
+            font-size: 0.82rem;
+            line-height: 1.6;
+        }
+
         /* CTA */
         .cta {
             text-align: center;
@@ -273,7 +304,7 @@
         </div>
 
         <h2>How It Works</h2>
-        <p>Because of how iOS handles background apps, Spotify playback works best with two devices — one running WalkUp Songs and another running Spotify, both connected to the same speaker.</p>
+        <p>Because of how iOS handles background apps, Spotify playback works best with two devices — one running WalkUp Songs and another running Spotify, both connected to the same Bluetooth speaker.</p>
 
         <div class="diagram">
             <div class="device-card">
@@ -297,20 +328,57 @@
 
         <p>WalkUp Songs controls Spotify remotely — picking the right song, starting at the right offset, and fading out when it's time. The second device just needs Spotify open and connected.</p>
 
+        <h2>What You Need</h2>
+        <div class="checklist">
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>Same Spotify account on both devices</strong>
+                    <span class="check-detail">Log into the same Spotify Premium account in WalkUp Songs and in the Spotify app on Device 2. This is how WalkUp Songs finds and controls the other device.</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>Internet connection on both devices</strong>
+                    <span class="check-detail">Device 1 needs internet to send playback commands. Device 2 needs internet to stream the music. Wi-Fi or cellular both work.</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>Both devices connected to the same speaker</strong>
+                    <span class="check-detail">Device 1 plays announcer intros and sound effects. Device 2 plays the Spotify music. Connect both to the same Bluetooth or AirPlay speaker so everything comes through one place.</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>Keep Spotify in the foreground and unlocked</strong>
+                    <span class="check-detail">On Device 2, keep the Spotify app open and the screen unlocked during the game. If the device locks or Spotify goes to the background, it may lose its connection and playback will fail.</span>
+                </div>
+            </div>
+        </div>
+
         <h2>Setup Steps</h2>
         <ol class="steps">
-            <li><strong>Connect your speaker</strong> to the device that will run Spotify (Device 2) via Bluetooth or AirPlay.</li>
+            <li><strong>Connect your speaker</strong> to both devices via Bluetooth or AirPlay. Device 2 will play Spotify music; Device 1 will play announcer intros and effects.</li>
             <li><strong>Open Spotify</strong> on Device 2 and play any song briefly to make sure audio goes to the speaker. You can pause it after.</li>
-            <li>On your main device (Device 1), open <strong>WalkUp Songs → Settings</strong> and turn on <strong>Spotify</strong>. Log in when prompted.</li>
+            <li>On your main device (Device 1), open <strong>WalkUp Songs → Settings</strong> and turn on <strong>Spotify</strong>. Log in with the <strong>same Spotify account</strong> you're using on Device 2.</li>
             <li><strong>Pick songs</strong> for your players from the Spotify library. Set the start offset so each song begins at the perfect moment.</li>
-            <li>On game day, make sure Spotify is <strong>open and connected</strong> on Device 2 before heading into Play Ball mode.</li>
+            <li>On game day, make sure Spotify is <strong>open, in the foreground, and connected to the speaker</strong> on Device 2 before heading into Play Ball mode. Disable auto-lock on Device 2 so the screen stays on.</li>
         </ol>
 
         <div class="tip">
-            <p><strong>Tip:</strong> An old phone, iPad, or iPod touch works great as Device 2. It just needs Spotify installed, a Wi-Fi or cellular connection, and Bluetooth for the speaker.</p>
+            <p><strong>Tip:</strong> An old phone, iPad, or iPod touch works great as Device 2. It just needs Spotify installed, a Wi-Fi or cellular connection, and Bluetooth for the speaker. Set <em>Settings → Display &amp; Brightness → Auto-Lock</em> to <strong>Never</strong> during games.</p>
         </div>
 
         <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">Do I need the same Spotify account on both devices?</div>
+            <div class="faq-a">Yes. WalkUp Songs logs into your Spotify account to send play/pause commands. The Spotify app on Device 2 must be logged into the same account so it receives those commands.</div>
+        </div>
 
         <div class="faq-item">
             <div class="faq-q">Why do I need two devices?</div>
@@ -324,7 +392,7 @@
 
         <div class="faq-item">
             <div class="faq-q">Does it work with Bluetooth speakers?</div>
-            <div class="faq-a">Yes! Bluetooth speakers, AirPlay speakers, and wired speakers all work. Just make sure Device 2 (running Spotify) is the one connected to the speaker.</div>
+            <div class="faq-a">Yes! Bluetooth speakers, AirPlay speakers, and wired speakers all work. Connect both devices to the same speaker so announcer intros and music all come through together.</div>
         </div>
 
         <div class="faq-item">
@@ -334,12 +402,17 @@
 
         <div class="faq-item">
             <div class="faq-q">Why does it say "No active device found"?</div>
-            <div class="faq-a">This means Spotify isn't active on Device 2. Open Spotify, play a song briefly so it registers as a device, and try again from WalkUp Songs.</div>
+            <div class="faq-a">This means Spotify isn't active on Device 2. Make sure the Spotify app is in the foreground, the screen is unlocked, and it's connected to the speaker. Play a song briefly so it registers as a device, then try again from WalkUp Songs.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-q">Can I use a computer for Device 2?</div>
-            <div class="faq-a">Yes! The Spotify desktop app on a Mac or PC works great as Device 2. Just make sure it's connected to your speaker and Spotify is open.</div>
+            <div class="faq-a">Yes! The Spotify desktop app on a Mac or PC works great as Device 2. Computers don't have the same background app limitations, so Spotify stays connected even if it's not the focused window.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Can Device 2's screen lock during the game?</div>
+            <div class="faq-a">No — if the screen locks, Spotify may get suspended and lose its connection. Set <em>Settings → Display &amp; Brightness → Auto-Lock</em> to <strong>Never</strong> on Device 2 during games, and keep Spotify in the foreground.</div>
         </div>
 
         <div class="cta">
