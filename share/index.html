@@ -110,8 +110,8 @@
                     var binary = atob(base64);
                     var bytes = new Uint8Array(binary.length);
                     for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-                    // DecompressionStream uses deflate (raw) — same as Apple's COMPRESSION_ZLIB
-                    var ds = new DecompressionStream('deflate');
+                    // Apple's COMPRESSION_ZLIB produces raw deflate (no zlib header)
+                    var ds = new DecompressionStream('deflate-raw');
                     var writer = ds.writable.getWriter();
                     writer.write(bytes);
                     writer.close();
@@ -167,35 +167,6 @@
                     var json = atob(encoded);
                     showTeam(JSON.parse(json));
                 } catch(e) {}
-            }
-
-            // Display team info if available
-            if (teamData && teamData.name) {
-                document.getElementById('teamName').textContent = teamData.name;
-                document.title = 'Walk-Up Songs — ' + teamData.name;
-
-                if (teamData.players && teamData.players.length > 0) {
-                    var roster = document.getElementById('roster');
-                    var list = document.getElementById('rosterList');
-                    var players = teamData.players.filter(function(p) { return p.inLineup; });
-                    if (players.length === 0) players = teamData.players;
-                    
-                    players.slice(0, 12).forEach(function(p) {
-                        var div = document.createElement('div');
-                        div.className = 'player';
-                        div.innerHTML = '<span class="num">#' + p.number + '</span>' +
-                            p.firstName + ' ' + p.lastName;
-                        list.appendChild(div);
-                    });
-                    if (teamData.players.length > 12) {
-                        var more = document.createElement('div');
-                        more.className = 'player';
-                        more.style.color = 'rgba(255,255,255,0.4)';
-                        more.textContent = '+ ' + (teamData.players.length - 12) + ' more';
-                        list.appendChild(more);
-                    }
-                    roster.classList.remove('hidden');
-                }
             }
 
             // Try to open in app via universal link (this page IS the universal link)
