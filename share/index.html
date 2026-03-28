@@ -104,16 +104,69 @@
             var STORE_URL = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
             var teamData = null;
 
-            // Decode team from query parameter (?data=) or fragment (#) for backward compat
-            try {
-                var params = new URLSearchParams(window.location.search);
-                var encoded = params.get('data') || window.location.hash.substring(1);
-                if (encoded) {
-                    var json = atob(encoded);
-                    teamData = JSON.parse(json);
+            // Inflate zlib-compressed base64 data (v2 format)
+            function zlibInflate(base64) {
+                try {
+                    var binary = atob(base64);
+                    var bytes = new Uint8Array(binary.length);
+                    for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+                    // DecompressionStream uses deflate (raw) — same as Apple's COMPRESSION_ZLIB
+                    var ds = new DecompressionStream('deflate');
+                    var writer = ds.writable.getWriter();
+                    writer.write(bytes);
+                    writer.close();
+                    return new Response(ds.readable).text().then(function(text) {
+                        return JSON.parse(text);
+                    });
+                } catch(e) {
+                    return Promise.resolve(null);
                 }
-            } catch(e) {
-                // Couldn't decode — that's fine, show generic message
+            }
+
+            function showTeam(data) {
+                if (!data || !data.name) return;
+                teamData = data;
+                document.getElementById('teamName').textContent = data.name;
+                document.title = 'Walk-Up Songs \u2014 ' + data.name;
+
+                if (data.players && data.players.length > 0) {
+                    var roster = document.getElementById('roster');
+                    var list = document.getElementById('rosterList');
+                    var players = data.players.filter(function(p) { return p.inLineup; });
+                    if (players.length === 0) players = data.players;
+
+                    players.slice(0, 12).forEach(function(p) {
+                        var div = document.createElement('div');
+                        div.className = 'player';
+                        div.innerHTML = '<span class="num">#' + p.number + '</span>' +
+                            p.firstName + ' ' + p.lastName;
+                        list.appendChild(div);
+                    });
+                    if (data.players.length > 12) {
+                        var more = document.createElement('div');
+                        more.className = 'player';
+                        more.style.color = 'rgba(255,255,255,0.4)';
+                        more.textContent = '+ ' + (data.players.length - 12) + ' more';
+                        list.appendChild(more);
+                    }
+                    roster.classList.remove('hidden');
+                }
+            }
+
+            // Decode team from query parameter (?data=) or fragment (#) for backward compat
+            var params = new URLSearchParams(window.location.search);
+            var version = params.get('v');
+            var encoded = params.get('data') || window.location.hash.substring(1);
+
+            if (encoded && version === '2') {
+                // v2: zlib compressed
+                zlibInflate(encoded).then(showTeam).catch(function() {});
+            } else if (encoded) {
+                // v1: plain base64 JSON
+                try {
+                    var json = atob(encoded);
+                    showTeam(JSON.parse(json));
+                } catch(e) {}
             }
 
             // Display team info if available
