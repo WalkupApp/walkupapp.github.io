@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta property="og:title" content="WalkUp Songs — Free Promo Code">
+    <meta property="og:description" content="Claim a free download code for Walk-Up Songs on the App Store.">
+    <meta property="og:type" content="website">
+    <title>WalkUp Songs — Free Promo Code</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #e8e8e8;
+            background: #151b25;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 420px;
+            width: 100%;
+        }
+        .icon { font-size: 56px; margin-bottom: 12px; }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 15px;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 32px;
+        }
+        .card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 24px;
+        }
+        .card h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 20px;
+        }
+        .claim-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1a1a2e;
+            font-weight: 700;
+            font-size: 17px;
+            padding: 14px 36px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+            width: 100%;
+        }
+        .claim-btn:hover { opacity: 0.92; }
+        .claim-btn:active { transform: scale(0.97); }
+        .claim-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+        .result.show { display: block; }
+        .redeem-link {
+            display: inline-block;
+            background: #fff;
+            color: #1a1a2e;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: transform 0.1s;
+            width: 100%;
+        }
+        .redeem-link:hover { opacity: 0.92; }
+        .redeem-link:active { transform: scale(0.97); }
+        .code-display {
+            font-family: 'SF Mono', SFMono-Regular, Menlo, monospace;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fbbf24;
+            letter-spacing: 2px;
+            margin: 12px 0 4px;
+        }
+        .code-hint {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 8px;
+        }
+        .error-msg {
+            color: #f87171;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+        .success-msg {
+            color: #34d399;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(26,26,46,0.3);
+            border-top-color: #1a1a2e;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .already-claimed {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+        .already-claimed p {
+            color: #34d399;
+            font-size: 14px;
+            margin: 0;
+        }
+        .footer {
+            margin-top: 32px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+        }
+        .footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .footer a:hover { text-decoration: underline; }
+        .setup-notice {
+            background: rgba(248,113,113,0.1);
+            border: 1px solid rgba(248,113,113,0.2);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #f87171;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#9918;</div>
+        <h1>Walk-Up Songs</h1>
+        <p class="subtitle">Free App Store Download</p>
+
+        <div class="card">
+            <h2>Claim Your Free Code</h2>
+            <p>Tap below to get a free App Store promo code for Walk-Up Songs. One code per person.</p>
+
+            <div class="setup-notice" id="setupNotice">
+                Promo codes are not configured yet. Check back soon!
+            </div>
+
+            <button class="claim-btn" id="claimBtn" onclick="claimCode()">
+                Get My Free Code
+            </button>
+
+            <div class="result" id="result"></div>
+        </div>
+
+        <p class="footer">
+            <a href="https://walkupsongs.app">walkupsongs.app</a> &middot;
+            Walk-Up Songs &copy; 2026
+        </p>
+    </div>
+
+    <script>
+    // ============================================================
+    // CONFIGURATION — Set your Google Apps Script URL here
+    // ============================================================
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTnAQqXnvCqRHv04CHc7sQX9VsJvXpLPkHBMJ78OSse5Ti8KeZSRFusPWmvcq-rQ2n/exec';
+
+    var APP_ID = '6760240442';
+
+    function claimCode() {
+        var btn = document.getElementById('claimBtn');
+        var result = document.getElementById('result');
+
+        // Check if already claimed in this browser
+        var saved = localStorage.getItem('walkup_promo');
+        if (saved) {
+            showSavedCode(JSON.parse(saved));
+            return;
+        }
+
+        if (!SCRIPT_URL) {
+            document.getElementById('setupNotice').style.display = 'block';
+            return;
+        }
+
+        // Show loading state
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span>Claiming...';
+        result.className = 'result';
+        result.innerHTML = '';
+
+        fetch(SCRIPT_URL + '?action=claim', { redirect: 'follow' })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.success && data.code) {
+                    var redeemURL = data.url || ('https://apps.apple.com/redeem?ctx=offercodes&id=' + APP_ID + '&code=' + data.code);
+                    // Save to localStorage
+                    localStorage.setItem('walkup_promo', JSON.stringify({
+                        code: data.code,
+                        url: redeemURL,
+                        claimedAt: new Date().toISOString()
+                    }));
+
+                    result.innerHTML =
+                        '<p class="success-msg">Your code is ready!</p>' +
+                        '<div class="code-display">' + data.code + '</div>' +
+                        '<a class="redeem-link" href="' + redeemURL + '" target="_blank">' +
+                        'Redeem on App Store &rarr;</a>' +
+                        '<p class="code-hint">This link opens the App Store to redeem your code.</p>';
+                    result.className = 'result show';
+                    btn.style.display = 'none';
+                } else if (data.error === 'exhausted') {
+                    result.innerHTML = '<p class="error-msg">All promo codes have been claimed. Check back later!</p>';
+                    result.className = 'result show';
+                    btn.disabled = true;
+                    btn.textContent = 'No Codes Available';
+                } else {
+                    result.innerHTML = '<p class="error-msg">Something went wrong. Please try again.</p>';
+                    result.className = 'result show';
+                    btn.disabled = false;
+                    btn.textContent = 'Get My Free Code';
+                }
+            })
+            .catch(function(err) {
+                result.innerHTML = '<p class="error-msg">Could not connect. Please try again later.</p>';
+                result.className = 'result show';
+                btn.disabled = false;
+                btn.textContent = 'Get My Free Code';
+            });
+    }
+
+    function showSavedCode(saved) {
+        var btn = document.getElementById('claimBtn');
+        var result = document.getElementById('result');
+        btn.style.display = 'none';
+        result.innerHTML =
+            '<div class="already-claimed"><p>You already claimed a code!</p></div>' +
+            '<div class="code-display">' + saved.code + '</div>' +
+            '<a class="redeem-link" href="' + saved.url + '" target="_blank">' +
+            'Redeem on App Store &rarr;</a>' +
+            '<p class="code-hint">This link opens the App Store to redeem your code.</p>';
+        result.className = 'result show';
+    }
+
+    // On load, check if already claimed
+    (function() {
+        var saved = localStorage.getItem('walkup_promo');
+        if (saved) {
+            try { showSavedCode(JSON.parse(saved)); } catch(e) {}
+        }
+    })();
+    </script>
+</body>
+</html>
