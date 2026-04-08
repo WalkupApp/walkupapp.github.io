@@ -10,6 +10,13 @@
     <meta property="og:description" content="Set walk-up songs for every player. The walk-out music app for youth baseball & softball.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://walkupsongs.app">
+    <meta property="og:image" content="https://walkupsongs.app/icon.png">
+    <meta property="og:image:width" content="120">
+    <meta property="og:image:height" content="120">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WalkUp Songs — Walk-up & Walk-out Music App">
+    <meta name="twitter:description" content="Set walk-up songs for every player. The walk-out music app for youth baseball & softball.">
+    <meta name="twitter:image" content="https://walkupsongs.app/icon.png">
     <title>WalkUp Songs — Walk-up & Walk-out Music App for Baseball & Softball</title>
     <script type="application/ld+json">
     {
@@ -118,7 +125,48 @@
             max-width: 480px;
         }
 
-        @media (max-width: 400px) {
+        .how-it-works {
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .how-it-works h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #8899bb;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .how-it-works ol {
+            list-style: none;
+            counter-reset: steps;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .how-it-works ol li {
+            counter-increment: steps;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            color: #c0cde0;
+        }
+        .how-it-works ol li::before {
+            content: counter(steps);
+            background: #1e3a5f;
+            color: #7ab3f0;
+            font-weight: 700;
+            font-size: 0.8rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
             h1 { font-size: 1.7rem; }
             .features { grid-template-columns: 1fr; }
             .icon { width: 100px; height: 100px; font-size: 3rem; border-radius: 22px; }
@@ -139,6 +187,16 @@
             <div class="feature"><span>📢</span> Announcer intros</div>
             <div class="feature"><span>🔊</span> Soundboard effects</div>
             <div class="feature"><span>🎧</span> Inning break DJs</div>
+        </div>
+
+        <div class="how-it-works">
+            <h2>How it works</h2>
+            <ol>
+                <li>Build your lineup — add players with their name, number, and position.</li>
+                <li>Pick a walk-up song for each player from Apple Music, Spotify, YouTube, or your own files.</li>
+                <li>On game day, tap a player's name to instantly play their walk-up song through your speaker.</li>
+                <li>Add AI announcer intros, soundboard effects, and inning-break DJ sets to complete the experience.</li>
+            </ol>
         </div>
 
         <div class="download">
