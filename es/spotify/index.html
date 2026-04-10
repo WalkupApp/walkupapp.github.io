@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-itunes-app" content="app-id=6760240442">
-    <meta name="description" content="How to use Spotify with WalkUp Songs — two-device setup guide for walk-up music at youth baseball & softball games.">
-    <meta property="og:title" content="WalkUp Songs — Spotify Setup Guide">
-    <meta property="og:description" content="Learn how to use Spotify with WalkUp Songs for walk-up music at your games.">
+    <meta name="description" content="Cómo usar Spotify con WalkUp Songs — guía de configuración con dos dispositivos para música de entrada en partidos de béisbol y softbol juvenil.">
+    <meta property="og:title" content="WalkUp Songs — Guía de Configuración de Spotify">
+    <meta property="og:description" content="Aprende a usar Spotify con WalkUp Songs para música de entrada en tus partidos.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://walkupsongs.app/spotify">
-    <title>WalkUp Songs — Spotify Setup Guide</title>
+    <meta property="og:url" content="https://walkupsongs.app/es/spotify/">
+    <link rel="alternate" hreflang="en" href="https://walkupsongs.app/spotify/">
+    <link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/spotify/">
+    <link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/spotify/">
+    <link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/spotify/">
+    <title>WalkUp Songs — Guía de Configuración de Spotify</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -282,6 +286,17 @@
             max-width: 560px;
             text-align: center;
         }
+        .lang-switcher {
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            color: #4a5568;
+        }
+        .lang-switcher a {
+            color: #5b9cf5;
+            text-decoration: none;
+            margin: 0 0.3rem;
+        }
+        .lang-switcher a:hover { text-decoration: underline; }
 
         @media (max-width: 420px) {
             h1 { font-size: 1.5rem; }
@@ -294,144 +309,146 @@
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">WalkUp Songs</a>
+        <a href="/es/" class="back-link">WalkUp Songs</a>
 
         <div class="page-icon">🎵</div>
-        <h1>Spotify Setup</h1>
-        <p class="subtitle">Use Spotify for your walk-up songs on game day</p>
+        <h1>Configuración de Spotify</h1>
+        <p class="subtitle">Usa Spotify para tus canciones de entrada el día de juego</p>
 
         <div class="callout">
             <span class="callout-icon">⚡</span>
-            <p><strong>Spotify Premium required.</strong> Spotify's free tier doesn't allow remote playback control, which WalkUp Songs uses to play music through your speaker.</p>
+            <p><strong>Se requiere Spotify Premium.</strong> El nivel gratuito de Spotify no permite el control remoto de reproducción, que es lo que WalkUp Songs utiliza para reproducir música a través de tu altavoz.</p>
         </div>
 
-        <h2>How It Works</h2>
-        <p>Because of how iOS handles background apps, Spotify playback works best with two devices — one running WalkUp Songs and another running Spotify, both connected to the same Bluetooth speaker.</p>
+        <h2>Cómo funciona</h2>
+        <p>Debido a cómo iOS gestiona las apps en segundo plano, la reproducción de Spotify funciona mejor con dos dispositivos — uno ejecutando WalkUp Songs y otro ejecutando Spotify, ambos conectados al mismo altavoz Bluetooth.</p>
 
         <div class="diagram">
             <div class="device-card">
                 <div class="emoji">📱</div>
-                <div class="label">Device 1</div>
-                <div class="detail">Runs WalkUp Songs</div>
+                <div class="label">Dispositivo 1</div>
+                <div class="detail">Ejecuta WalkUp Songs</div>
             </div>
             <div class="connector">→</div>
             <div class="device-card speaker-card">
                 <div class="emoji">🔊</div>
-                <div class="label">Speaker</div>
-                <div class="detail">Bluetooth or AirPlay</div>
+                <div class="label">Altavoz</div>
+                <div class="detail">Bluetooth o AirPlay</div>
             </div>
             <div class="connector">←</div>
             <div class="device-card">
                 <div class="emoji">📱</div>
-                <div class="label">Device 2</div>
-                <div class="detail">Runs Spotify</div>
+                <div class="label">Dispositivo 2</div>
+                <div class="detail">Ejecuta Spotify</div>
             </div>
         </div>
 
-        <p>WalkUp Songs controls Spotify remotely — picking the right song, starting at the right offset, and fading out when it's time. The second device just needs Spotify open and connected.</p>
+        <p>WalkUp Songs controla Spotify de forma remota — seleccionando la canción correcta, comenzando en el offset correcto y haciendo un fade out cuando corresponde. El segundo dispositivo solo necesita tener Spotify abierto y conectado.</p>
 
-        <h2>What You Need</h2>
+        <h2>Qué necesitas</h2>
         <div class="checklist">
             <div class="check-item">
                 <span class="check-icon">✅</span>
                 <div>
-                    <strong>Same Spotify account on both devices</strong>
-                    <span class="check-detail">Log into the same Spotify Premium account in WalkUp Songs and in the Spotify app on Device 2. This is how WalkUp Songs finds and controls the other device.</span>
+                    <strong>La misma cuenta de Spotify en ambos dispositivos</strong>
+                    <span class="check-detail">Inicia sesión con la misma cuenta de Spotify Premium en WalkUp Songs y en la app de Spotify del Dispositivo 2. Así es como WalkUp Songs encuentra y controla el otro dispositivo.</span>
                 </div>
             </div>
             <div class="check-item">
                 <span class="check-icon">✅</span>
                 <div>
-                    <strong>Internet connection on both devices</strong>
-                    <span class="check-detail">Device 1 needs internet to send playback commands. Device 2 needs internet to stream the music. Wi-Fi or cellular both work.</span>
+                    <strong>Conexión a internet en ambos dispositivos</strong>
+                    <span class="check-detail">El Dispositivo 1 necesita internet para enviar comandos de reproducción. El Dispositivo 2 necesita internet para transmitir la música. Wi-Fi o datos móviles funcionan igual.</span>
                 </div>
             </div>
             <div class="check-item">
                 <span class="check-icon">✅</span>
                 <div>
-                    <strong>Both devices connected to the same speaker</strong>
-                    <span class="check-detail">Device 1 plays announcer intros and sound effects. Device 2 plays the Spotify music. Connect both to the same Bluetooth or AirPlay speaker so everything comes through one place.</span>
+                    <strong>Ambos dispositivos conectados al mismo altavoz</strong>
+                    <span class="check-detail">El Dispositivo 1 reproduce los intros del anunciador y los efectos de sonido. El Dispositivo 2 reproduce la música de Spotify. Conecta ambos al mismo altavoz Bluetooth o AirPlay para que todo salga por un solo lugar.</span>
                 </div>
             </div>
             <div class="check-item">
                 <span class="check-icon">✅</span>
                 <div>
-                    <strong>Keep Spotify in the foreground and unlocked</strong>
-                    <span class="check-detail">On Device 2, keep the Spotify app open and the screen unlocked during the game. If the device locks or Spotify goes to the background, it may lose its connection and playback will fail.</span>
+                    <strong>Mantén Spotify en primer plano y sin bloquear</strong>
+                    <span class="check-detail">En el Dispositivo 2, mantén la app de Spotify abierta y la pantalla desbloqueada durante el partido. Si el dispositivo se bloquea o Spotify pasa a segundo plano, puede perder su conexión y la reproducción fallará.</span>
                 </div>
             </div>
         </div>
 
-        <h2>Setup Steps</h2>
+        <h2>Pasos de configuración</h2>
         <ol class="steps">
-            <li><span><strong>Connect your speaker</strong> to both devices via Bluetooth or AirPlay. Device 2 will play Spotify music; Device 1 will play announcer intros and effects.</span></li>
-            <li><span><strong>Open Spotify</strong> on Device 2 and play any song briefly to make sure audio goes to the speaker. You can pause it after.</span></li>
-            <li><span>On your main device (Device 1), open <strong>WalkUp Songs → Settings</strong> and turn on <strong>Spotify</strong>. Log in with the <strong>same Spotify account</strong> you're using on Device 2.</span></li>
-            <li><span><strong>Pick songs</strong> for your players from the Spotify library. Set the start offset so each song begins at the perfect moment.</span></li>
-            <li><span>On game day, make sure Spotify is <strong>open, in the foreground, and connected to the speaker</strong> on Device 2 before heading into Play Ball mode. Disable auto-lock on Device 2 so the screen stays on.</span></li>
+            <li><span><strong>Conecta tu altavoz</strong> a ambos dispositivos vía Bluetooth o AirPlay. El Dispositivo 2 reproducirá la música de Spotify; el Dispositivo 1 reproducirá los intros del anunciador y los efectos.</span></li>
+            <li><span><strong>Abre Spotify</strong> en el Dispositivo 2 y reproduce cualquier canción brevemente para asegurarte de que el audio vaya al altavoz. Puedes pausarla después.</span></li>
+            <li><span>En tu dispositivo principal (Dispositivo 1), abre <strong>WalkUp Songs → Configuración</strong> y activa <strong>Spotify</strong>. Inicia sesión con la <strong>misma cuenta de Spotify</strong> que estás usando en el Dispositivo 2.</span></li>
+            <li><span><strong>Elige canciones</strong> para tus jugadores de la biblioteca de Spotify. Establece el offset de inicio para que cada canción comience en el momento perfecto.</span></li>
+            <li><span>El día de juego, asegúrate de que Spotify esté <strong>abierto, en primer plano y conectado al altavoz</strong> en el Dispositivo 2 antes de entrar al modo de juego. Desactiva el bloqueo automático en el Dispositivo 2 para que la pantalla permanezca encendida.</span></li>
         </ol>
 
         <div class="tip">
-            <p><strong>Tip:</strong> An old phone, iPad, or iPod touch works great as Device 2. It just needs Spotify installed, a Wi-Fi or cellular connection, and Bluetooth for the speaker. Set <em>Settings → Display &amp; Brightness → Auto-Lock</em> to <strong>Never</strong> during games.</p>
+            <p><strong>Consejo:</strong> Un teléfono antiguo, iPad o iPod touch funciona muy bien como Dispositivo 2. Solo necesita Spotify instalado, conexión Wi-Fi o datos móviles y Bluetooth para el altavoz. Configura <em>Ajustes → Pantalla y brillo → Bloqueo automático</em> en <strong>Nunca</strong> durante los juegos.</p>
         </div>
 
-        <h2>Frequently Asked Questions</h2>
+        <h2>Preguntas Frecuentes</h2>
 
         <div class="faq-item">
-            <div class="faq-q">Do I need the same Spotify account on both devices?</div>
-            <div class="faq-a">Yes. WalkUp Songs logs into your Spotify account to send play/pause commands. The Spotify app on Device 2 must be logged into the same account so it receives those commands.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">Why do I need two devices?</div>
-            <div class="faq-a">iOS suspends apps that aren't in the foreground. If Spotify and WalkUp Songs are on the same device, Spotify loses its connection to the speaker when WalkUp Songs is active. A second device keeps Spotify running and connected.</div>
+            <div class="faq-q">¿Necesito la misma cuenta de Spotify en ambos dispositivos?</div>
+            <div class="faq-a">Sí. WalkUp Songs inicia sesión en tu cuenta de Spotify para enviar comandos de reproducción/pausa. La app de Spotify en el Dispositivo 2 debe estar con la misma cuenta para recibir esos comandos.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">What if I only have one device?</div>
-            <div class="faq-a">You can still use Apple Music songs, which play directly on the device without needing a second phone. Spotify requires the two-device setup for reliable playback.</div>
+            <div class="faq-q">¿Por qué necesito dos dispositivos?</div>
+            <div class="faq-a">iOS suspende las apps que no están en primer plano. Si Spotify y WalkUp Songs están en el mismo dispositivo, Spotify pierde su conexión con el altavoz cuando WalkUp Songs está activo. Un segundo dispositivo mantiene Spotify ejecutándose y conectado.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">Does it work with Bluetooth speakers?</div>
-            <div class="faq-a">Yes! Bluetooth speakers, AirPlay speakers, and wired speakers all work. Connect both devices to the same speaker so announcer intros and music all come through together.</div>
+            <div class="faq-q">¿Qué pasa si solo tengo un dispositivo?</div>
+            <div class="faq-a">Puedes seguir usando canciones de Apple Music, que se reproducen directamente en el dispositivo sin necesitar un segundo teléfono. Spotify requiere la configuración de dos dispositivos para una reproducción confiable.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">Do both devices need internet?</div>
-            <div class="faq-a">Yes. Device 1 needs internet to send playback commands to Spotify, and Device 2 needs internet to stream the music. Wi-Fi or cellular both work.</div>
+            <div class="faq-q">¿Funciona con altavoces Bluetooth?</div>
+            <div class="faq-a">¡Sí! Los altavoces Bluetooth, AirPlay y con cable funcionan todos. Conecta ambos dispositivos al mismo altavoz para que los intros del anunciador y la música salgan juntos.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">Why does it say "No active device found"?</div>
-            <div class="faq-a">This means Spotify isn't active on Device 2. Make sure the Spotify app is in the foreground, the screen is unlocked, and it's connected to the speaker. Play a song briefly so it registers as a device, then try again from WalkUp Songs.</div>
+            <div class="faq-q">¿Ambos dispositivos necesitan internet?</div>
+            <div class="faq-a">Sí. El Dispositivo 1 necesita internet para enviar comandos de reproducción a Spotify, y el Dispositivo 2 necesita internet para transmitir la música. Wi-Fi o datos móviles funcionan igual.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">Can I use a computer for Device 2?</div>
-            <div class="faq-a">Yes! The Spotify desktop app on a Mac or PC works great as Device 2. Computers don't have the same background app limitations, so Spotify stays connected even if it's not the focused window.</div>
+            <div class="faq-q">¿Por qué aparece "No se encontró ningún dispositivo activo"?</div>
+            <div class="faq-a">Significa que Spotify no está activo en el Dispositivo 2. Asegúrate de que la app de Spotify esté en primer plano, la pantalla desbloqueada y conectada al altavoz. Reproduce una canción brevemente para que se registre como dispositivo, luego inténtalo de nuevo desde WalkUp Songs.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">Can Device 2's screen lock during the game?</div>
-            <div class="faq-a">No — if the screen locks, Spotify may get suspended and lose its connection. Set <em>Settings → Display &amp; Brightness → Auto-Lock</em> to <strong>Never</strong> on Device 2 during games, and keep Spotify in the foreground.</div>
+            <div class="faq-q">¿Puedo usar una computadora como Dispositivo 2?</div>
+            <div class="faq-a">¡Sí! La app de escritorio de Spotify en una Mac o PC funciona muy bien como Dispositivo 2. Las computadoras no tienen las mismas limitaciones de apps en segundo plano, por lo que Spotify permanece conectado incluso si no es la ventana enfocada.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">¿Puede bloquearse la pantalla del Dispositivo 2 durante el partido?</div>
+            <div class="faq-a">No — si la pantalla se bloquea, Spotify puede suspenderse y perder su conexión. Configura <em>Ajustes → Pantalla y brillo → Bloqueo automático</em> en <strong>Nunca</strong> en el Dispositivo 2 durante los juegos y mantén Spotify en primer plano.</div>
         </div>
 
         <div class="cta">
-            <p>Ready to set up your lineup?</p>
+            <p>¿Listo para configurar tu alineación?</p>
             <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/es-mx?size=250x83" alt="Descargar en el App Store">
             </a>
         </div>
 
         <div class="links">
-            <a href="/support/">Support &amp; FAQ</a>
-            <a href="/privacy/">Privacy Policy</a>
+            <a href="/es/support/">Soporte &amp; FAQ</a>
+            <a href="/es/privacy/">Política de Privacidad</a>
         </div>
 
         <footer>
-            &copy; 2026 WalkUp Songs. All rights reserved.<br>
-            <span style="font-size:0.8rem;">🌐 <a href="/es/spotify/" style="color:#5b9cf5; text-decoration:none;">Español</a> · <a href="/ja/spotify/" style="color:#5b9cf5; text-decoration:none;">日本語</a></span>
+            &copy; 2026 WalkUp Songs. Todos los derechos reservados.
+            <div class="lang-switcher">
+                🌐 <a href="/spotify/">English</a> · <a href="/ja/spotify/">日本語</a>
+            </div>
         </footer>
     </div>
 </body>

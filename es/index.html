@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta name="description" content="WalkUp Songs — la app de música de entrada para béisbol y softbol juvenil. Configura canciones de entrada para cada jugador y dales su momento de grandes ligas.">
+    <meta name="keywords" content="canción de entrada béisbol, canción de entrada softbol, walk-out béisbol, walk out cancion beisbol, cancion walk out softbol, app música de entrada béisbol, walkup songs, música de entrada jugadores, intros anunciador béisbol, béisbol juvenil app, softbol juvenil app, deportes juveniles app, música banquillo dugout, app DJ béisbol, canciones de bienvenida béisbol">
+    <meta property="og:title" content="WalkUp Songs — App de Música de Entrada para Béisbol y Softbol">
+    <meta property="og:description" content="Configura canciones de entrada para cada jugador. La app de música de bienvenida para béisbol y softbol juvenil.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app/es/">
+    <meta property="og:image" content="https://walkupsongs.app/icon.png">
+    <meta property="og:image:width" content="120">
+    <meta property="og:image:height" content="120">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WalkUp Songs — App de Música de Entrada para Béisbol y Softbol">
+    <meta name="twitter:description" content="Configura canciones de entrada para cada jugador. La app de música de bienvenida para béisbol y softbol juvenil.">
+    <meta name="twitter:image" content="https://walkupsongs.app/icon.png">
+    <link rel="alternate" hreflang="en" href="https://walkupsongs.app/">
+    <link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/">
+    <link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/">
+    <title>WalkUp Songs — App de Música de Entrada para Béisbol y Softbol Juvenil</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WalkUp Songs",
+      "alternateName": ["App Canciones de Entrada", "App Música Béisbol", "App Walkup Softbol"],
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "SportsApplication",
+      "description": "Configura canciones de entrada y de bienvenida para cada jugador en tu alineación de béisbol o softbol juvenil. Compatible con Apple Music, Spotify, YouTube y archivos locales.",
+      "url": "https://walkupsongs.app/es/",
+      "downloadUrl": "https://apps.apple.com/app/walk-up-songs/id6760240442",
+      "inLanguage": "es",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #e8e8e8;
+            background: #151b25;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .container { max-width: 480px; width: 100%; }
+        .icon { width: 120px; height: 120px; margin: 0 auto 1.5rem; }
+        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.25rem; color: #fff; }
+        .tagline { color: #8a9bb5; font-size: 1.05rem; margin-bottom: 1.5rem; }
+        .description { color: #a0aec0; font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.7; }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .feature { background: #1e2636; border-radius: 12px; padding: 0.85rem; font-size: 0.85rem; color: #c0cde0; }
+        .feature span { margin-right: 0.4rem; }
+        .download {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .download img { height: 50px; transition: opacity 0.2s; }
+        .download a:hover img { opacity: 0.8; }
+        .links { margin-bottom: 2rem; }
+        .links a { display: inline-block; margin: 0.25rem 0.75rem; color: #5b9cf5; font-size: 0.9rem; text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        footer { font-size: 0.8rem; color: #4a5568; border-top: 1px solid #2d3748; padding-top: 1rem; width: 100%; max-width: 480px; }
+        .how-it-works { margin: 2rem 0; text-align: left; }
+        .how-it-works h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8899bb; margin-bottom: 1rem; text-align: center; }
+        .how-it-works ol { list-style: none; counter-reset: steps; display: flex; flex-direction: column; gap: 0.6rem; }
+        .how-it-works ol li { counter-increment: steps; display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: #c0cde0; }
+        .how-it-works ol li::before {
+            content: counter(steps);
+            background: #1e3a5f;
+            color: #7ab3f0;
+            font-weight: 700;
+            font-size: 0.8rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .screenshots { margin: 2.5rem 0 1rem; width: 100vw; max-width: 100vw; position: relative; left: 50%; transform: translateX(-50%); }
+        .screenshots h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8899bb; margin-bottom: 1.2rem; text-align: center; }
+        .screenshots-scroll { display: flex; gap: 1rem; overflow-x: auto; padding: 0 1.5rem 1rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; justify-content: center; }
+        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        .screenshot-item { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
+        .screenshot-item img { width: 160px; border-radius: 18px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); display: block; }
+        .screenshot-item p { margin-top: 0.6rem; font-size: 0.78rem; color: #8899bb; width: 160px; line-height: 1.3; }
+        .why-section { margin: 2rem 0; text-align: left; }
+        .why-section h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8899bb; margin-bottom: 1rem; text-align: center; }
+        .why-section p { font-size: 0.9rem; color: #c0cde0; margin-bottom: 0.75rem; line-height: 1.6; }
+        .lang-switcher { margin-top: 1rem; font-size: 0.8rem; color: #4a5568; }
+        .lang-switcher a { color: #5b9cf5; text-decoration: none; margin: 0 0.4rem; }
+        .lang-switcher a:hover { text-decoration: underline; }
+        @media (max-width: 400px) {
+            h1 { font-size: 1.7rem; }
+            .features { grid-template-columns: 1fr; }
+            .icon { width: 100px; height: 100px; border-radius: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="/icon.png" alt="WalkUp Songs" width="120" height="120" style="border-radius: 26px;">
+        </div>
+        <h1>WalkUp Songs</h1>
+        <p class="tagline">Música de entrada para béisbol y softbol juvenil</p>
+
+        <div class="download">
+            <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/es-mx?size=250x83" alt="Descargar en el App Store">
+            </a>
+            <div style="opacity:0.6; position:relative; display:inline-block;">
+                <img src="https://play.google.com/intl/es_419/badges/static/images/badges/es-419_badge_web_generic.png" alt="Disponible en Google Play" style="filter:grayscale(100%);">
+                <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.65); border-radius:8px; color:#fff; font-size:1.3em; font-weight:800; letter-spacing:0.05em; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Pronto 4/19</div>
+            </div>
+        </div>
+
+        <p class="description">Dale a cada jugador su momento de grandes ligas. Configura tu alineación, elige canciones de tus fuentes de música favoritas y toca para reproducir el día de juego.</p>
+
+        <div class="features">
+            <div class="feature"><span>🎵</span> Apple Music, Spotify y más</div>
+            <div class="feature"><span>📢</span> Intros del anunciador</div>
+            <div class="feature"><span>🔊</span> Efectos de sonido</div>
+            <div class="feature"><span>🎧</span> DJ en descansos de inning</div>
+        </div>
+
+        <div class="how-it-works">
+            <h2>Cómo funciona</h2>
+            <ol>
+                <li>Arma tu alineación — agrega jugadores con su nombre, número y posición.</li>
+                <li>Elige una canción de entrada para cada jugador desde Apple Music, Spotify, YouTube o tus propios archivos.</li>
+                <li>El día de juego, toca el nombre del jugador para reproducir su canción de entrada al instante por tu altavoz.</li>
+                <li>Agrega intros del anunciador con IA, efectos de sonido y sets de DJ para los descansos entre innings.</li>
+            </ol>
+        </div>
+
+        <div class="screenshots">
+            <h2>Míralo en acción</h2>
+            <div class="screenshots-scroll">
+                <div class="screenshot-item">
+                    <img src="/images/230x499bb.webp" alt="WalkUp Songs pantalla de equipos — administra varios equipos de béisbol y softbol">
+                    <p>Administra todos tus equipos en un solo lugar</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="/images/230x499bb2.webp" alt="WalkUp Songs pantalla de alineación — jugadores con canciones de entrada asignadas">
+                    <p>Configura tu alineación con canciones de entrada para cada jugador</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="/images/230x499bb3.webp" alt="WalkUp Songs editor de jugador — elige canción de Apple Music, Spotify o archivos">
+                    <p>Elige canciones de Apple Music, Spotify, YouTube o tus propios archivos</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="/images/230x499bb4.webp" alt="WalkUp Songs pantalla del día de juego — toca para reproducir música de entrada">
+                    <p>Toca un jugador el día de juego para reproducir su canción al instante</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-section">
+            <h2>¿Por qué WalkUp Songs?</h2>
+            <p>Cada niño merece su momento de grandes ligas al llegar al plato. WalkUp Songs permite a entrenadores y padres configurar fácilmente música de entrada personalizada e intros del anunciador para cada jugador del equipo, sin necesidad de ser DJ.</p>
+            <p>Ya sea que dirijas una liga de béisbol juvenil, un equipo de softbol viajero o una liga recreativa, WalkUp Songs convierte el día de juego en un evento memorable. Elige entre Apple Music, Spotify, YouTube o archivos de audio locales — lo que más les guste a tus jugadores.</p>
+            <p>Más allá de las canciones de entrada, agrega intros del anunciador generadas por IA, un tablero de efectos de sonido para el ambiente y sets de DJ para los descansos entre innings para mantener la energía alta desde el primer lanzamiento hasta el último out.</p>
+        </div>
+
+        <div class="links">
+            <a href="/es/support/">Soporte y FAQ</a>
+            <a href="/es/spotify/">Configuración de Spotify</a>
+            <a href="/es/privacy/">Política de Privacidad</a>
+        </div>
+
+        <div class="lang-switcher">
+            🌐 <a href="/">English</a> · <a href="/ja/">日本語</a>
+        </div>
+
+        <footer>
+            &copy; 2026 WalkUp Songs. Todos los derechos reservados.
+        </footer>
+    </div>
+</body>
+</html>

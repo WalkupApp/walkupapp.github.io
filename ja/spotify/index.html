@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta name="description" content="WalkUp SongsでSpotifyを使う方法 — 少年野球・ソフトボールの試合で登場曲を再生するための2デバイス設定ガイド。">
+    <meta property="og:title" content="WalkUp Songs — Spotify設定ガイド">
+    <meta property="og:description" content="WalkUp SongsでSpotifyを使って試合の登場曲を再生する方法を解説します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app/ja/spotify/">
+    <link rel="alternate" hreflang="en" href="https://walkupsongs.app/spotify/">
+    <link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/spotify/">
+    <link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/spotify/">
+    <link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/spotify/">
+    <title>WalkUp Songs — Spotify設定ガイド</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #e8e8e8;
+            background: #151b25;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 560px;
+            width: 100%;
+        }
+
+        /* Header */
+        .back-link {
+            display: inline-block;
+            color: #5b9cf5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .back-link::before { content: "← "; }
+
+        .page-icon {
+            font-size: 3rem;
+            margin-bottom: 0.75rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+        .subtitle {
+            color: #8a9bb5;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Callout box */
+        .callout {
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+        .callout-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+        .callout p {
+            color: #c0cde0;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .callout strong {
+            color: #e8e8e8;
+        }
+
+        /* Section */
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            margin-top: 2rem;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        p {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        /* Device diagram */
+        .diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+            flex-wrap: wrap;
+        }
+        .device-card {
+            background: #1e2636;
+            border-radius: 14px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            width: 150px;
+            flex-shrink: 0;
+        }
+        .device-card .emoji {
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .device-card .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+        .device-card .detail {
+            font-size: 0.75rem;
+            color: #8a9bb5;
+            line-height: 1.4;
+        }
+        .connector {
+            font-size: 1.5rem;
+            color: #4a5568;
+            flex-shrink: 0;
+        }
+        .speaker-card {
+            background: linear-gradient(135deg, #1e2636 0%, #243044 100%);
+            border: 1px solid #2d3748;
+        }
+
+        /* Steps */
+        .steps {
+            list-style: none;
+            counter-reset: step;
+            margin: 1rem 0 1.5rem;
+            padding-left: 0;
+        }
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #c0cde0;
+            line-height: 1.7;
+        }
+        .steps li::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            background: #5b9cf5;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .steps li strong {
+            color: #e8e8e8;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .faq-q {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .faq-a {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            line-height: 1.7;
+        }
+
+        /* Tip box */
+        .tip {
+            background: rgba(91, 156, 245, 0.1);
+            border-left: 3px solid #5b9cf5;
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .tip p {
+            color: #c0cde0;
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        .tip strong {
+            color: #5b9cf5;
+        }
+
+        /* Checklist */
+        .checklist {
+            margin: 1rem 0 1.5rem;
+        }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: #1e2636;
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+            margin-bottom: 0.6rem;
+        }
+        .check-icon {
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            line-height: 1.5;
+        }
+        .check-item strong {
+            display: block;
+            color: #fff;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+        .check-detail {
+            display: block;
+            color: #a0aec0;
+            font-size: 0.82rem;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta p {
+            color: #8a9bb5;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .cta a img {
+            height: 50px;
+            transition: opacity 0.2s;
+        }
+        .cta a:hover img { opacity: 0.8; }
+
+        /* Footer */
+        .links {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0.25rem 0.75rem;
+            color: #5b9cf5;
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+        .links a:hover { text-decoration: underline; }
+        footer {
+            font-size: 0.8rem;
+            color: #4a5568;
+            border-top: 1px solid #2d3748;
+            padding-top: 1rem;
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+        }
+        .lang-switcher {
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            color: #4a5568;
+        }
+        .lang-switcher a {
+            color: #5b9cf5;
+            text-decoration: none;
+            margin: 0 0.3rem;
+        }
+        .lang-switcher a:hover { text-decoration: underline; }
+
+        @media (max-width: 420px) {
+            h1 { font-size: 1.5rem; }
+            .diagram { gap: 0.5rem; }
+            .device-card { width: 120px; padding: 1rem 0.75rem; }
+            .device-card .emoji { font-size: 1.75rem; }
+            .connector { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/ja/" class="back-link">WalkUp Songs</a>
+
+        <div class="page-icon">🎵</div>
+        <h1>Spotify設定</h1>
+        <p class="subtitle">試合当日の登場曲にSpotifyを使う</p>
+
+        <div class="callout">
+            <span class="callout-icon">⚡</span>
+            <p><strong>Spotify Premiumが必要です。</strong>Spotifyの無料プランではリモート再生コントロールが使用できません。WalkUp SongsはこのAPIを使用してスピーカーで音楽を再生します。</p>
+        </div>
+
+        <h2>仕組み</h2>
+        <p>iOSのバックグラウンド制限のため、Spotify再生は2台のデバイスを使用するのが最適です — 1台でWalkUp Songsを起動し、もう1台でSpotifyを起動して、両方を同じBluetoothスピーカーに接続します。</p>
+
+        <div class="diagram">
+            <div class="device-card">
+                <div class="emoji">📱</div>
+                <div class="label">デバイス1</div>
+                <div class="detail">WalkUp Songsを起動</div>
+            </div>
+            <div class="connector">→</div>
+            <div class="device-card speaker-card">
+                <div class="emoji">🔊</div>
+                <div class="label">スピーカー</div>
+                <div class="detail">Bluetooth または AirPlay</div>
+            </div>
+            <div class="connector">←</div>
+            <div class="device-card">
+                <div class="emoji">📱</div>
+                <div class="label">デバイス2</div>
+                <div class="detail">Spotifyを起動</div>
+            </div>
+        </div>
+
+        <p>WalkUp SongsがSpotifyをリモートコントロールします — 正しい登場曲を選択し、適切なオフセットから再生し、タイミングに合わせてフェードアウトします。デバイス2はSpotifyを起動して接続しておくだけでOKです。</p>
+
+        <h2>必要なもの</h2>
+        <div class="checklist">
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>両方のデバイスで同じSpotifyアカウント</strong>
+                    <span class="check-detail">WalkUp SongsとデバイスのSpotifyアプリ両方で、同じSpotify Premiumアカウントにログインしてください。これにより、WalkUp Songsが他のデバイスを検索してコントロールできます。</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>両方のデバイスにインターネット接続</strong>
+                    <span class="check-detail">デバイス1は再生コマンドを送信するためにインターネットが必要です。デバイス2は音楽をストリーミングするためにインターネットが必要です。Wi-Fiまたはモバイルデータ通信、どちらでも動作します。</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>両方のデバイスを同じスピーカーに接続</strong>
+                    <span class="check-detail">デバイス1はアナウンサーイントロとサウンドエフェクトを再生します。デバイス2はSpotifyの音楽を再生します。すべての音が一か所から出るように、両方を同じBluetoothまたはAirPlayスピーカーに接続してください。</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✅</span>
+                <div>
+                    <strong>Spotifyを前面で起動し、画面の自動ロックをオフに</strong>
+                    <span class="check-detail">デバイス2では、試合中はSpotifyアプリを前面に開いたままにし、画面をロック解除した状態を維持してください。デバイスがロックしたり、Spotifyがバックグラウンドに移動すると、接続が切断されて再生に失敗する可能性があります。</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>設定手順</h2>
+        <ol class="steps">
+            <li><span>BluetoothまたはAirPlayで<strong>両方のデバイスをスピーカーに接続</strong>します。デバイス2はSpotifyの音楽を再生し、デバイス1はアナウンサーイントロとエフェクトを再生します。</span></li>
+            <li><span>デバイス2で<strong>Spotifyを開き</strong>、音声がスピーカーに出ることを確認するために曲を少し再生します。その後は一時停止して構いません。</span></li>
+            <li><span>メインデバイス（デバイス1）で<strong>WalkUp Songs → 設定</strong>を開き、<strong>Spotify</strong>をオンにします。デバイス2で使用しているのと<strong>同じSpotifyアカウント</strong>でログインしてください。</span></li>
+            <li><span>Spotifyライブラリから<strong>各選手の登場曲を選び</strong>ます。各曲が最高の瞬間から始まるように開始オフセットを設定してください。</span></li>
+            <li><span>試合当日は、Play Ballモードに入る前に、デバイス2でSpotifyが<strong>前面に表示され、スピーカーに接続されている</strong>ことを確認してください。デバイス2の自動ロックを無効にして画面が点灯したままにしてください。</span></li>
+        </ol>
+
+        <div class="tip">
+            <p><strong>ヒント：</strong>古いiPhone、iPad、iPod touchがデバイス2として最適です。Spotifyがインストールされ、Wi-Fiまたはモバイルデータ通信接続があり、スピーカー用のBluetoothがあれば十分です。試合中は<em>設定 → 画面表示と明るさ → 自動ロック</em>を<strong>しない</strong>に設定してください。</p>
+        </div>
+
+        <h2>よくある質問</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">両方のデバイスで同じSpotifyアカウントが必要ですか？</div>
+            <div class="faq-a">はい。WalkUp SongsはSpotifyアカウントにログインして再生/一時停止コマンドを送信します。デバイス2のSpotifyアプリも同じアカウントでログインする必要があります。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">なぜ2台のデバイスが必要なのですか？</div>
+            <div class="faq-a">iOSはバックグラウンドのアプリを一時停止します。SpotifyとWalkUp Songsが同じデバイスにある場合、WalkUp SongsがアクティブなときにSpotifyがスピーカーとのBluetooth接続を失います。2台目のデバイスがSpotifyを起動したまま接続を維持します。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">デバイスが1台しかない場合はどうすればよいですか？</div>
+            <div class="faq-a">Apple Musicの曲を使用できます。Apple Musicは2台目のデバイスなしに直接デバイスで再生できます。Spotifyは安定した再生のために2デバイス構成が必要です。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Bluetoothスピーカーは使えますか？</div>
+            <div class="faq-a">はい！Bluetoothスピーカー、AirPlayスピーカー、有線スピーカーすべて対応しています。アナウンサーイントロと登場曲がまとめて再生されるよう、両方のデバイスを同じスピーカーに接続してください。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">両方のデバイスにインターネット接続は必要ですか？</div>
+            <div class="faq-a">はい。デバイス1はSpotifyに再生コマンドを送信するためにインターネットが必要で、デバイス2は音楽をストリーミングするためにインターネットが必要です。Wi-Fiまたはモバイルデータ通信、どちらでも動作します。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">「アクティブなデバイスが見つかりません」と表示されたら？</div>
+            <div class="faq-a">Spotifyがデバイス2でアクティブでないことを意味します。Spotifyアプリが前面に表示され、画面がロック解除されており、スピーカーに接続されていることを確認してください。デバイスとして登録されるよう一時的に曲を再生してから、WalkUp Songsから再試行してください。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">デバイス2にコンピューターを使えますか？</div>
+            <div class="faq-a">はい！MacまたはPCのSpotifyデスクトップアプリがデバイス2として最適です。コンピューターにはバックグラウンドアプリの制限がないため、フォーカスのないウィンドウでもSpotifyが接続を維持します。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">試合中にデバイス2の画面をロックしてもよいですか？</div>
+            <div class="faq-a">いいえ — 画面がロックされると、Spotifyが一時停止されて接続が失われる可能性があります。試合中はデバイス2で<em>設定 → 画面表示と明るさ → 自動ロック</em>を<strong>しない</strong>に設定し、Spotifyを前面に表示し続けてください。</div>
+        </div>
+
+        <div class="cta">
+            <p>打順（ラインアップ）を設定する準備はできましたか？</p>
+            <a href="https://apps.apple.com/jp/app/walk-up-songs/id6760240442">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/ja-jp?size=250x83" alt="App Storeからダウンロード">
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="/ja/support/">サポート &amp; FAQ</a>
+            <a href="/ja/privacy/">プライバシーポリシー</a>
+        </div>
+
+        <footer>
+            &copy; 2026 WalkUp Songs. All rights reserved.
+            <div class="lang-switcher">
+                🌐 <a href="/spotify/">English</a> · <a href="/es/spotify/">Español</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

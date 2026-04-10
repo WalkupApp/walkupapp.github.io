@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://walkupsongs.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://walkupsongs.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/"/>
     <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://walkupsongs.app/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://walkupsongs.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/"/>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://walkupsongs.app/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://walkupsongs.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/"/>
+    <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -11,13 +34,43 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://walkupsongs.app/es/support/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://walkupsongs.app/ja/support/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://walkupsongs.app/spotify/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://walkupsongs.app/es/spotify/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://walkupsongs.app/ja/spotify/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://walkupsongs.app/privacy/</loc>
     <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://walkupsongs.app/es/privacy/</loc>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://walkupsongs.app/ja/privacy/</loc>
+    <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
 </urlset>
