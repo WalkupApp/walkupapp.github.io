@@ -1,10 +1,16 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.walkupsongs.app",
-      "sha256_cert_fingerprints": ["REPLACE_WITH_SHA256"]
+      "sha256_cert_fingerprints": [
+        "80:91:66:84:A3:BA:A6:06:E1:AF:4A:4C:7D:13:F3:26:7F:3A:32:D1:A5:15:B1:EF:95:B2:C7:A6:F9:11:C5:A4",
+        "70:8F:B2:3D:6A:24:DF:6D:AA:4E:A6:07:DA:97:5C:32:11:05:DD:CD:D5:C3:6B:E2:22:3C:A3:57:2E:D1:18:FE"
+      ]
     }
   }
 ]
