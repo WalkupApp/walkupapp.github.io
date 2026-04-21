@@ -97,6 +97,10 @@
        href="https://apps.apple.com/app/walk-up-songs/id6760240442">
         Download on the App Store
     </a>
+    <a class="store-btn hidden" id="playBtn"
+       href="https://play.google.com/store/apps/details?id=com.walkupsongs.app">
+        Get it on Google Play
+    </a>
     <p class="footer">Walk-Up Songs &copy; 2026</p>
 
     <script>
@@ -174,8 +178,9 @@
             // If we're here, the app is NOT installed. Show the App Store button.
             setTimeout(function() {
                 document.getElementById('status').textContent =
-                    'Don\u2019t have Walk-Up Songs yet? Get it free on the App Store.';
+                    'Don\u2019t have Walk-Up Songs yet? Get it free on iOS and Android.';
                 document.getElementById('storeBtn').classList.remove('hidden');
+                document.getElementById('playBtn').classList.remove('hidden');
             }, 1500);
         })();
     </script>
