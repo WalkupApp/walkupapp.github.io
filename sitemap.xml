@@ -3,6 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://walkupsongs.app/</loc>
+    <lastmod>2025-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://walkupsongs.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/"/>
@@ -12,6 +13,7 @@
   </url>
   <url>
     <loc>https://walkupsongs.app/es/</loc>
+    <lastmod>2025-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://walkupsongs.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/"/>
@@ -21,6 +23,7 @@
   </url>
   <url>
     <loc>https://walkupsongs.app/ja/</loc>
+    <lastmod>2025-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://walkupsongs.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/"/>
@@ -30,46 +33,55 @@
   </url>
   <url>
     <loc>https://walkupsongs.app/support/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/es/support/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/ja/support/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/spotify/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/es/spotify/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/ja/spotify/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/privacy/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/es/privacy/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://walkupsongs.app/ja/privacy/</loc>
+    <lastmod>2025-04-20</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
