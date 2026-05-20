@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta name="description" content="WalkUp Songs — the walk-up song app for youth baseball & softball. Set a walk-up song for every player and give them their big-league moment. Perfect for little league, GameChanger teams, travel ball, and T-ball.">
+    <meta name="keywords" content="walk up song app, walk out song app, baseball walk-up songs, walk-up music app, walk-out music app, player entrance music, announcer intros, baseball walk up music, softball walk up songs, youth baseball app, youth softball app, youth sports app, batting entrance music, plate appearance music, game day music, team lineup music, dugout music, dugout DJ app, ballpark music app, walk-up song baseball, walk-out song baseball, game changer app, game changer baseball, baseball app, baseball games, tball near me, t-ball, mlb app, mlb ballpark app, ballpark app, youth baseball near me, little league baseball, little league baseball near me, baseball leagues near me, baseball 9, baseball simulator, baseball gear">
+    <meta property="og:title" content="WalkUp Songs — Walk-up Song App for Baseball & Softball">
+    <meta property="og:description" content="Set a walk-up song for every player in your lineup. The walk-up music app for youth baseball & softball.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app">
+    <meta property="og:image" content="https://walkupsongs.app/icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WalkUp Songs — Walk-up Song App for Baseball & Softball">
+    <meta name="twitter:description" content="Set a walk-up song for every player in your lineup. The walk-up music app for youth baseball & softball.">
+    <meta name="twitter:image" content="https://walkupsongs.app/icon.png">
+    <link rel="alternate" hreflang="en" href="https://walkupsongs.app/">
+    <link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/">
+    <link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/">
+    <link rel="canonical" href="https://walkupsongs.app/">
+    <title>WalkUp Songs — Walk-up Song App for Baseball & Softball</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WalkUp Songs",
+      "alternateName": ["Walk Up Songs App", "Walk Out Song App", "Walkup Music App"],
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "SportsApplication",
+      "description": "Set walk-up songs and announcer intros for every player in your youth baseball or softball lineup. Supports Apple Music, Spotify, YouTube, and local files.",
+      "url": "https://walkupsongs.app",
+      "downloadUrl": "https://apps.apple.com/app/walk-up-songs/id6760240442",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #0f172a;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 100;
+            padding: 0 2rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .btn-primary {
+            background: #2563eb;
+            color: #fff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background 0.15s;
+            white-space: nowrap;
+        }
+        .btn-primary:hover { background: #1d4ed8; }
+
+        /* ── Hero ── */
+        .hero {
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+        }
+        .hero-inner { max-width: 680px; margin: 0 auto; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 1.75rem;
+        }
+        .hero h1 {
+            font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: #0f172a;
+            margin-bottom: 1.25rem;
+        }
+        .hero h1 em { font-style: normal; color: #2563eb; }
+        .hero p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .store-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .store-badges img { height: 52px; transition: opacity 0.2s; }
+        .store-badges a:hover img { opacity: 0.8; }
+
+        /* ── Social bar ── */
+        .social-bar {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1.1rem 1.5rem;
+            text-align: center;
+        }
+        .social-bar p { font-size: 0.9rem; color: #64748b; }
+        .stars { color: #f59e0b; letter-spacing: 0.05em; }
+
+        /* ── Section helpers ── */
+        .section-eyebrow {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.6rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+        .section-sub {
+            text-align: center;
+            font-size: 1rem;
+            color: #64748b;
+            max-width: 520px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        /* ── Features ── */
+        .features-section {
+            padding: 5rem 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.25rem;
+        }
+        .feature-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .feature-card:hover {
+            box-shadow: 0 4px 20px rgba(15,23,42,0.08);
+            transform: translateY(-2px);
+        }
+        .feature-icon { font-size: 2rem; margin-bottom: 0.875rem; display: block; }
+        .feature-card h3 { font-size: 1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .feature-card p { font-size: 0.875rem; color: #64748b; line-height: 1.65; }
+
+        /* ── Screenshots ── */
+        .screenshots-section {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+        .screenshots-section .section-eyebrow,
+        .screenshots-section .section-title { padding: 0 1.5rem; }
+        .screenshots-scroll {
+            display: flex;
+            gap: 1.25rem;
+            overflow-x: auto;
+            padding: 0.5rem 2rem 1.5rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            justify-content: center;
+        }
+        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            text-align: center;
+        }
+        .screenshot-item img {
+            width: 175px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(15,23,42,0.15);
+            display: block;
+        }
+        .screenshot-item p {
+            margin-top: 0.75rem;
+            font-size: 0.78rem;
+            color: #64748b;
+            width: 175px;
+            line-height: 1.4;
+        }
+
+        /* ── How it works ── */
+        .hiw-section {
+            background: #0f172a;
+            padding: 5rem 1.5rem;
+        }
+        .hiw-inner { max-width: 900px; margin: 0 auto; }
+        .hiw-section .section-eyebrow { color: #93c5fd; }
+        .hiw-section .section-title { color: #f1f5f9; }
+        .hiw-section .section-sub { color: #94a3b8; }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: #2563eb;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .step h3 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.5rem; }
+        .step p { font-size: 0.875rem; color: #94a3b8; line-height: 1.65; }
+
+        /* ── CTA ── */
+        .cta-section {
+            padding: 5.5rem 1.5rem;
+            text-align: center;
+            background: linear-gradient(180deg, #fff 0%, #eff6ff 100%);
+        }
+        .cta-section .section-title { margin-bottom: 0.75rem; }
+        .cta-section p { font-size: 1rem; color: #64748b; margin-bottom: 2.25rem; }
+
+        /* ── Footer ── */
+        footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.15s;
+        }
+        .footer-links a:hover { color: #2563eb; }
+        .footer-lang {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+        }
+        .footer-lang a { color: #2563eb; text-decoration: none; }
+        .footer-lang a:hover { text-decoration: underline; }
+        .footer-copy { font-size: 0.78rem; color: #94a3b8; }
+
+        @media (max-width: 640px) {
+            nav { padding: 0 1.25rem; }
+            .hero { padding: 3.5rem 1.25rem 3rem; }
+            .features-section { padding: 3.5rem 1.25rem; }
+            .hiw-section { padding: 3.5rem 1.25rem; }
+            .cta-section { padding: 3.5rem 1.25rem; }
+            .screenshots-scroll { justify-content: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="nav-brand">
+            <img src="/icon.png" alt="WalkUp Songs">
+            WalkUp Songs
+        </a>
+        <a href="https://apps.apple.com/app/walk-up-songs/id6760240442" class="btn-primary">Download Free</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">⚾ Youth Baseball &amp; Softball</div>
+            <h1>Give every player their <em>big-league moment.</em></h1>
+            <p>Set up your lineup, pick songs from Apple Music, Spotify, or YouTube, and tap to play on game day. Perfect for little league, travel ball, T-ball, and any youth team.</p>
+            <div class="store-badges">
+                <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 76px; margin: -12px 0;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-bar">
+        <p><span class="stars">★★★★★</span> &nbsp;Loved by coaches and parents across the country &nbsp;·&nbsp; Works with GameChanger &amp; any league</p>
+    </div>
+
+    <section class="features-section">
+        <div class="section-eyebrow">Everything you need</div>
+        <h2 class="section-title">Built for game day</h2>
+        <p class="section-sub">One app handles walk-up music, announcer intros, soundboard effects, and inning-break DJ sets — so you can focus on the game.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🎵</span>
+                <h3>Apple Music, Spotify &amp; more</h3>
+                <p>Search millions of songs from your favorite streaming services — or use YouTube and local files. Set the perfect walk-up for every player.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📢</span>
+                <h3>AI Announcer Intros</h3>
+                <p>Custom voice announcements for every player — just like the pros. Type a script and the app generates it instantly.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔊</span>
+                <h3>Soundboard Effects</h3>
+                <p>Crowd cheers, air horns, and more at your fingertips. Keep the energy high between every at-bat.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎧</span>
+                <h3>Inning Break DJ Sets</h3>
+                <p>Keep the dugout pumped between innings with curated DJ sets — no extra setup required.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots-section">
+        <div class="section-eyebrow">See it in action</div>
+        <h2 class="section-title" style="margin-bottom: 2rem;">Everything on one screen</h2>
+        <div class="screenshots-scroll">
+            <div class="screenshot-item">
+                <img src="/images/230x499bb.webp" alt="Manage multiple baseball and softball teams">
+                <p>Manage all your teams in one place</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/images/230x499bb2.webp" alt="Lineup with walk-up songs for every player">
+                <p>Set up your lineup with a song for every player</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/images/230x499bb3.webp" alt="Pick walk-up songs from Apple Music, Spotify, or files">
+                <p>Pick from Apple Music, Spotify, YouTube, or your files</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/images/230x499bb4.webp" alt="Game day screen — tap to play walk-up music">
+                <p>Tap a player on game day to play their song instantly</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hiw-section">
+        <div class="hiw-inner">
+            <div class="section-eyebrow">Simple setup</div>
+            <h2 class="section-title">Ready in minutes</h2>
+            <p class="section-sub">No DJ experience needed. Just add your players, pick their songs, and you're ready to play ball.</p>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Build your lineup</h3>
+                    <p>Add players with their name, jersey number, and position. Organize multiple teams all in one place.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pick their songs</h3>
+                    <p>Search Apple Music, Spotify, or YouTube for the perfect walk-up. Set the start time for maximum hype.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Play on game day</h3>
+                    <p>Tap a player's card when they step up — their song plays, the crowd reacts, and the moment lands.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Add the extras</h3>
+                    <p>Layer in AI announcer intros, soundboard effects, and inning-break DJ sets to complete the experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="section-title">Make game day unforgettable.</h2>
+        <p>Free to download. Works with Apple Music, Spotify, YouTube, and your local music library.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 76px; margin: -12px 0;">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/support/">Support &amp; FAQ</a>
+            <a href="/spotify/">Spotify Setup</a>
+            <a href="/privacy/">Privacy Policy</a>
+        </div>
+        <div class="footer-lang">🌐 <a href="/es/">Español</a> · <a href="/ja/">日本語</a></div>
+        <p class="footer-copy">
+            Popular with little league, travel ball, T-ball, softball, and GameChanger teams.<br>
+            &copy; 2026 WalkUp Songs. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
