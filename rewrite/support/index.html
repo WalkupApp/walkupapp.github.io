@@ -198,7 +198,7 @@
                 <img src="/icon.png" alt="WalkUp Songs">
                 WalkUp Songs
             </a>
-            <a href="https://apps.apple.com/app/walk-up-songs/id6760240442" class="nav-dl" target="_blank" rel="noopener">Download Free</a>
+            <a href="/#download" class="nav-dl" id="nav-dl-btn">Download Free</a>
         </div>
     </nav>
 
@@ -296,6 +296,23 @@
             btn.closest('.faq-item').classList.toggle('open');
         }
     </script>
+
+<script>
+(function() {
+    var btn = document.getElementById('nav-dl-btn');
+    if (!btn) return;
+    var ua = navigator.userAgent || '';
+    if (/android/i.test(ua)) {
+        btn.href = 'https://play.google.com/store/apps/details?id=com.walkupsongs.app';
+        btn.target = '_blank'; btn.rel = 'noopener';
+    } else if (/iphone|ipad|ipod/i.test(ua)) {
+        btn.href = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
+        btn.target = '_blank'; btn.rel = 'noopener';
+    } else {
+        btn.href = '/#download';
+    }
+})();
+</script>
 
 </body>
 </html>
