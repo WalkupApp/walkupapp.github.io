@@ -298,12 +298,21 @@
         }
         .lang-switcher a:hover { text-decoration: underline; }
 
-        @media (max-width: 420px) {
+        @media (max-width: 600px) {
             h1 { font-size: 1.5rem; }
-            .diagram { gap: 0.5rem; }
-            .device-card { width: 120px; padding: 1rem 0.75rem; }
-            .device-card .emoji { font-size: 1.75rem; }
-            .connector { font-size: 1.25rem; }
+            body { padding: 1.25rem 1rem; }
+            .diagram {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                margin: 1rem 0 1.5rem;
+            }
+            .device-card { width: 100%; max-width: 240px; padding: 1rem; }
+            .connector { transform: rotate(90deg); font-size: 1.25rem; }
+            .callout { padding: 1rem; }
+            .check-item { padding: 0.85rem 1rem; }
+            .faq-item { padding: 0.85rem 1rem; }
+            .steps li { font-size: 0.85rem; }
         }
     </style>
     <link rel="canonical" href="https://walkupsongs.app/ja/spotify/">
