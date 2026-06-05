@@ -314,11 +314,16 @@
 
         <div class="page-icon">🎵</div>
         <h1>Spotify設定</h1>
-        <p class="subtitle">試合当日の登場曲にSpotifyを使う</p>
+        <p class="subtitle">試合当日の登場曲にSpotifyを使う — iOSのみ</p>
+
+        <div class="callout" style="border-left: 3px solid #f56565; background: rgba(245,101,101,0.08);">
+            <span class="callout-icon">🤖</span>
+            <p><strong>Androidユーザーの方へ：</strong>SpotifyはWalkUp SongsのAndroid版では利用できません。登場曲にはYouTubeまたはローカルファイルをご利用ください。</p>
+        </div>
 
         <div class="callout">
-            <span class="callout-icon">⚡</span>
-            <p><strong>Spotify Premiumが必要です。</strong>Spotifyの無料プランではリモート再生コントロールが使用できません。WalkUp SongsはこのAPIを使用してスピーカーで音楽を再生します。</p>
+            <span class="callout-icon">⭐</span>
+            <p><strong>プレミアム機能 — iOSのみ。</strong>SpotifyはWalkUp Songs Premiumサブスクライバー向けの有料機能です。<strong>設定 → 詳細設定</strong>からアクセスできます。SpotifyのAPIにはSpotify Premiumも必要です — 無料プランではリモート再生コントロールが使用できません。</p>
         </div>
 
         <h2>仕組み</h2>
@@ -382,7 +387,7 @@
         <ol class="steps">
             <li><span>BluetoothまたはAirPlayで<strong>両方のデバイスをスピーカーに接続</strong>します。デバイス2はSpotifyの音楽を再生し、デバイス1はアナウンサーイントロとエフェクトを再生します。</span></li>
             <li><span>デバイス2で<strong>Spotifyを開き</strong>、音声がスピーカーに出ることを確認するために曲を少し再生します。その後は一時停止して構いません。</span></li>
-            <li><span>メインデバイス（デバイス1）で<strong>WalkUp Songs → 設定</strong>を開き、<strong>Spotify</strong>をオンにします。デバイス2で使用しているのと<strong>同じSpotifyアカウント</strong>でログインしてください。</span></li>
+            <li><span>メインデバイス（デバイス1）で<strong>WalkUp Songs → 設定 → 詳細設定</strong>を開き、<strong>Spotify</strong>をオンにします。デバイス2で使用しているのと<strong>同じSpotifyアカウント</strong>でログインしてください。</span></li>
             <li><span>Spotifyライブラリから<strong>各選手の登場曲を選び</strong>ます。各曲が最高の瞬間から始まるように開始オフセットを設定してください。</span></li>
             <li><span>試合当日は、Play Ballモードに入る前に、デバイス2でSpotifyが<strong>前面に表示され、スピーカーに接続されている</strong>ことを確認してください。デバイス2の自動ロックを無効にして画面が点灯したままにしてください。</span></li>
         </ol>
@@ -392,6 +397,16 @@
         </div>
 
         <h2>よくある質問</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">Androidを使っています — Spotifyはどこですか？</div>
+            <div class="faq-a">SpotifyはWalkUp SongsのAndroid版では利用できません。選手の登場曲にはYouTube検索またはローカルオーディオファイルをご利用ください。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">アプリのどこでSpotifyを有効にできますか？</div>
+            <div class="faq-a">SpotifyはiOSのプレミアム機能です。<strong>設定 → 詳細設定</strong>から有効にできます。アクセスするにはWalkUp Songs Premiumの有効なサブスクリプションが必要です。</div>
+        </div>
 
         <div class="faq-item">
             <div class="faq-q">両方のデバイスで同じSpotifyアカウントが必要ですか？</div>
