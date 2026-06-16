@@ -111,16 +111,19 @@
             overflow: hidden;
         }
         .hero-inner {
-            max-width: 1200px;
+            max-width: 760px;
             margin: 0 auto;
-            padding: 4rem 2rem 0;
-            display: grid;
-            grid-template-columns: 1fr 420px;
-            gap: 2rem;
-            align-items: flex-end;
-            min-height: calc(90vh - 68px);
+            padding: 5rem 2rem 5.5rem;
+            text-align: center;
+            min-height: calc(72vh - 68px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .hero-text { padding-bottom: 5rem; }
+        .hero-text { max-width: 640px; }
+        .hero-sub { margin-left: auto; margin-right: auto; }
+        .hero .badges { justify-content: center; }
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -153,35 +156,60 @@
         .badges a:hover img { opacity: 0.78; }
         .badge-gp { height: 74px !important; margin: -12px 0 !important; }
 
-        /* hero + feature promo shots */
-        .hero-phone {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+        /* setup trio: screenshots 1 / 2 / 3 side by side */
+        .setup {
+            padding: 7rem 2rem;
+            background: #fff;
         }
-        .promo-shot img {
+        .setup-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .setup-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 3.5rem;
+        }
+        .setup-header h2 {
+            font-size: clamp(1.75rem, 3vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--navy);
+            line-height: 1.08;
+            margin-bottom: 1rem;
+        }
+        .promo-trio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            align-items: end;
+        }
+        .promo-trio img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 22px;
+            box-shadow: 0 28px 56px rgba(0,0,0,0.14);
+        }
+        .promo-trio-label {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--blue);
+        }
+
+        /* solo promo shots: screenshots 4 & 5 */
+        .promo-solo img {
             display: block;
             width: 300px;
+            max-width: 100%;
             height: auto;
             border-radius: 28px;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.55);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.18);
         }
-        .hero-phone .promo-shot img { width: 320px; }
-        .phone {
-            background: #111827;
-            border-radius: 52px;
-            padding: 14px 14px 0;
-            box-shadow: 0 60px 120px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.08);
-            display: inline-block;
-        }
-        .phone img {
-            display: block;
-            border-radius: 38px 38px 0 0;
-        }
-        .hero-phone .phone {
-            box-shadow: 0 50px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.1);
-        }
-        .hero-phone .phone img { width: 300px; }
 
         /* ── Proof bar ── */
         .proof-bar {
@@ -248,9 +276,7 @@
         .feat-body li { margin-left: 1.25rem; margin-top: 0.35rem; }
 
         .feat-phone { display: flex; justify-content: center; }
-        .feat-phone .promo-shot img { width: 280px; box-shadow: 0 40px 80px rgba(0,0,0,0.18); }
-        .feat-phone .phone { padding: 12px 12px 0; border-radius: 44px; }
-        .feat-phone .phone img { width: 255px; border-radius: 32px 32px 0 0; }
+        .feat-phone .promo-solo img { width: 280px; }
 
         /* ── Testimonials ── */
         .testimonials {
@@ -358,19 +384,26 @@
         /* ── Mobile ── */
         @media (max-width: 820px) {
             .hero-inner {
-                grid-template-columns: 1fr;
-                align-items: center;
                 min-height: auto;
-                padding-top: 3rem;
-                text-align: center;
+                padding: 3.5rem 1.25rem 4rem;
             }
-            .hero-text { padding-bottom: 2rem; }
-            .hero-sub { max-width: 100%; }
-            .badges { justify-content: center; }
-            .hero-phone { padding-bottom: 3rem; }
-            .hero-phone .promo-shot img { width: 240px; }
-            .feat-phone .promo-shot img { width: 220px; }
-            .hero-phone .phone img { width: 220px; }
+
+            .setup { padding: 4rem 0 4rem 1.25rem; }
+            .setup-header { padding-right: 1.25rem; margin-bottom: 2.5rem; }
+            .promo-trio {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                padding: 0 1.25rem 0.5rem 0;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .promo-trio::-webkit-scrollbar { display: none; }
+            .promo-trio-item {
+                flex: 0 0 min(72vw, 260px);
+                scroll-snap-align: center;
+            }
 
             .feat-inner {
                 grid-template-columns: 1fr;
@@ -425,11 +458,6 @@
                 </a>
             </div>
         </div>
-        <div class="hero-phone">
-            <div class="promo-shot">
-                <img src="/images/hero.webp" alt="WalkUp Songs — game day on phone and Apple Watch">
-            </div>
-        </div>
     </div>
 </section>
 
@@ -442,56 +470,57 @@
     iOS &amp; Android
 </div>
 
-<!-- Feature 1: Build your roster -->
-<section class="feat">
-    <div class="feat-inner">
-        <div class="feat-text">
-            <div class="feat-step">Step 01</div>
-            <h2>Build your roster in minutes.</h2>
-            <p class="feat-body">Add players by name and jersey number, create as many teams as you need, and organize your full lineup before the first pitch — no complicated setup required.</p>
+<!-- Setup: screenshots 1 / 2 / 3 side by side -->
+<section class="setup">
+    <div class="setup-inner">
+        <div class="setup-header">
+            <h2>Ready for game day in three steps.</h2>
+            <p class="feat-body">Create your teams, build your lineup, and pick walk-up songs from Apple Music, Spotify, YouTube, or your own library — no complicated setup required.</p>
         </div>
-        <div class="feat-phone">
-            <div class="promo-shot">
+        <div class="promo-trio">
+            <div class="promo-trio-item">
+                <img src="/images/hero.webp" alt="WalkUp Songs — give every player their big-league moment">
+                <div class="promo-trio-label">Step 01 · Get started</div>
+            </div>
+            <div class="promo-trio-item">
                 <img src="/images/teams.webp" alt="WalkUp Songs teams screen">
+                <div class="promo-trio-label">Step 02 · Build teams</div>
+            </div>
+            <div class="promo-trio-item">
+                <img src="/images/lineup.webp" alt="WalkUp Songs lineup with walk-up songs assigned">
+                <div class="promo-trio-label">Step 03 · Set lineup &amp; songs</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Feature 2: Pick their song (flipped) -->
+<!-- Game day play menu: screenshot 4 solo -->
 <section class="feat feat-alt feat-flip">
     <div class="feat-inner">
         <div class="feat-text">
-            <div class="feat-step">Step 02</div>
-            <h2>Pick the perfect walk-up song.</h2>
-            <p class="feat-body">
-                Search Apple Music, Spotify, YouTube, or your own library. Set the exact start time so the chorus — the best 15 seconds — plays every single at-bat.
-                <ul style="margin-top:0.75rem">
-                    <li>Apple Music &amp; Spotify streaming</li>
-                    <li>YouTube search built in</li>
-                    <li>Local files &amp; your own downloads</li>
-                </ul>
-            </p>
+            <div class="feat-step">Game day</div>
+            <h2>Tap. Play. Hype.</h2>
+            <p class="feat-body">One tap triggers their walk-up song and an AI announcer intro. Tap any player to skip ahead in the order, adjust volume on the fly, and keep the energy electric all game long.</p>
         </div>
         <div class="feat-phone">
-            <div class="promo-shot">
-                <img src="/images/lineup.webp" alt="WalkUp Songs lineup with walk-up songs assigned">
+            <div class="promo-solo">
+                <img src="/images/play-menu.webp" alt="WalkUp Songs game day play menu">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Feature 3: Game day -->
+<!-- Apple Watch: screenshot 5 solo -->
 <section class="feat">
     <div class="feat-inner">
         <div class="feat-text">
-            <div class="feat-step">Step 03</div>
-            <h2>Tap to play.<br>Watch them own it.</h2>
-            <p class="feat-body">One tap triggers their walk-up song and an AI announcer intro. Add crowd cheers, soundboard effects, and inning-break DJ sets to keep the energy electric all game long.</p>
+            <div class="feat-step">Apple Watch</div>
+            <h2>Keep your phone away.</h2>
+            <p class="feat-body">Full control right from your wrist. Hold to play walk-up songs, run inning-break DJ sets, and stop playback without digging for your phone in the dugout.</p>
         </div>
         <div class="feat-phone">
-            <div class="phone">
-                <img src="/images/230x499bb4.webp" alt="WalkUp Songs tap to play screen">
+            <div class="promo-solo">
+                <img src="/images/watch.webp" alt="WalkUp Songs on Apple Watch — walk-up songs and inning break controls">
             </div>
         </div>
     </div>
