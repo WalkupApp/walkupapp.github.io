@@ -279,6 +279,67 @@
         .feat-phone { display: flex; justify-content: center; }
         .feat-phone .promo-solo img { width: 280px; }
 
+        /* ── Details (how it works / why) ── */
+        .details {
+            padding: 7rem 2rem;
+            background: var(--soft);
+        }
+        .details-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .details-block + .details-block {
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border);
+        }
+        .details h2 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        .details ol {
+            list-style: none;
+            counter-reset: steps;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .details ol li {
+            counter-increment: steps;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+        .details ol li::before {
+            content: counter(steps);
+            background: var(--blue);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+        .details p {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .details p:last-child { margin-bottom: 0; }
+
         /* ── Testimonials ── */
         .testimonials {
             background: var(--navy);
@@ -450,6 +511,8 @@
             .promo-trio { gap: 0.375rem; }
             .promo-trio-label { font-size: 0.5rem; }
             .feat { padding: 4rem 1.25rem; }
+            .details { padding: 4rem 1.25rem; }
+            .details-block + .details-block { margin-top: 3rem; padding-top: 3rem; }
             .testimonials, .cta { padding: 4rem 1.25rem; }
             .proof-bar { font-size: 0.72rem; padding: 1rem; }
         }
@@ -547,6 +610,27 @@
             <div class="promo-solo">
                 <img src="/images/watch.webp" alt="WalkUp Songs on Apple Watch — walk-up songs and inning break controls">
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works / Why WalkUp Songs -->
+<section class="details">
+    <div class="details-inner">
+        <div class="details-block how-it-works">
+            <h2>How it works</h2>
+            <ol>
+                <li>Build your lineup — add players with their name, number, and position.</li>
+                <li>Pick a walk-up song for each player from Apple Music, YouTube, or your own files.</li>
+                <li>On game day, tap a player's name to instantly play their walk-up song through your speaker.</li>
+                <li>Add AI announcer intros, soundboard effects, and inning-break DJ sets to complete the experience.</li>
+            </ol>
+        </div>
+        <div class="details-block why-section">
+            <h2>Why WalkUp Songs?</h2>
+            <p>Every kid deserves a big-league moment stepping up to the plate. WalkUp Songs makes it easy for coaches and parents to set up personalized walk-up music and announcer intros for every player on the team — no DJ experience required. Works great for little league, youth baseball leagues, travel ball, T-ball, and any team using GameChanger.</p>
+            <p>Whether you're running a youth baseball league, a travel softball team, or a rec league, WalkUp Songs turns game day into an event. Pick from Apple Music, YouTube, or local audio files — whatever your players love.</p>
+            <p>Beyond walk-up songs, add AI-generated announcer intros, a soundboard for crowd effects, and curated inning-break DJ sets to keep the energy high from first pitch to last out.</p>
         </div>
     </div>
 </section>
