@@ -11,8 +11,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://walkupsongs.app">
     <meta property="og:image" content="https://walkupsongs.app/icon.png">
-    <meta property="og:image:width" content="120">
-    <meta property="og:image:height" content="120">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="WalkUp Songs — Walk-up Song App for Baseball & Softball">
     <meta name="twitter:description" content="Set a walk-up song for every player in your lineup. The walk-up music app for youth baseball & softball.">
@@ -34,241 +32,592 @@
       "description": "Set walk-up songs and announcer intros for every player in your youth baseball or softball lineup. Supports Apple Music, YouTube, and local files.",
       "url": "https://walkupsongs.app",
       "downloadUrl": "https://apps.apple.com/app/walk-up-songs/id6760240442",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ── Base ── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy:   #0d1b2a;
+            --blue:   #2563eb;
+            --blue2:  #1d4ed8;
+            --text:   #1e293b;
+            --muted:  #64748b;
+            --border: #e2e8f0;
+            --soft:   #f0ede8;
+        }
+
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: #f7f5f1;
             line-height: 1.6;
-            color: #e8e8e8;
-            background: #151b25;
-            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 68px;
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+        .nav-brand img { width: 30px; height: 30px; border-radius: 7px; }
+        .nav-dl {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--blue);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .nav-dl:hover { background: var(--blue2); }
+
+        /* ── Hero ── */
+        .hero {
+            background: var(--navy);
+            overflow: hidden;
+        }
+        .hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 5.5rem;
+            text-align: center;
+            min-height: calc(72vh - 68px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem 1.5rem;
-            text-align: center;
         }
-        .container {
-            max-width: 480px;
-            width: 100%;
-        }
-        .icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 1.5rem;
-        }
-        h1 {
-            font-size: 2rem;
+        .hero-text { max-width: 640px; }
+        .hero-sub { margin-left: auto; margin-right: auto; }
+        .hero .badges { justify-content: center; }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            margin-bottom: 0.25rem;
-            color: #fff;
-        }
-        .tagline {
-            color: #8a9bb5;
-            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #60a5fa;
             margin-bottom: 1.5rem;
         }
-        .description {
-            color: #a0aec0;
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            line-height: 1.7;
+        .hero h1 {
+            font-size: clamp(2.75rem, 5.5vw, 4.75rem);
+            font-weight: 800;
+            line-height: 1.0;
+            letter-spacing: -0.04em;
+            color: #fff;
+            margin-bottom: 1.5rem;
         }
-        .features {
+        .hero h1 span { color: #60a5fa; }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.58);
+            line-height: 1.75;
+            margin-bottom: 2.75rem;
+            max-width: 430px;
+        }
+        .badges { display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+        .badges a { display: flex; align-items: center; justify-content: center; line-height: 0; }
+        .badges a img { height: 50px; width: auto; transition: opacity 0.2s; }
+        .badges a:hover img { opacity: 0.78; }
+        .badge-gp { height: 74px !important; margin: -12px 0 !important; }
+
+        /* setup trio: screenshots 1 / 2 / 3 side by side */
+        .setup {
+            padding: 7rem 2rem;
+            background: #fff;
+        }
+        .setup-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .setup-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 3.5rem;
+        }
+        .setup-header h2 {
+            font-size: clamp(1.75rem, 3vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--navy);
+            line-height: 1.08;
+            margin-bottom: 1rem;
+        }
+        .promo-trio {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-            text-align: left;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            align-items: end;
         }
-        .feature {
-            background: #1e2636;
-            border-radius: 12px;
-            padding: 0.85rem;
-            font-size: 0.85rem;
-            color: #c0cde0;
-        }
-        .feature span { margin-right: 0.4rem; }
-        .download {
-            margin-bottom: 2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-        .download img {
-            height: 50px;
-            transition: opacity 0.2s;
-        }
-        .download a:hover img { opacity: 0.8; }
-        .links {
-            margin-bottom: 2rem;
-        }
-        .links a {
-            display: inline-block;
-            margin: 0.25rem 0.75rem;
-            color: #5b9cf5;
-            font-size: 0.9rem;
-            text-decoration: none;
-        }
-        .links a:hover { text-decoration: underline; }
-        footer {
-            font-size: 0.8rem;
-            color: #4a5568;
-            border-top: 1px solid #2d3748;
-            padding-top: 1rem;
+        .promo-trio img {
+            display: block;
             width: 100%;
-            max-width: 480px;
+            height: auto;
+            border-radius: 22px;
+            box-shadow: 0 28px 56px rgba(0,0,0,0.14);
+        }
+        .promo-trio-label {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--blue);
         }
 
-        .how-it-works {
-            margin: 2rem 0;
-            text-align: left;
+        /* solo promo shots: screenshots 4 & 5 */
+        .promo-solo img {
+            display: block;
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 28px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.18);
         }
-        .how-it-works h2 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #8899bb;
-            margin-bottom: 1rem;
+
+        /* ── Proof bar ── */
+        .proof-bar {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--soft);
+            padding: 1.1rem 2rem;
             text-align: center;
+            font-size: 0.82rem;
+            color: var(--muted);
+            letter-spacing: 0.01em;
         }
-        .how-it-works ol {
+        .proof-bar .stars { color: #f59e0b; }
+
+        /* ── Feature sections ── */
+        .feat {
+            padding: 7rem 2rem;
+            background: #fff;
+        }
+        .feat-alt { background: var(--soft); }
+        .feat-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        /* flip: image visually moves to the left side */
+        .feat-flip .feat-text { order: 2; }
+        .feat-flip .feat-phone { order: 1; }
+
+        .feat-step {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .feat-step::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 36px;
+            background: var(--border);
+        }
+        .feat h2 {
+            font-size: clamp(1.75rem, 3vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--navy);
+            line-height: 1.08;
+            margin-bottom: 1rem;
+        }
+        .feat-body {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+        .feat-body li { margin-left: 1.25rem; margin-top: 0.35rem; }
+
+        .feat-phone { display: flex; justify-content: center; }
+        .feat-phone .promo-solo img { width: 280px; }
+
+        /* ── Details (how it works / why) ── */
+        .details {
+            padding: 7rem 2rem;
+            background: var(--soft);
+        }
+        .details-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .details-block + .details-block {
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border);
+        }
+        .details h2 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        .details ol {
             list-style: none;
             counter-reset: steps;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            gap: 1rem;
         }
-        .how-it-works ol li {
+        .details ol li {
             counter-increment: steps;
             display: flex;
-            gap: 0.75rem;
+            gap: 1rem;
             align-items: flex-start;
-            font-size: 0.9rem;
-            color: #c0cde0;
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.75;
         }
-        .how-it-works ol li::before {
+        .details ol li::before {
             content: counter(steps);
-            background: #1e3a5f;
-            color: #7ab3f0;
+            background: var(--blue);
+            color: #fff;
             font-weight: 700;
             font-size: 0.8rem;
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.75rem;
+            height: 1.75rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            margin-top: 0.1rem;
+            margin-top: 0.15rem;
         }
-        .screenshots {
-            margin: 2.5rem 0 1rem;
-            width: 100vw;
-            max-width: 100vw;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .screenshots h2 {
+        .details p {
             font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #8899bb;
-            margin-bottom: 1.2rem;
-            text-align: center;
-        }
-        .screenshots-scroll {
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-            padding: 0 1.5rem 1rem;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            justify-content: center;
-        }
-        .screenshots-scroll::-webkit-scrollbar { display: none; }
-        .screenshot-item {
-            flex: 0 0 auto;
-            scroll-snap-align: center;
-            text-align: center;
-        }
-        .screenshot-item img {
-            width: 160px;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-            display: block;
-        }
-        .screenshot-item p {
-            margin-top: 0.6rem;
-            font-size: 0.78rem;
-            color: #8899bb;
-            width: 160px;
-            line-height: 1.3;
-        }
-        .why-section {
-            margin: 2rem 0;
-            text-align: left;
-        }
-        .why-section h2 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #8899bb;
+            color: var(--muted);
+            line-height: 1.8;
             margin-bottom: 1rem;
+        }
+        .details p:last-child { margin-bottom: 0; }
+
+        /* ── Testimonials ── */
+        .testimonials {
+            background: var(--navy);
+            padding: 7rem 2rem;
+        }
+        .testi-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .testi-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+        }
+        .testimonials h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+        .testi-sub {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 3.5rem;
+        }
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .quote {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 16px;
+            padding: 1.75rem;
+        }
+        .quote-stars { color: #f59e0b; font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+        .quote p {
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+        .quote p strong { color: #fff; font-weight: 600; }
+        .quote-author { font-size: 0.78rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        /* ── CTA ── */
+        .cta {
+            padding: 7rem 2rem;
+            text-align: center;
+            background: #fff;
+        }
+        .cta h2 {
+            font-size: clamp(2.25rem, 4.5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--navy);
+            line-height: 1.05;
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 2.75rem;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--soft);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
         }
-        .why-section p {
-            font-size: 0.9rem;
-            color: #c0cde0;
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem 2rem;
+            margin-bottom: 1.25rem;
         }
-        @media (max-width: 400px) {
-            h1 { font-size: 1.7rem; }
-            .features { grid-template-columns: 1fr; }
-            .icon { width: 100px; height: 100px; font-size: 3rem; border-radius: 22px; }
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.15s;
+        }
+        .footer-links a:hover { color: var(--blue); }
+        .footer-lang { font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem; }
+        .footer-lang a { color: var(--blue); text-decoration: none; }
+        .footer-copy { font-size: 0.78rem; color: #94a3b8; line-height: 1.8; }
+
+        /* ── Mobile ── */
+        @media (max-width: 820px) {
+            .hero-inner {
+                min-height: auto;
+                padding: 3.5rem 1.25rem 3.5rem;
+            }
+
+            .badges {
+                flex-wrap: nowrap;
+                gap: 0.625rem;
+                width: 100%;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+            .badges a { flex: 1 1 0; min-width: 0; }
+            .badges a img {
+                width: 100%;
+                max-width: 158px;
+                height: auto;
+                max-height: 48px;
+                object-fit: contain;
+            }
+            .badges .badge-gp {
+                height: auto !important;
+                max-height: 58px !important;
+                margin: 0 !important;
+            }
+
+            .setup { padding: 4rem 0.75rem; }
+            .setup-header { margin-bottom: 2rem; }
+            .promo-trio {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+                align-items: end;
+            }
+            .promo-trio img {
+                border-radius: 12px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+            }
+            .promo-trio-label {
+                font-size: 0.58rem;
+                letter-spacing: 0.04em;
+                margin-top: 0.5rem;
+                line-height: 1.35;
+            }
+
+            .feat-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            /* always show text first on mobile regardless of flip */
+            .feat-flip .feat-text { order: 1; }
+            .feat-flip .feat-phone { order: 2; }
+            .feat-step::after { display: none; }
+            .feat-phone { justify-content: center; }
+
+            .quotes-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-inner { padding: 2.5rem 1rem 3rem; }
+            .badges { max-width: 100%; gap: 0.5rem; }
+            .setup { padding: 3rem 0.5rem; }
+            .promo-trio { gap: 0.375rem; }
+            .promo-trio-label { font-size: 0.5rem; }
+            .feat { padding: 4rem 1.25rem; }
+            .details { padding: 4rem 1.25rem; }
+            .details-block + .details-block { margin-top: 3rem; padding-top: 3rem; }
+            .testimonials, .cta { padding: 4rem 1.25rem; }
+            .proof-bar { font-size: 0.72rem; padding: 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">
-            <img src="/icon.png" alt="WalkUp Songs" width="120" height="120" style="border-radius: 26px;">
+
+<!-- Nav -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <img src="/icon.png" alt="WalkUp Songs icon">
+            WalkUp Songs
+        </a>
+        <a href="#download" class="nav-dl" id="nav-dl-btn">
+            Download Free
+        </a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <div class="hero-eyebrow">⚾ Walk-up Music App</div>
+            <h1>Walk-up music<br>for <span>every player.</span></h1>
+            <p class="hero-sub">Set a walk-up song for every kid in your lineup. One tap on game day and they step up to the plate like a pro.</p>
+            <div class="badges">
+                <a href="https://apps.apple.com/app/walk-up-songs/id6760240442" target="_blank" rel="noopener">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app" target="_blank" rel="noopener">
+                    <img class="badge-gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                </a>
+            </div>
         </div>
-        <h1>WalkUp Songs</h1>
-        <p class="tagline">Walk-up music for youth baseball &amp; softball</p>
+    </div>
+</section>
 
-        <div class="download">
-            <a href="https://apps.apple.com/app/walk-up-songs/id6760240442">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 73px; margin: -11px 0;">
-            </a>
+<!-- Social proof bar -->
+<div class="proof-bar">
+    <span class="stars">★★★★★</span>&ensp;
+    Loved by coaches and parents &nbsp;·&nbsp;
+    Apple Music &amp; YouTube &nbsp;·&nbsp;
+    Free to download &nbsp;·&nbsp;
+    iOS &amp; Android
+</div>
+
+<!-- Setup: screenshots 1 / 2 / 3 side by side -->
+<section class="setup">
+    <div class="setup-inner">
+        <div class="setup-header">
+            <h2>Ready for game day in three steps.</h2>
+            <p class="feat-body">Create your teams, build your lineup, and pick walk-up songs from Apple Music, YouTube, or your own library — no complicated setup required.</p>
         </div>
-
-        <p class="description">Give every player their big-league moment. Set up your lineup, pick songs from your favorite music sources, and tap to play on game day.</p>
-
-        <div class="features">
-            <div class="feature"><span>🎵</span> Apple Music, YouTube & more</div>
-            <div class="feature"><span>📢</span> Announcer intros</div>
-            <div class="feature"><span>🔊</span> Soundboard effects</div>
-            <div class="feature"><span>🎧</span> Inning break DJs</div>
+        <div class="promo-trio">
+            <div class="promo-trio-item">
+                <img src="/images/hero.webp" alt="WalkUp Songs — give every player their big-league moment">
+            </div>
+            <div class="promo-trio-item">
+                <img src="/images/teams.webp" alt="WalkUp Songs teams screen">
+            </div>
+            <div class="promo-trio-item">
+                <img src="/images/lineup.webp" alt="WalkUp Songs lineup with walk-up songs assigned">
+            </div>
         </div>
+    </div>
+</section>
 
-        <div class="how-it-works">
+<!-- Game day play menu: screenshot 4 solo -->
+<section class="feat feat-alt feat-flip">
+    <div class="feat-inner">
+        <div class="feat-text">
+            <div class="feat-step">Game day</div>
+            <h2>Tap. Play. Hype.</h2>
+            <p class="feat-body">One tap triggers their walk-up song and an AI announcer intro. Tap any player to skip ahead in the order, adjust volume on the fly, and keep the energy electric all game long.</p>
+        </div>
+        <div class="feat-phone">
+            <div class="promo-solo">
+                <img src="/images/play-menu.webp" alt="WalkUp Songs game day play menu">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Apple Watch: screenshot 5 solo -->
+<section class="feat">
+    <div class="feat-inner">
+        <div class="feat-text">
+            <div class="feat-step">Apple Watch</div>
+            <h2>Keep your phone away.</h2>
+            <p class="feat-body">Full control right from your wrist. Hold to play walk-up songs, run inning-break DJ sets, and stop playback without digging for your phone in the dugout.</p>
+        </div>
+        <div class="feat-phone">
+            <div class="promo-solo">
+                <img src="/images/watch.webp" alt="WalkUp Songs on Apple Watch — walk-up songs and inning break controls">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works / Why WalkUp Songs -->
+<section class="details">
+    <div class="details-inner">
+        <div class="details-block how-it-works">
             <h2>How it works</h2>
             <ol>
                 <li>Build your lineup — add players with their name, number, and position.</li>
@@ -277,48 +626,72 @@
                 <li>Add AI announcer intros, soundboard effects, and inning-break DJ sets to complete the experience.</li>
             </ol>
         </div>
-
-        <div class="screenshots">
-            <h2>See it in action</h2>
-            <div class="screenshots-scroll">
-                <div class="screenshot-item">
-                    <img src="/images/230x499bb.webp" alt="WalkUp Songs teams screen — manage multiple baseball and softball teams">
-                    <p>Manage all your teams in one place</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="/images/230x499bb2.webp" alt="WalkUp Songs lineup screen — players with walk-up songs assigned">
-                    <p>Set up your lineup with walk-up songs for every player</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="/images/230x499bb3.webp" alt="WalkUp Songs player editor — pick walk-up song from Apple Music or files">
-                    <p>Pick songs from Apple Music, YouTube, or your own files</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="/images/230x499bb4.webp" alt="WalkUp Songs game day screen — tap to play walk-up music">
-                    <p>Tap a player on game day to play their song instantly</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-section">
+        <div class="details-block why-section">
             <h2>Why WalkUp Songs?</h2>
             <p>Every kid deserves a big-league moment stepping up to the plate. WalkUp Songs makes it easy for coaches and parents to set up personalized walk-up music and announcer intros for every player on the team — no DJ experience required. Works great for little league, youth baseball leagues, travel ball, T-ball, and any team using GameChanger.</p>
             <p>Whether you're running a youth baseball league, a travel softball team, or a rec league, WalkUp Songs turns game day into an event. Pick from Apple Music, YouTube, or local audio files — whatever your players love.</p>
             <p>Beyond walk-up songs, add AI-generated announcer intros, a soundboard for crowd effects, and curated inning-break DJ sets to keep the energy high from first pitch to last out.</p>
         </div>
+    </div>
+</section>
 
-        <div class="links">
+<!-- Testimonials -->
+<!-- Note: placeholder quotes — replace with real App Store reviews before launch -->
+<section class="testimonials">
+    <div class="testi-inner">
+        <div class="testi-eyebrow">What coaches &amp; parents are saying</div>
+        <h2>The kids absolutely love it.</h2>
+        <p class="testi-sub">From little league and T-ball to travel ball and youth softball.</p>
+        <div class="quotes-grid">
+            <div class="quote">
+                <div class="quote-stars">★★★★★</div>
+                <p>"I've tried dozens of walk-up song apps and <strong>this is by far the best.</strong> User friendly, easy to navigate. The voice recognizes names and <strong>says them clearly with no weird pronunciation or glitches.</strong> I like how you can choose where you want the song to start. Highly recommend!"</p>
+                <div class="quote-author">Verified App Store Review</div>
+            </div>
+            <div class="quote">
+                <div class="quote-stars">★★★★★</div>
+                <p>"AMAZING!! Absolutely the best out of all the options. <strong>You can add as many people without needing to pay</strong> — and the song range is incredible. I found every song I needed and <strong>set the duration time and fade out to the correct times for each batter!</strong>"</p>
+                <div class="quote-author">Verified Google Play Review · May 2026</div>
+            </div>
+            <div class="quote">
+                <div class="quote-stars">★★★★★</div>
+                <p>"So simple. <strong>Love seeing my kid get pumped up to bat!</strong>"</p>
+                <div class="quote-author">Verified App Store Review</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="download">
+    <h2>Make game day<br>unforgettable.</h2>
+    <p>Free to download. Works with Apple Music, YouTube, and your own music library.</p>
+    <div class="badges" style="justify-content:center">
+        <a href="https://apps.apple.com/app/walk-up-songs/id6760240442" target="_blank" rel="noopener">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app" target="_blank" rel="noopener">
+            <img class="badge-gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
             <a href="/support/">Support &amp; FAQ</a>
+            <a href="/spotify/">Spotify Setup</a>
             <a href="/privacy/">Privacy Policy</a>
         </div>
-
-        <div style="margin-top:1rem; font-size:0.8rem; color:#4a5568;">
-            🌐 <a href="/es/" style="color:#5b9cf5; text-decoration:none;">Español</a> · <a href="/ja/" style="color:#5b9cf5; text-decoration:none;">日本語</a>
-        </div>
-
-        <footer>
-            &copy; 2026 WalkUp Songs. All rights reserved.
-        </footer>
+        <div class="footer-lang">🌐 <a href="/es/">Español</a> &nbsp;·&nbsp; <a href="/ja/">日本語</a></div>
+        <p class="footer-copy">
+            Popular with little league, travel ball, T-ball, softball, and GameChanger teams.<br>
+            &copy; 2025 WalkUp Songs. All rights reserved. &nbsp;·&nbsp; <a href="mailto:walkupmusicapp@gmail.com" style="color:inherit">walkupmusicapp@gmail.com</a>
+        </p>
     </div>
+</footer>
+
+
 </body>
 </html>

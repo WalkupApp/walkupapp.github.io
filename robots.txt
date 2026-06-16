@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_backup-pre-rewrite/
 
 Sitemap: https://walkupsongs.app/sitemap.xml

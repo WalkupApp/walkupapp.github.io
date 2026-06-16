@@ -3,64 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WalkUp Songs — Support</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-            background: #fafafa;
-        }
-        h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-        h2 { font-size: 1.2rem; margin-top: 1.8rem; margin-bottom: 0.5rem; color: #111; }
-        p, li { margin-bottom: 0.6rem; }
-        ul { padding-left: 1.5rem; }
-        .tagline { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
-        a { color: #0066cc; }
-        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; border-top: 1px solid #ddd; padding-top: 1rem; }
-    </style>
+    <title>WalkUp Songs — Support & FAQ</title>
     <link rel="canonical" href="https://walkupsongs.app/support/">
     <link rel="alternate" hreflang="en" href="https://walkupsongs.app/support/">
     <link rel="alternate" hreflang="es" href="https://walkupsongs.app/es/support/">
     <link rel="alternate" hreflang="ja" href="https://walkupsongs.app/ja/support/">
     <link rel="alternate" hreflang="x-default" href="https://walkupsongs.app/support/">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy:   #0d1b2a;
+            --blue:   #2563eb;
+            --blue2:  #1d4ed8;
+            --text:   #1e293b;
+            --muted:  #64748b;
+            --border: #e2e8f0;
+            --soft:   #f8fafc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 68px;
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+        .nav-brand img { width: 30px; height: 30px; border-radius: 7px; }
+        .nav-dl {
+            display: inline-flex;
+            align-items: center;
+            background: var(--blue);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .nav-dl:hover { background: var(--blue2); }
+
+        /* ── Page header ── */
+        .page-header {
+            background: var(--soft);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 2rem 2.75rem;
+        }
+        .page-header-inner { max-width: 720px; margin: 0 auto; }
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb:hover { text-decoration: underline; }
+        .page-header h1 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+            line-height: 1.1;
+        }
+        .page-subtitle { font-size: 1rem; color: var(--muted); }
+
+        /* ── Content ── */
+        main { padding: 3rem 2rem 5rem; }
+        .content-inner { max-width: 720px; margin: 0 auto; }
+
+        /* Contact card */
+        .contact-card {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .contact-icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1.4; }
+        .contact-card h2 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.35rem; }
+        .contact-card p { font-size: 0.9rem; color: var(--muted); }
+        .contact-card a { color: var(--blue); text-decoration: none; font-weight: 500; }
+        .contact-card a:hover { text-decoration: underline; }
+
+        /* FAQ */
+        .faq-section h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: var(--navy);
+            margin-bottom: 1.25rem;
+        }
+        .faq-list { display: flex; flex-direction: column; gap: 0.5rem; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.1rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: left;
+            font-family: inherit;
+            transition: background 0.15s;
+        }
+        .faq-q:hover { background: var(--soft); }
+        .faq-chevron { color: #94a3b8; flex-shrink: 0; transition: transform 0.2s; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-a {
+            display: none;
+            padding: 0 1.25rem 1.1rem;
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.75;
+            border-top: 1px solid var(--border);
+        }
+        .faq-item.open .faq-a { display: block; }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--soft);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem 2rem;
+            margin-bottom: 1.25rem;
+        }
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+        .footer-links a:hover { color: var(--blue); }
+        .footer-lang { font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem; }
+        .footer-lang a { color: var(--blue); text-decoration: none; }
+        .footer-copy { font-size: 0.78rem; color: #94a3b8; line-height: 1.8; }
+
+        @media (max-width: 640px) {
+            .page-header { padding: 2rem 1.25rem 1.75rem; }
+            main { padding: 2rem 1.25rem 3rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>WalkUp Songs — Support</h1>
-    <p class="tagline">Walk-up music for youth baseball &amp; softball</p>
 
-    <h2>Contact Us</h2>
-    <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
-    <p>Email us at <a href="mailto:walkupmusicapp@gmail.com">walkupmusicapp@gmail.com</a> and we'll get back to you as soon as we can.</p>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">
+                <img src="/icon.png" alt="WalkUp Songs">
+                WalkUp Songs
+            </a>
+            <a href="/#download" class="nav-dl" id="nav-dl-btn">Download Free</a>
+        </div>
+    </nav>
 
-    <h2>Frequently Asked Questions</h2>
+    <div class="page-header">
+        <div class="page-header-inner">
+            <a href="/" class="breadcrumb">← Home</a>
+            <h1>Support &amp; FAQ</h1>
+            <p class="page-subtitle">Walk-up music for youth baseball &amp; softball</p>
+        </div>
+    </div>
 
-    <h2>Do I need an Apple Music subscription?</h2>
-    <p>An Apple Music subscription lets you search and play any song from the Apple Music catalog. Without one, you can still use songs from your personal music library, built-in sound effects, or text-to-speech announcements.</p>
+    <main>
+        <div class="content-inner">
 
-    <h2>Why does my song stop playing?</h2>
-    <p>Make sure you've granted WalkUp Songs access to Apple Music when prompted. Also check that your device isn't in Silent Mode — flip the switch on the side of your iPhone. If the problem persists, try force-quitting the app and reopening it.</p>
+            <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <h2>Contact Us</h2>
+                    <p>Have a question, found a bug, or want to suggest a feature? Email us at <a href="mailto:walkupmusicapp@gmail.com">walkupmusicapp@gmail.com</a> and we'll get back to you as soon as we can.</p>
+                </div>
+            </div>
 
-    <h2>How do I sync teams between devices?</h2>
-    <p>Your teams and settings sync automatically via iCloud. Make sure both devices are signed in to the same Apple&nbsp;ID with iCloud Drive turned on. Changes may take a moment to appear on the other device.</p>
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
 
-    <h2>How do I remove ads?</h2>
-    <p>Go to Settings in the app and tap "Remove Ads" to make a one-time purchase. This removes all banner ads permanently — no subscription required.</p>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Do I need an Apple Music subscription?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">An Apple Music subscription lets you search and play any song from the Apple Music catalog. Without one, you can still use songs from your personal music library, built-in sound effects, or text-to-speech announcements.</div>
+                    </div>
 
-    <h2>Can I use my own music files?</h2>
-    <p>Yes! When assigning a song to a player, choose "Music Library" to pick from songs stored on your device. You can sync music to your iPhone via the Finder or iTunes.</p>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Why does my song stop playing?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Make sure you've granted WalkUp Songs access to Apple Music when prompted. Also check that your device isn't in Silent Mode — flip the switch on the side of your iPhone. If the problem persists, try force-quitting the app and reopening it.</div>
+                    </div>
 
-    <h2>What devices are supported?</h2>
-    <p>WalkUp Songs requires an iPhone or iPad running iOS 18 or later.</p>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            How do I sync teams between devices?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Your teams and settings sync automatically via iCloud. Make sure both devices are signed in to the same Apple ID with iCloud Drive turned on. Changes may take a moment to appear on the other device.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            How do I remove ads?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Go to Settings in the app and tap "Remove Ads" to make a one-time purchase. This removes all banner ads permanently — no subscription required.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Can I use my own music files?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Yes! When assigning a song to a player, choose "Music Library" to pick from songs stored on your device. You can sync music to your iPhone via the Finder or iTunes.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            What devices are supported?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">WalkUp Songs requires an iPhone or iPad running iOS 18 or later.</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
 
     <footer>
-        <a href="/privacy/">Privacy Policy</a><br>
-        &copy; 2026 WalkUp Songs. All rights reserved.<br>
-        <span style="font-size:0.8rem; color:#bbb;">🌐 <a href="/es/support/">Español</a> · <a href="/ja/support/">日本語</a></span>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/spotify/">Spotify Setup</a>
+                <a href="/privacy/">Privacy Policy</a>
+            </div>
+            <div class="footer-lang">🌐 <a href="/es/support/">Español</a> &nbsp;·&nbsp; <a href="/ja/support/">日本語</a></div>
+            <p class="footer-copy">&copy; 2025 WalkUp Songs. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        function toggle(btn) {
+            btn.closest('.faq-item').classList.toggle('open');
+        }
+    </script>
+
+<script>
+(function() {
+    var btn = document.getElementById('nav-dl-btn');
+    if (!btn) return;
+    var ua = navigator.userAgent || '';
+    if (/android/i.test(ua)) {
+        btn.href = 'https://play.google.com/store/apps/details?id=com.walkupsongs.app';
+        btn.target = '_blank'; btn.rel = 'noopener';
+    } else if (/iphone|ipad|ipod/i.test(ua)) {
+        btn.href = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
+        btn.target = '_blank'; btn.rel = 'noopener';
+    } else {
+        btn.href = '/#download';
+    }
+})();
+</script>
+
 </body>
 </html>
