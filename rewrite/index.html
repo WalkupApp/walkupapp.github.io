@@ -153,12 +153,20 @@
         .badges a:hover img { opacity: 0.78; }
         .badge-gp { height: 74px !important; margin: -12px 0 !important; }
 
-        /* hero phone */
+        /* hero + feature promo shots */
         .hero-phone {
             display: flex;
             justify-content: center;
             align-items: flex-end;
         }
+        .promo-shot img {
+            display: block;
+            width: 300px;
+            height: auto;
+            border-radius: 28px;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.55);
+        }
+        .hero-phone .promo-shot img { width: 320px; }
         .phone {
             background: #111827;
             border-radius: 52px;
@@ -240,6 +248,7 @@
         .feat-body li { margin-left: 1.25rem; margin-top: 0.35rem; }
 
         .feat-phone { display: flex; justify-content: center; }
+        .feat-phone .promo-shot img { width: 280px; box-shadow: 0 40px 80px rgba(0,0,0,0.18); }
         .feat-phone .phone { padding: 12px 12px 0; border-radius: 44px; }
         .feat-phone .phone img { width: 255px; border-radius: 32px 32px 0 0; }
 
@@ -359,6 +368,8 @@
             .hero-sub { max-width: 100%; }
             .badges { justify-content: center; }
             .hero-phone { padding-bottom: 3rem; }
+            .hero-phone .promo-shot img { width: 240px; }
+            .feat-phone .promo-shot img { width: 220px; }
             .hero-phone .phone img { width: 220px; }
 
             .feat-inner {
@@ -415,8 +426,8 @@
             </div>
         </div>
         <div class="hero-phone">
-            <div class="phone">
-                <img src="/images/230x499bb4.webp" alt="WalkUp Songs game day screen">
+            <div class="promo-shot">
+                <img src="/images/hero.webp" alt="WalkUp Songs — game day on phone and Apple Watch">
             </div>
         </div>
     </div>
@@ -440,8 +451,8 @@
             <p class="feat-body">Add players by name and jersey number, create as many teams as you need, and organize your full lineup before the first pitch — no complicated setup required.</p>
         </div>
         <div class="feat-phone">
-            <div class="phone">
-                <img src="/images/230x499bb2.webp" alt="WalkUp Songs lineup screen">
+            <div class="promo-shot">
+                <img src="/images/teams.webp" alt="WalkUp Songs teams screen">
             </div>
         </div>
     </div>
@@ -463,8 +474,8 @@
             </p>
         </div>
         <div class="feat-phone">
-            <div class="phone">
-                <img src="/images/230x499bb3.webp" alt="WalkUp Songs song picker screen">
+            <div class="promo-shot">
+                <img src="/images/lineup.webp" alt="WalkUp Songs lineup with walk-up songs assigned">
             </div>
         </div>
     </div>
