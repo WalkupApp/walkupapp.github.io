@@ -414,6 +414,72 @@
             margin-right: auto;
         }
 
+        /* ── More apps ── */
+        .more-apps {
+            padding: 4.5rem 2rem;
+            background: var(--soft);
+            border-top: 1px solid var(--border);
+        }
+        .more-apps-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .more-apps-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--blue);
+            margin-bottom: 0.75rem;
+        }
+        .more-apps h2 {
+            font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            line-height: 1.15;
+        }
+        .more-apps-intro {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .more-apps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            text-align: left;
+        }
+        .more-apps-list a {
+            display: block;
+            padding: 1.15rem 1.25rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #fff;
+            text-decoration: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        .more-apps-list a:hover {
+            border-color: #bfdbfe;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+        }
+        .more-apps-list strong {
+            display: block;
+            color: var(--navy);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .more-apps-list span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
         /* ── Footer ── */
         footer {
             background: var(--soft);
@@ -513,7 +579,7 @@
             .feat { padding: 4rem 1.25rem; }
             .details { padding: 4rem 1.25rem; }
             .details-block + .details-block { margin-top: 3rem; padding-top: 3rem; }
-            .testimonials, .cta { padding: 4rem 1.25rem; }
+            .testimonials, .cta, .more-apps { padding: 4rem 1.25rem; }
             .proof-bar { font-size: 0.72rem; padding: 1rem; }
         }
     </style>
@@ -673,6 +739,25 @@
         <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app" target="_blank" rel="noopener">
             <img class="badge-gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
         </a>
+    </div>
+</section>
+
+<!-- More from the developer -->
+<section class="more-apps">
+    <div class="more-apps-inner">
+        <div class="more-apps-eyebrow">About the developer</div>
+        <h2>More apps for coaches &amp; families.</h2>
+        <p class="more-apps-intro">WalkUp Songs is built by an independent developer who makes useful tools for youth sports and everyday hobbies.</p>
+        <div class="more-apps-list">
+            <a href="https://baseballlineup.app/" target="_blank" rel="noopener">
+                <strong>Baseball Lineup Manager</strong>
+                <span>Build fair batting orders and defense for youth baseball — week after week, without the spreadsheet grind.</span>
+            </a>
+            <a href="https://puzzlestats.app/" target="_blank" rel="noopener">
+                <strong>Puzzle Stats</strong>
+                <span>The jigsaw timer for speed puzzlers — catalog your collection, time every solve, and track personal bests.</span>
+            </a>
+        </div>
     </div>
 </section>
 
