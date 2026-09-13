@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walk-Up Songs — Player Shared With You</title>
+    <title>WalkUp Songs — Player Shared With You</title>
+    <meta name="description" content="Import this player into WalkUp Songs on iOS or Android.">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="apple-itunes-app" content="app-id=6760240442">
-    <meta property="og:title" content="Walk-Up Songs — Player Shared With You">
-    <meta property="og:description" content="Tap to import this player into Walk-Up Songs.">
+    <meta property="og:title" content="WalkUp Songs — Player Shared With You">
+    <meta property="og:description" content="Tap to import this player into WalkUp Songs.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app/player/">
+    <meta property="og:image" content="https://walkupsongs.app/icon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://walkupsongs.app/player/">
+    <link rel="icon" href="/icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             background: #1a2035;
             color: #fff;
             min-height: 100vh;
@@ -22,8 +29,14 @@
             padding: 24px;
             text-align: center;
         }
-        .icon { font-size: 64px; margin-bottom: 16px; }
-        h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .icon-img {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+        h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
         .player-name {
             font-size: 28px;
             font-weight: 800;
@@ -31,7 +44,7 @@
             margin-bottom: 4px;
         }
         .player-number {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 900;
             color: #fbbf24;
             margin-bottom: 16px;
@@ -64,33 +77,61 @@
         .status {
             font-size: 16px;
             color: rgba(255,255,255,0.7);
-            margin-bottom: 32px;
+            margin-bottom: 20px;
             line-height: 1.5;
+            max-width: 340px;
         }
-        .store-btn {
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 320px;
+        }
+        .btn {
             display: inline-block;
-            background: #fff;
-            color: #1a2035;
             font-weight: 700;
-            font-size: 17px;
-            padding: 14px 32px;
+            font-size: 16px;
+            padding: 14px 24px;
             border-radius: 12px;
             text-decoration: none;
-            margin-top: 8px;
-            transition: transform 0.1s;
+            transition: transform 0.1s, opacity 0.15s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
-        .store-btn:active { transform: scale(0.97); }
+        .btn:active { transform: scale(0.97); }
+        .btn-open {
+            background: #2563eb;
+            color: #fff;
+        }
+        .store-btn {
+            background: #fff;
+            color: #1a2035;
+        }
+        .store-btn.primary {
+            background: #2563eb;
+            color: #fff;
+        }
+        .hint {
+            margin-top: 12px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+            max-width: 320px;
+            line-height: 1.4;
+        }
         .footer {
-            margin-top: 48px;
+            margin-top: 40px;
             font-size: 13px;
             color: rgba(255,255,255,0.4);
         }
-        .hidden { display: none; }
+        .footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
-    <div class="icon">&#9918;</div>
-    <h1>Walk-Up Songs</h1>
+    <img class="icon-img" src="/icon.png" width="72" height="72" alt="WalkUp Songs">
+    <h1>WalkUp Songs</h1>
     <div class="player-number hidden" id="playerNumber"></div>
     <div class="player-name" id="playerName">Player Shared With You</div>
     <div class="song-info hidden" id="songInfo">
@@ -98,57 +139,81 @@
         <div class="song-name" id="songName"></div>
         <div class="artist" id="songArtist"></div>
     </div>
-    <p class="status" id="status">Opening Walk-Up Songs…</p>
-    <a class="store-btn hidden" id="storeBtn"
-       href="https://apps.apple.com/app/walk-up-songs/id6760240442">
-        Download on the App Store
-    </a>
-    <a class="store-btn hidden" id="playBtn"
-       href="https://play.google.com/store/apps/details?id=com.walkupsongs.app">
-        Get it on Google Play
-    </a>
-    <p class="footer">Walk-Up Songs &copy; 2026</p>
+    <p class="status" id="status">Opening WalkUp Songs…</p>
 
+    <div class="actions" id="actions">
+        <button type="button" class="btn btn-open" id="openBtn">Open in WalkUp Songs</button>
+        <a class="btn store-btn hidden" id="storeBtn"
+           href="https://apps.apple.com/app/walk-up-songs/id6760240442">
+            Download on the App Store
+        </a>
+        <a class="btn store-btn hidden" id="playBtn"
+           href="https://play.google.com/store/apps/details?id=com.walkupsongs.app">
+            Get it on Google Play
+        </a>
+    </div>
+    <p class="hint hidden" id="hint">
+        If the app doesn’t open, install WalkUp Songs, then return to this link or scan the QR again.
+    </p>
+    <p class="footer">
+        <a href="https://walkupsongs.app/">walkupsongs.app</a> ·
+        <a href="https://walkupsongs.app/support/">Support</a>
+    </p>
+
+    <script src="/js/share-landing.js"></script>
     <script>
-        (function() {
-            var playerData = null;
+        (function () {
+            var W = window.WalkUpShareLanding;
+            var params = new URLSearchParams(window.location.search);
+            var encoded = params.get('data') || (window.location.hash ? window.location.hash.substring(1) : '');
+            var version = params.get('v');
 
-            try {
-                var params = new URLSearchParams(window.location.search);
-                var encoded = params.get('data') || window.location.hash.substring(1);
-                if (encoded) {
-                    var json = atob(encoded);
-                    playerData = JSON.parse(json);
-                }
-            } catch(e) {}
-
-            if (playerData) {
+            function showPlayer(playerData) {
+                if (!playerData) return;
                 var name = ((playerData.firstName || '') + ' ' + (playerData.lastName || '')).trim();
                 if (name) {
                     document.getElementById('playerName').textContent = name;
-                    document.title = 'Walk-Up Songs — ' + name;
+                    document.title = 'WalkUp Songs — ' + name;
                 }
-                if (playerData.number !== undefined) {
+                if (playerData.number !== undefined && playerData.number !== null) {
                     var numEl = document.getElementById('playerNumber');
                     numEl.textContent = '#' + playerData.number;
                     numEl.classList.remove('hidden');
                 }
                 if (playerData.songName) {
-                    var songInfo = document.getElementById('songInfo');
                     document.getElementById('songName').textContent = playerData.songName;
                     if (playerData.songArtist) {
                         document.getElementById('songArtist').textContent = playerData.songArtist;
                     }
-                    songInfo.classList.remove('hidden');
+                    document.getElementById('songInfo').classList.remove('hidden');
                 }
             }
 
-            setTimeout(function() {
+            W.decodeSharePayload(encoded, version).then(showPlayer);
+
+            document.getElementById('openBtn').addEventListener('click', function () {
+                W.openAppNow('player');
+            });
+
+            // Universal Links / App Links usually intercept before this page loads.
+            // If we're here, try custom scheme / Android Intent once, then show stores.
+            if (encoded) {
+                W.tryOpenApp('player');
+            } else {
                 document.getElementById('status').textContent =
-                    'Don\u2019t have Walk-Up Songs yet? Get it free on iOS and Android.';
-                document.getElementById('storeBtn').classList.remove('hidden');
-                document.getElementById('playBtn').classList.remove('hidden');
-            }, 1500);
+                    'This share link is missing player data. Ask the sender to share again.';
+            }
+
+            setTimeout(function () {
+                document.getElementById('status').textContent =
+                    'Don’t have WalkUp Songs yet? Get it free on iOS and Android.';
+                var ios = document.getElementById('storeBtn');
+                var droid = document.getElementById('playBtn');
+                ios.classList.remove('hidden');
+                droid.classList.remove('hidden');
+                document.getElementById('hint').classList.remove('hidden');
+                W.applyStorePriority(ios, droid);
+            }, 1600);
         })();
     </script>
 </body>
