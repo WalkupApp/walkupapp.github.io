@@ -146,6 +146,7 @@
         </a>
     </div>
     <p class="hint hidden" id="hint">
+        This link imports a roster copy into the app — it does not share live game control.
         If the app doesn’t open, install WalkUp Songs, then return to this link or scan the QR again.
     </p>
     <p class="footer">
@@ -166,12 +167,18 @@
                 document.getElementById('teamName').textContent = data.name;
                 document.title = 'WalkUp Songs — ' + data.name;
 
-                if (data.players && data.players.length > 0) {
+                // New shares: everyone in `players` (no inLineup). Legacy: optional `bench`.
+                var players = [];
+                if (data.players && data.players.length) {
+                    players = players.concat(data.players);
+                }
+                if (data.bench && data.bench.length) {
+                    players = players.concat(data.bench);
+                }
+                if (players.length > 0) {
                     var roster = document.getElementById('roster');
                     var list = document.getElementById('rosterList');
                     list.innerHTML = '';
-                    var players = data.players.filter(function (p) { return p.inLineup; });
-                    if (players.length === 0) players = data.players;
 
                     players.slice(0, 12).forEach(function (p) {
                         var div = document.createElement('div');
@@ -182,11 +189,11 @@
                             (first + ' ' + last).trim();
                         list.appendChild(div);
                     });
-                    if (data.players.length > 12) {
+                    if (players.length > 12) {
                         var more = document.createElement('div');
                         more.className = 'player';
                         more.style.color = 'rgba(255,255,255,0.4)';
-                        more.textContent = '+ ' + (data.players.length - 12) + ' more';
+                        more.textContent = '+ ' + (players.length - 12) + ' more';
                         list.appendChild(more);
                     }
                     roster.classList.remove('hidden');
@@ -208,7 +215,7 @@
 
             setTimeout(function () {
                 document.getElementById('status').textContent =
-                    'Don’t have WalkUp Songs yet? Get it free on iOS and Android.';
+                    'Import a one-time roster copy into WalkUp Songs (not live game sync). Get the app free on iOS and Android.';
                 var ios = document.getElementById('storeBtn');
                 var droid = document.getElementById('playBtn');
                 ios.classList.remove('hidden');

@@ -106,16 +106,20 @@
   /**
    * Attempt to hand off to the native app. Call once on load.
    * Shows no error UI; store fallback is the page’s responsibility.
+   *
+   * iOS: Universal Links should intercept before this page; if we are here,
+   * try custom-scheme once. Do NOT auto top-level navigate on iOS (Safari often
+   * shows an error interstitial and drops the query). Prefer the Open button.
    */
   function tryOpenApp(kind) {
     var platform = detectPlatform();
-    var target = platform === 'android' ? androidIntentUrl(kind) : customSchemeUrl(kind);
+    var schemeUrl = customSchemeUrl(kind);
 
     // Hidden iframe avoids some browsers replacing the landing page on failure.
     try {
       var iframe = document.createElement('iframe');
       iframe.style.display = 'none';
-      iframe.src = customSchemeUrl(kind);
+      iframe.src = schemeUrl;
       document.body.appendChild(iframe);
       setTimeout(function () {
         try { document.body.removeChild(iframe); } catch (e) { /* ignore */ }
@@ -125,9 +129,10 @@
     if (platform === 'android') {
       // Intent URLs work best via top-level navigation on Android Chrome.
       setTimeout(function () {
-        window.location.href = target;
+        window.location.href = androidIntentUrl(kind);
       }, 50);
     }
+    // iOS: leave landing visible; user taps "Open in WalkUp Songs" → openAppNow.
   }
 
   function openAppNow(kind) {
