@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta name="description" content="How to cancel a WalkUp Songs subscription on iPhone (App Store) and Android (Google Play).">
+    <meta property="og:title" content="WalkUp Songs — Cancel Subscription">
+    <meta property="og:description" content="Step-by-step instructions to cancel WalkUp Songs on iOS and Android.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app/cancellation">
+    <link rel="canonical" href="https://walkupsongs.app/cancellation/">
+    <title>WalkUp Songs — Cancel Subscription</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy:   #0d1b2a;
+            --blue:   #2563eb;
+            --blue2:  #1d4ed8;
+            --text:   #1e293b;
+            --muted:  #64748b;
+            --border: #e2e8f0;
+            --soft:   #f8fafc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 68px;
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+        .nav-brand img { width: 30px; height: 30px; border-radius: 7px; }
+        .nav-dl {
+            display: inline-flex;
+            align-items: center;
+            background: var(--blue);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .nav-dl:hover { background: var(--blue2); }
+
+        .page-header {
+            background: var(--soft);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 2rem 2.75rem;
+        }
+        .page-header-inner { max-width: 680px; margin: 0 auto; }
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb:hover { text-decoration: underline; }
+        .page-header h1 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+            line-height: 1.1;
+        }
+        .page-subtitle { font-size: 1rem; color: var(--muted); }
+
+        main { padding: 3rem 2rem 5rem; }
+        .content-inner { max-width: 680px; margin: 0 auto; }
+
+        .alert {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            color: #1e40af;
+            line-height: 1.65;
+        }
+        .alert-icon { flex-shrink: 0; font-size: 1.1rem; line-height: 1.5; }
+        .alert strong { color: var(--blue2); }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .platform-card {
+            display: block;
+            text-decoration: none;
+            background: var(--soft);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.15rem;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        .platform-card:hover {
+            border-color: #bfdbfe;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+        }
+        .platform-card strong {
+            display: block;
+            color: var(--navy);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .platform-card span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        .guide-section { margin-bottom: 2.5rem; }
+        .guide-section h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .guide-section h2:first-of-type { border-top: none; padding-top: 0; }
+        .guide-section p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.75;
+            margin-bottom: 0.75rem;
+        }
+        .guide-section a { color: var(--blue); }
+
+        .steps { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 0.875rem; }
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+        .steps li::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .steps li strong { color: var(--text); }
+
+        .tip {
+            background: #eff6ff;
+            border-left: 3px solid var(--blue);
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.875rem;
+            color: #1e40af;
+            line-height: 1.65;
+        }
+        .tip strong { color: var(--blue2); }
+
+        .checklist { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 0.5rem; }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            background: var(--soft);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+        }
+        .check-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.5; }
+        .check-item strong { display: block; color: var(--navy); font-size: 0.9rem; margin-bottom: 0.2rem; }
+        .check-detail { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+        .faq-list { display: flex; flex-direction: column; gap: 0.5rem; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.1rem 1.25rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: left;
+            font-family: inherit;
+            transition: background 0.15s;
+        }
+        .faq-q:hover { background: var(--soft); }
+        .faq-chevron { color: #94a3b8; flex-shrink: 0; transition: transform 0.2s; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-a {
+            display: none;
+            padding: 0 1.25rem 1.1rem;
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.75;
+            border-top: 1px solid var(--border);
+        }
+        .faq-a a { color: var(--blue); }
+        .faq-item.open .faq-a { display: block; }
+
+        footer {
+            background: var(--soft);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem 2rem;
+            margin-bottom: 1.25rem;
+        }
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+        .footer-links a:hover { color: var(--blue); }
+        .footer-copy { font-size: 0.78rem; color: #94a3b8; line-height: 1.8; }
+
+        @media (max-width: 640px) {
+            .page-header { padding: 2rem 1.25rem 1.75rem; }
+            main { padding: 2rem 1.25rem 3rem; }
+            .platform-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">
+                <img src="/icon.png" alt="WalkUp Songs">
+                WalkUp Songs
+            </a>
+            <a href="/#download" class="nav-dl" id="nav-dl-btn">Download Free</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="page-header-inner">
+            <a href="/" class="breadcrumb">← Home</a>
+            <h1>Cancel Subscription</h1>
+            <p class="page-subtitle">How to cancel WalkUp Songs purchases managed by Apple or Google</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-inner">
+
+            <div class="alert">
+                <span class="alert-icon">ℹ️</span>
+                <div><strong>Subscriptions are managed by the store,</strong> not inside WalkUp Songs. Cancel through the App Store on iPhone/iPad or Google Play on Android. Uninstalling the app does <em>not</em> cancel a subscription.</div>
+            </div>
+
+            <div class="platform-grid">
+                <a class="platform-card" href="#ios">
+                    <strong>iPhone / iPad</strong>
+                    <span>Cancel in Apple Settings → Subscriptions</span>
+                </a>
+                <a class="platform-card" href="#android">
+                    <strong>Android</strong>
+                    <span>Cancel in the Google Play Store app</span>
+                </a>
+            </div>
+
+            <div class="guide-section" id="ios">
+                <h2>Cancel on iPhone or iPad</h2>
+                <p>Use the Apple ID that purchased the subscription.</p>
+                <ul class="steps">
+                    <li>Open the <strong>Settings</strong> app.</li>
+                    <li>Tap your name at the top, then tap <strong>Subscriptions</strong>.</li>
+                    <li>Tap <strong>WalkUp Songs</strong> (or the subscription you want to cancel).</li>
+                    <li>Tap <strong>Cancel Subscription</strong>. You may need to scroll down to find it.</li>
+                    <li>Confirm the cancellation when prompted.</li>
+                </ul>
+                <div class="tip">
+                    <strong>Already canceled?</strong> If there’s no Cancel button — or you see a red expiration message — the subscription is already set to end and won’t renew.
+                </div>
+                <p>You can also manage subscriptions in the App Store: tap your profile photo → <strong>Subscriptions</strong>.</p>
+                <p>Official Apple help: <a href="https://support.apple.com/en-us/118428" target="_blank" rel="noopener">Cancel a subscription from Apple</a>.</p>
+            </div>
+
+            <div class="guide-section" id="android">
+                <h2>Cancel on Android</h2>
+                <p>Use the Google account that purchased the subscription.</p>
+                <ul class="steps">
+                    <li>Open the <strong>Google Play Store</strong> app.</li>
+                    <li>Tap your profile icon (top right).</li>
+                    <li>Tap <strong>Payments &amp; subscriptions</strong> → <strong>Subscriptions</strong>.</li>
+                    <li>Select <strong>WalkUp Songs</strong>.</li>
+                    <li>Tap <strong>Cancel subscription</strong> and follow the prompts.</li>
+                </ul>
+                <div class="tip">
+                    <strong>Important:</strong> Deleting the app from your phone does not stop billing. You must cancel in Google Play.
+                </div>
+                <p>Official Google help: <a href="https://support.google.com/googleplay/answer/7018481" target="_blank" rel="noopener">Cancel a subscription on Google Play</a>.</p>
+            </div>
+
+            <div class="guide-section">
+                <h2>What happens after you cancel</h2>
+                <div class="checklist">
+                    <div class="check-item">
+                        <span class="check-icon">📅</span>
+                        <div>
+                            <strong>Access continues until the period ends</strong>
+                            <span class="check-detail">You’ll usually keep premium features until the end of the current billing period. You won’t be charged again after that.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">🧾</span>
+                        <div>
+                            <strong>One-time purchases don’t renew</strong>
+                            <span class="check-detail">Things like Remove Ads are one-time purchases — there’s nothing to cancel. They stay on your account.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">🎵</span>
+                        <div>
+                            <strong>Apple Music / Spotify are separate</strong>
+                            <span class="check-detail">Those are billed by Apple or Spotify, not as a WalkUp Songs subscription. Cancel them in their own account settings if needed.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            I don’t see WalkUp Songs under Subscriptions
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Make sure you’re signed in with the same Apple ID or Google account used for the purchase. On a family plan, the organizer’s account may manage the subscription. If you only bought Remove Ads, it won’t appear under Subscriptions because it’s not a recurring charge.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Can WalkUp Songs cancel it for me?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">No. Apple and Google require subscriptions to be canceled by the account holder in the App Store or Google Play. We can’t cancel store billing on your behalf.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            How do I request a refund?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Refunds are handled by Apple or Google. For Apple: <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">reportaproblem.apple.com</a>. For Google Play: open the Play Store → profile → Payments &amp; subscriptions → Budget &amp; history, find the charge, and request a refund if available.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Still need help?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Email <a href="mailto:walkupmusicapp@gmail.com">walkupmusicapp@gmail.com</a> with your platform (iOS or Android) and a screenshot of what you see under Subscriptions — we’ll help point you in the right direction.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/support/">Support &amp; FAQ</a>
+                <a href="/local-files/">Local Files Guide</a>
+                <a href="/spotify/">Spotify Setup</a>
+                <a href="/privacy/">Privacy Policy</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 WalkUp Songs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggle(btn) {
+            btn.closest('.faq-item').classList.toggle('open');
+        }
+    </script>
+    <script>
+    (function() {
+        var btn = document.getElementById('nav-dl-btn');
+        if (!btn) return;
+        var ua = navigator.userAgent || '';
+        if (/android/i.test(ua)) {
+            btn.href = 'https://play.google.com/store/apps/details?id=com.walkupsongs.app';
+            btn.target = '_blank'; btn.rel = 'noopener';
+        } else if (/iphone|ipad|ipod/i.test(ua)) {
+            btn.href = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
+            btn.target = '_blank'; btn.rel = 'noopener';
+        } else {
+            btn.href = '/#download';
+        }
+    })();
+    </script>
+
+</body>
+</html>

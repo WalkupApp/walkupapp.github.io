@@ -56,6 +56,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://walkupsongs.app/cancellation/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
     <loc>https://walkupsongs.app/spotify/</loc>
     <lastmod>2025-04-20</lastmod>
     <priority>0.6</priority>
