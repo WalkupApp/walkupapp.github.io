@@ -339,6 +339,13 @@
             margin-bottom: 1rem;
         }
         .details p:last-child { margin-bottom: 0; }
+        .details a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+        .details-note {
+            margin-top: 1.25rem;
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
 
         /* ── Testimonials ── */
         .testimonials {
@@ -687,10 +694,11 @@
             <h2>How it works</h2>
             <ol>
                 <li>Build your lineup — add players with their name, number, and position.</li>
-                <li>Pick a walk-up song for each player from Apple Music, YouTube, or your own files. (<a href="/local-files/" style="color:var(--blue)">Local files are often best for game day</a>.)</li>
+                <li>Pick a walk-up song for each player from Apple Music, YouTube, or <a href="/local-files/">your own files</a>.</li>
                 <li>On game day, tap a player's name to instantly play their walk-up song through your speaker.</li>
                 <li>Add AI announcer intros, soundboard effects, and inning-break DJ sets to complete the experience.</li>
             </ol>
+            <p class="details-note">Tip: <a href="/local-files/">Local files</a> are often best for game day — offline, no streaming fee, and better fade control.</p>
         </div>
         <div class="details-block why-section">
             <h2>Why WalkUp Songs?</h2>

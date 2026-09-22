@@ -166,6 +166,42 @@
         .check-item strong { display: block; color: var(--navy); font-size: 0.9rem; margin-bottom: 0.2rem; }
         .check-detail { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
 
+        .tip-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            margin: 1rem 0 0.5rem;
+        }
+        .tip-card {
+            background: var(--soft);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.15rem;
+        }
+        .tip-card strong {
+            display: block;
+            color: var(--navy);
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+            line-height: 1.35;
+        }
+        .tip-card p {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+        .tip-card em {
+            font-style: normal;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.8rem;
+            color: var(--text);
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.05rem 0.35rem;
+        }
+
         .steps { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 0.875rem; }
         .steps li {
             counter-increment: step;
@@ -205,27 +241,6 @@
             line-height: 1.65;
         }
         .tip strong { color: var(--blue2); }
-
-        .compare {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-            margin: 1rem 0 1.5rem;
-        }
-        .compare th, .compare td {
-            border: 1px solid var(--border);
-            padding: 0.7rem 0.85rem;
-            text-align: left;
-            vertical-align: top;
-        }
-        .compare th {
-            background: var(--soft);
-            color: var(--navy);
-            font-weight: 700;
-        }
-        .compare td { color: var(--muted); }
-        .compare .yes { color: #15803d; font-weight: 600; }
-        .compare .no { color: #b91c1c; font-weight: 600; }
 
         .faq-list { display: flex; flex-direction: column; gap: 0.5rem; }
         .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -291,8 +306,7 @@
         @media (max-width: 640px) {
             .page-header { padding: 2rem 1.25rem 1.75rem; }
             main { padding: 2rem 1.25rem 3rem; }
-            .compare { font-size: 0.78rem; }
-            .compare th, .compare td { padding: 0.55rem 0.6rem; }
+            .tip-grid { grid-template-columns: 1fr; gap: 0.75rem; }
         }
     </style>
 </head>
@@ -364,43 +378,6 @@
                     </div>
                 </div>
 
-                <table class="compare">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Local files</th>
-                            <th>Apple Music / YouTube</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Offline at the field</td>
-                            <td class="yes">Yes</td>
-                            <td class="no">Usually no*</td>
-                        </tr>
-                        <tr>
-                            <td>Subscription needed</td>
-                            <td class="yes">No</td>
-                            <td class="no">Often yes</td>
-                        </tr>
-                        <tr>
-                            <td>Fade in / fade out control</td>
-                            <td class="yes">Best</td>
-                            <td>Limited / varies</td>
-                        </tr>
-                        <tr>
-                            <td>Start-time precision</td>
-                            <td class="yes">Excellent</td>
-                            <td>Good, but can stutter</td>
-                        </tr>
-                        <tr>
-                            <td>Setup effort</td>
-                            <td>One-time import</td>
-                            <td class="yes">Faster search</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="font-size:0.8rem;color:#94a3b8;margin-top:-0.75rem;">*Apple Music offline downloads and YouTube Premium offline can help, but local files are still the most predictable under dugout conditions.</p>
             </div>
 
             <div class="guide-section">
@@ -413,12 +390,30 @@
                 <h2>Where to get the audio files</h2>
                 <p>Prefer sources you’re allowed to use. Walk-up music at youth games is short and local, but copyright still applies — especially if you post recordings online.</p>
 
-                <h3>Best / cleanest options</h3>
-                <ul class="steps">
-                    <li><strong>Buy or already own the track</strong> — purchase from iTunes, Amazon, Bandcamp, etc., or rip a CD you own.</li>
-                    <li><strong>Ask families for a short clip</strong> — parents often already have the kid’s favorite song as an MP3.</li>
-                    <li><strong>Royalty-free / custom intros</strong> — great for teams that want zero copyright stress; pair with the app’s AI announcer.</li>
-                </ul>
+                <h3>Recommended sources</h3>
+                <div class="checklist">
+                    <div class="check-item">
+                        <span class="check-icon">🛒</span>
+                        <div>
+                            <strong>Buy or own the track</strong>
+                            <span class="check-detail">Purchase from iTunes, Amazon, Bandcamp, and similar stores — or rip a CD you already own.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">👨‍👩‍👧</span>
+                        <div>
+                            <strong>Ask families for a short clip</strong>
+                            <span class="check-detail">Parents often already have their kid’s favorite song as an MP3 and can text or email it over.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">🎵</span>
+                        <div>
+                            <strong>Royalty-free or custom audio</strong>
+                            <span class="check-detail">A solid choice for teams that want zero copyright stress. Pair with the app’s AI announcer for a full intro.</span>
+                        </div>
+                    </div>
+                </div>
 
                 <h3>YouTube → MP3 (common, but be careful)</h3>
                 <div class="alert alert-warn" style="margin:1rem 0 1.25rem">
@@ -426,12 +421,24 @@
                     <div><strong>Copyright &amp; safety note.</strong> Downloading audio from YouTube can violate YouTube’s terms and may infringe copyright depending on the track and how you use it. Random “free MP3 converter” websites are also a common source of adware and malware. Use legal sources when you can, and only convert content you’re allowed to use.</div>
                 </div>
                 <p>If you still choose to convert a YouTube video to audio for personal/team use:</p>
-                <ul class="steps">
-                    <li><strong>Desktop tools are safer than random websites</strong> — many coaches use a local converter on a computer (search for reputable open-source downloaders like <em>yt-dlp</em>) instead of shady online converters.</li>
-                    <li><strong>Browser extensions / online converters exist</strong> — you’ll find many “YouTube to MP3” extensions and sites if you search. Quality and safety vary wildly. Avoid anything that pushes weird permissions, pop-up downloads, or “enable notifications” traps.</li>
-                    <li><strong>Prefer short clips</strong> — export only the walk-up section (often 12–20 seconds). Smaller files, clearer starts, fewer surprises.</li>
-                    <li><strong>Check the audio</strong> — open the MP3 on your computer and confirm it’s the right moment before you load nine players’ songs on the phone.</li>
-                </ul>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <strong>Prefer a desktop tool</strong>
+                        <p>A local converter on a computer is safer than random websites. Search for reputable open-source options like <em>yt-dlp</em> instead of shady online converters.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Be careful with extensions &amp; sites</strong>
+                        <p>“YouTube to MP3” extensions and converters vary wildly. Skip anything that pushes weird permissions, pop-up downloads, or “enable notifications” traps.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Export a short clip</strong>
+                        <p>Keep only the walk-up section — usually 12–20 seconds. Smaller files, clearer starts, fewer surprises on game day.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Listen before you import</strong>
+                        <p>Open the MP3 on your computer and confirm it’s the right moment before loading the whole lineup onto the phone.</p>
+                    </div>
+                </div>
                 <div class="tip">
                     <strong>Pro tip:</strong> After converting, trim the file in a free editor (Audacity, CapCut, or a phone audio trimmer) so the file <em>starts</em> on the chorus. Then you barely need start-offset fiddling in the app.
                 </div>
@@ -497,6 +504,13 @@
                         <div>
                             <strong>Keep a backup set of files</strong>
                             <span class="check-detail">Store the team’s MP3 folder in Google Drive or iCloud. If a phone dies mid-season, you’re back online in minutes.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">⬇️</span>
+                        <div>
+                            <strong>Mark files “Keep Downloaded”</strong>
+                            <span class="check-detail">On iPhone, open the Files app, long-press each song (or the whole folder), and choose <em>Keep Downloaded</em> so iCloud doesn’t offload them to the cloud. Without that, a song can look available at home and then fail at the field with no signal. On Android, download files to device storage (Downloads / Music) instead of leaving them cloud-only.</span>
                         </div>
                     </div>
                     <div class="check-item">
