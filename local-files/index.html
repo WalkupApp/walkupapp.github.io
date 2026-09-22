@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6760240442">
+    <meta name="description" content="Use local audio files with WalkUp Songs for offline, reliable walk-up music on iOS and Android — better fade control, no streaming fees, and no field Wi‑Fi required.">
+    <meta property="og:title" content="WalkUp Songs — Local Files Guide">
+    <meta property="og:description" content="Why local files beat streaming for game day, and how to import MP3s on iPhone and Android.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walkupsongs.app/local-files">
+    <link rel="canonical" href="https://walkupsongs.app/local-files/">
+    <title>WalkUp Songs — Local Files Guide</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy:   #0d1b2a;
+            --blue:   #2563eb;
+            --blue2:  #1d4ed8;
+            --text:   #1e293b;
+            --muted:  #64748b;
+            --border: #e2e8f0;
+            --soft:   #f8fafc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 68px;
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+        .nav-brand img { width: 30px; height: 30px; border-radius: 7px; }
+        .nav-dl {
+            display: inline-flex;
+            align-items: center;
+            background: var(--blue);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .nav-dl:hover { background: var(--blue2); }
+
+        .page-header {
+            background: var(--soft);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 2rem 2.75rem;
+        }
+        .page-header-inner { max-width: 680px; margin: 0 auto; }
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb:hover { text-decoration: underline; }
+        .page-header h1 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+            line-height: 1.1;
+        }
+        .page-subtitle { font-size: 1rem; color: var(--muted); }
+
+        main { padding: 3rem 2rem 5rem; }
+        .content-inner { max-width: 680px; margin: 0 auto; }
+
+        .alert {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            color: #1e40af;
+            line-height: 1.65;
+        }
+        .alert-warn {
+            background: #fefce8;
+            border-color: #fde68a;
+            color: #78350f;
+        }
+        .alert-warn strong { color: #92400e; }
+        .alert-icon { flex-shrink: 0; font-size: 1.1rem; line-height: 1.5; }
+        .alert strong { color: var(--blue2); }
+
+        .guide-section { margin-bottom: 2.5rem; }
+        .guide-section h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .guide-section h2:first-of-type { border-top: none; padding-top: 0; }
+        .guide-section h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 1.35rem 0 0.6rem;
+        }
+        .guide-section p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.75;
+            margin-bottom: 0.75rem;
+        }
+        .guide-section a { color: var(--blue); }
+
+        .checklist { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 0.5rem; }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            background: var(--soft);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+        }
+        .check-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.5; }
+        .check-item strong { display: block; color: var(--navy); font-size: 0.9rem; margin-bottom: 0.2rem; }
+        .check-detail { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+        .steps { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 0.875rem; }
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+        .steps li::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .steps li strong { color: var(--text); }
+
+        .tip {
+            background: #eff6ff;
+            border-left: 3px solid var(--blue);
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.875rem;
+            color: #1e40af;
+            line-height: 1.65;
+        }
+        .tip strong { color: var(--blue2); }
+
+        .compare {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .compare th, .compare td {
+            border: 1px solid var(--border);
+            padding: 0.7rem 0.85rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        .compare th {
+            background: var(--soft);
+            color: var(--navy);
+            font-weight: 700;
+        }
+        .compare td { color: var(--muted); }
+        .compare .yes { color: #15803d; font-weight: 600; }
+        .compare .no { color: #b91c1c; font-weight: 600; }
+
+        .faq-list { display: flex; flex-direction: column; gap: 0.5rem; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.1rem 1.25rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: left;
+            font-family: inherit;
+            transition: background 0.15s;
+        }
+        .faq-q:hover { background: var(--soft); }
+        .faq-chevron { color: #94a3b8; flex-shrink: 0; transition: transform 0.2s; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-a {
+            display: none;
+            padding: 0 1.25rem 1.1rem;
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.75;
+            border-top: 1px solid var(--border);
+        }
+        .faq-a a { color: var(--blue); }
+        .faq-item.open .faq-a { display: block; }
+
+        .cta {
+            text-align: center;
+            padding: 2.5rem 0 1rem;
+        }
+        .cta p { font-size: 1rem; color: var(--muted); margin-bottom: 1.25rem; }
+        .store-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; align-items: center; }
+        .store-badges img { height: 52px; transition: opacity 0.2s; }
+        .store-badges a:hover img { opacity: 0.8; }
+        .badge-gp { height: 74px !important; margin: -11px 0 !important; }
+
+        footer {
+            background: var(--soft);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem 2rem;
+            margin-bottom: 1.25rem;
+        }
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+        .footer-links a:hover { color: var(--blue); }
+        .footer-copy { font-size: 0.78rem; color: #94a3b8; line-height: 1.8; }
+
+        @media (max-width: 640px) {
+            .page-header { padding: 2rem 1.25rem 1.75rem; }
+            main { padding: 2rem 1.25rem 3rem; }
+            .compare { font-size: 0.78rem; }
+            .compare th, .compare td { padding: 0.55rem 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">
+                <img src="/icon.png" alt="WalkUp Songs">
+                WalkUp Songs
+            </a>
+            <a href="/#download" class="nav-dl" id="nav-dl-btn">Download Free</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="page-header-inner">
+            <a href="/" class="breadcrumb">← Home</a>
+            <h1>Local Files Guide</h1>
+            <p class="page-subtitle">The most reliable way to run walk-up songs on game day — iOS &amp; Android</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-inner">
+
+            <div class="alert">
+                <span class="alert-icon">💡</span>
+                <div><strong>Recommended for most teams.</strong> Local audio files play offline, don’t need a streaming subscription, and give WalkUp Songs full control over start time, duration, and fade in/out — which streaming sources often can’t match.</div>
+            </div>
+
+            <div class="guide-section">
+                <h2>Why local files beat streaming at the field</h2>
+                <div class="checklist">
+                    <div class="check-item">
+                        <span class="check-icon">📴</span>
+                        <div>
+                            <strong>Works offline</strong>
+                            <span class="check-detail">Ballfields often have spotty or no cell service. Once the MP3 is on your phone, playback doesn’t need Wi‑Fi or data.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">💵</span>
+                        <div>
+                            <strong>No streaming fee required</strong>
+                            <span class="check-detail">You don’t need Apple Music, YouTube Premium, or Spotify Premium just to play walk-up songs. Free to set up and free to run on game day.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">🎚️</span>
+                        <div>
+                            <strong>Better fade &amp; timing control</strong>
+                            <span class="check-detail">Local files let WalkUp Songs start at the exact second you choose and fade in/out cleanly. Streaming APIs are often more limited or less predictable with fades.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">✅</span>
+                        <div>
+                            <strong>More reliable on game day</strong>
+                            <span class="check-detail">No buffering, no account login surprises, no “song unavailable in your region,” and no second-device Spotify dance. Tap → play.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">✂️</span>
+                        <div>
+                            <strong>You can pre-trim the perfect 12–20 seconds</strong>
+                            <span class="check-detail">Edit the clip at home so only the chorus/drop is in the file — then game day is dead simple.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="compare">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Local files</th>
+                            <th>Apple Music / YouTube</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Offline at the field</td>
+                            <td class="yes">Yes</td>
+                            <td class="no">Usually no*</td>
+                        </tr>
+                        <tr>
+                            <td>Subscription needed</td>
+                            <td class="yes">No</td>
+                            <td class="no">Often yes</td>
+                        </tr>
+                        <tr>
+                            <td>Fade in / fade out control</td>
+                            <td class="yes">Best</td>
+                            <td>Limited / varies</td>
+                        </tr>
+                        <tr>
+                            <td>Start-time precision</td>
+                            <td class="yes">Excellent</td>
+                            <td>Good, but can stutter</td>
+                        </tr>
+                        <tr>
+                            <td>Setup effort</td>
+                            <td>One-time import</td>
+                            <td class="yes">Faster search</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size:0.8rem;color:#94a3b8;margin-top:-0.75rem;">*Apple Music offline downloads and YouTube Premium offline can help, but local files are still the most predictable under dugout conditions.</p>
+            </div>
+
+            <div class="guide-section">
+                <h2>What file types work?</h2>
+                <p>Most teams use <strong>MP3</strong>. Also commonly supported: <strong>M4A</strong>, <strong>WAV</strong>, and <strong>AAC</strong>. Stick with MP3 if you’re unsure — it’s universal on both iPhone and Android.</p>
+                <p>Name files clearly before you import, e.g. <em>22-sandy-we-will-rock-you.mp3</em>, so they’re easy to find in the picker.</p>
+            </div>
+
+            <div class="guide-section">
+                <h2>Where to get the audio files</h2>
+                <p>Prefer sources you’re allowed to use. Walk-up music at youth games is short and local, but copyright still applies — especially if you post recordings online.</p>
+
+                <h3>Best / cleanest options</h3>
+                <ul class="steps">
+                    <li><strong>Buy or already own the track</strong> — purchase from iTunes, Amazon, Bandcamp, etc., or rip a CD you own.</li>
+                    <li><strong>Ask families for a short clip</strong> — parents often already have the kid’s favorite song as an MP3.</li>
+                    <li><strong>Royalty-free / custom intros</strong> — great for teams that want zero copyright stress; pair with the app’s AI announcer.</li>
+                </ul>
+
+                <h3>YouTube → MP3 (common, but be careful)</h3>
+                <div class="alert alert-warn" style="margin:1rem 0 1.25rem">
+                    <span class="alert-icon">⚠️</span>
+                    <div><strong>Copyright &amp; safety note.</strong> Downloading audio from YouTube can violate YouTube’s terms and may infringe copyright depending on the track and how you use it. Random “free MP3 converter” websites are also a common source of adware and malware. Use legal sources when you can, and only convert content you’re allowed to use.</div>
+                </div>
+                <p>If you still choose to convert a YouTube video to audio for personal/team use:</p>
+                <ul class="steps">
+                    <li><strong>Desktop tools are safer than random websites</strong> — many coaches use a local converter on a computer (search for reputable open-source downloaders like <em>yt-dlp</em>) instead of shady online converters.</li>
+                    <li><strong>Browser extensions / online converters exist</strong> — you’ll find many “YouTube to MP3” extensions and sites if you search. Quality and safety vary wildly. Avoid anything that pushes weird permissions, pop-up downloads, or “enable notifications” traps.</li>
+                    <li><strong>Prefer short clips</strong> — export only the walk-up section (often 12–20 seconds). Smaller files, clearer starts, fewer surprises.</li>
+                    <li><strong>Check the audio</strong> — open the MP3 on your computer and confirm it’s the right moment before you load nine players’ songs on the phone.</li>
+                </ul>
+                <div class="tip">
+                    <strong>Pro tip:</strong> After converting, trim the file in a free editor (Audacity, CapCut, or a phone audio trimmer) so the file <em>starts</em> on the chorus. Then you barely need start-offset fiddling in the app.
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>Get the files onto your phone</h2>
+
+                <h3>iPhone / iPad</h3>
+                <ul class="steps">
+                    <li><strong>AirDrop or Files app</strong> — send the MP3 from a Mac/PC, or save it into the Files app (iCloud Drive or On My iPhone).</li>
+                    <li><strong>Email / Messages</strong> — send the file to yourself, open the attachment, tap Share → Save to Files.</li>
+                    <li><strong>Google Drive / Dropbox</strong> — download the file to Files / Downloads so WalkUp Songs can pick it.</li>
+                    <li><strong>Computer sync (optional)</strong> — add songs to the Music app via Finder/iTunes, then choose them from Music Library in WalkUp Songs.</li>
+                </ul>
+
+                <h3>Android</h3>
+                <ul class="steps">
+                    <li><strong>Downloads folder</strong> — download the MP3 in Chrome; it usually lands in <em>Downloads</em>.</li>
+                    <li><strong>USB from a computer</strong> — plug in the phone, copy MP3s into <em>Music</em> or <em>Download</em>.</li>
+                    <li><strong>Drive / email / messaging</strong> — open the attachment and tap Download / Save.</li>
+                    <li><strong>Keep them in one folder</strong> — e.g. a “WalkUp Songs” folder makes picking files much faster on game week.</li>
+                </ul>
+            </div>
+
+            <div class="guide-section">
+                <h2>How to add a local file in WalkUp Songs</h2>
+                <ul class="steps">
+                    <li>Open your team and tap the player.</li>
+                    <li>Choose the option to set / change their walk-up song.</li>
+                    <li>Select <strong>Local file</strong>, <strong>Files</strong>, or <strong>Music Library</strong> (wording can vary slightly by platform).</li>
+                    <li>Pick the MP3 from Files / Downloads / your music library.</li>
+                    <li>Set the <strong>start time</strong>, <strong>duration</strong>, and <strong>fade out</strong> so the best 12–20 seconds play every at-bat.</li>
+                    <li>Tap play once at home (or in the parking lot) to confirm volume and timing before first pitch.</li>
+                </ul>
+                <div class="tip">
+                    <strong>Android tip:</strong> If the file picker doesn’t show your song, confirm it’s an MP3/M4A in Downloads or Music, then try the system file browser. Grant storage / media permission if Android asks.
+                </div>
+                <div class="tip">
+                    <strong>iOS tip:</strong> If you imported via the Files app, browse <em>On My iPhone</em> or iCloud Drive inside the picker. If you synced through the Music app, use Music Library instead.
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>Game-day tips that make local files shine</h2>
+                <div class="checklist">
+                    <div class="check-item">
+                        <span class="check-icon">🔋</span>
+                        <div>
+                            <strong>Do the setup at home</strong>
+                            <span class="check-detail">Import every player’s song the night before. Game day should only be Bluetooth + Play Ball.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">🔊</span>
+                        <div>
+                            <strong>Connect the speaker early</strong>
+                            <span class="check-detail">Pair Bluetooth before warmups. Local playback is rock-solid once the phone and speaker are talking.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">🗂️</span>
+                        <div>
+                            <strong>Keep a backup set of files</strong>
+                            <span class="check-detail">Store the team’s MP3 folder in Google Drive or iCloud. If a phone dies mid-season, you’re back online in minutes.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">📵</span>
+                        <div>
+                            <strong>Turn on airplane mode + Bluetooth (optional)</strong>
+                            <span class="check-detail">Prevents surprise calls/notifications from interrupting playback while still allowing your speaker connection.</span>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <span class="check-icon">⌚</span>
+                        <div>
+                            <strong>Pair with Apple Watch if you have one</strong>
+                            <span class="check-detail">Local songs still play from the phone/speaker — the watch is just a convenient trigger from the dugout.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Do I still need Apple Music or YouTube if I use local files?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">No. Local files are a complete path by themselves. Many coaches use only local files all season.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Why do fades work better with local files?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">When the audio file lives on your device, WalkUp Songs can control playback directly — including volume ramps for fade in/out. Streaming services often restrict or delay that kind of low-level control.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            What’s the best length for a walk-up clip?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Most teams land around 12–20 seconds — long enough for the walk from the on-deck circle, short enough to stop cleanly as the pitcher starts. Use the app’s duration and fade-out settings, or pre-trim the MP3.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Can I mix local files and streaming songs on the same team?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Yes. Some players can use local files while others use Apple Music or YouTube. For reliability, many coaches eventually move everyone to local files.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            The file picker can’t find my song — what now?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Confirm the file is actually on the device (not only in a cloud preview). On iOS, save it to Files first. On Android, put it in Downloads or Music and grant media permission. Try renaming to a simple .mp3 filename with no special characters.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Is downloading from YouTube legal?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">It depends on the content and your local laws, and it often conflicts with YouTube’s terms of service. We can’t give legal advice — when in doubt, buy the track, use music you own, or use royalty-free audio. We’re describing a common workflow coaches ask about, not encouraging copyright infringement.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggle(this)">
+                            Still stuck?
+                            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-a">Email <a href="mailto:walkupmusicapp@gmail.com">walkupmusicapp@gmail.com</a> with your device type (iPhone/Android) and a screenshot of where you’re stuck — we’re happy to help.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta">
+                <p>Ready to load your lineup with local files?</p>
+                <div class="store-badges">
+                    <a href="https://apps.apple.com/app/walk-up-songs/id6760240442" target="_blank" rel="noopener">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.walkupsongs.app" target="_blank" rel="noopener">
+                        <img class="badge-gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/support/">Support &amp; FAQ</a>
+                <a href="/spotify/">Spotify Setup</a>
+                <a href="/privacy/">Privacy Policy</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 WalkUp Songs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggle(btn) {
+            btn.closest('.faq-item').classList.toggle('open');
+        }
+    </script>
+    <script>
+    (function() {
+        var btn = document.getElementById('nav-dl-btn');
+        if (!btn) return;
+        var ua = navigator.userAgent || '';
+        if (/android/i.test(ua)) {
+            btn.href = 'https://play.google.com/store/apps/details?id=com.walkupsongs.app';
+            btn.target = '_blank'; btn.rel = 'noopener';
+        } else if (/iphone|ipad|ipod/i.test(ua)) {
+            btn.href = 'https://apps.apple.com/app/walk-up-songs/id6760240442';
+            btn.target = '_blank'; btn.rel = 'noopener';
+        } else {
+            btn.href = '/#download';
+        }
+    })();
+    </script>
+
+</body>
+</html>
