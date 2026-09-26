@@ -56,6 +56,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://walkupsongs.app/share-team/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://walkupsongs.app/cancellation/</loc>
     <lastmod>2026-09-22</lastmod>
     <priority>0.6</priority>
