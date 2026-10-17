@@ -1,0 +1,2359 @@
+{
+  "format": "walkupsongs.songs.v1",
+  "version": 1,
+  "updated": "2026-10-16T16:00:00Z",
+  "minAppVersion": "1.0.0",
+  "inningBreak": [
+    {
+      "artist": "Queen",
+      "song": "We Will Rock You",
+      "explicit": false,
+      "appleMusicId": "6781074741",
+      "offset": 21,
+      "weight": 5,
+      "year": 1977
+    },
+    {
+      "artist": "Queen",
+      "song": "We Are the Champions",
+      "explicit": false,
+      "appleMusicId": "6781074743",
+      "offset": 22,
+      "weight": 4,
+      "year": 1977
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Thunderstruck",
+      "explicit": false,
+      "appleMusicId": "575998661",
+      "offset": 0,
+      "weight": 5,
+      "year": 1990
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Back in Black",
+      "explicit": false,
+      "appleMusicId": "574050602",
+      "offset": 0,
+      "weight": 4,
+      "year": 1980
+    },
+    {
+      "artist": "AC/DC",
+      "song": "T.N.T.",
+      "explicit": false,
+      "appleMusicId": "574124824",
+      "offset": 10,
+      "weight": 3,
+      "year": 1975
+    },
+    {
+      "artist": "Guns N' Roses",
+      "song": "Welcome to the Jungle",
+      "explicit": false,
+      "appleMusicId": "1377826728",
+      "offset": 0,
+      "weight": 4,
+      "year": 1987
+    },
+    {
+      "artist": "Guns N' Roses",
+      "song": "Paradise City",
+      "explicit": false,
+      "appleMusicId": "1377813298",
+      "offset": 0,
+      "weight": 3,
+      "year": 1987
+    },
+    {
+      "artist": "Metallica",
+      "song": "Enter Sandman",
+      "explicit": false,
+      "appleMusicId": "1572051818",
+      "offset": 4,
+      "weight": 5,
+      "year": 1991
+    },
+    {
+      "artist": "Ozzy Osbourne",
+      "song": "Crazy Train",
+      "explicit": false,
+      "appleMusicId": "1531535287",
+      "offset": 0,
+      "weight": 5,
+      "year": 1980
+    },
+    {
+      "artist": "Survivor",
+      "song": "Eye of the Tiger",
+      "explicit": false,
+      "appleMusicId": "254685026",
+      "offset": 0,
+      "weight": 4,
+      "year": 1982
+    },
+    {
+      "artist": "Journey",
+      "song": "Don't Stop Believin'",
+      "explicit": false,
+      "appleMusicId": "169003415",
+      "offset": 0,
+      "weight": 4,
+      "year": 1981
+    },
+    {
+      "artist": "Neil Diamond",
+      "song": "Sweet Caroline",
+      "explicit": false,
+      "appleMusicId": "1422721989",
+      "offset": 19,
+      "weight": 5,
+      "year": 1969
+    },
+    {
+      "artist": "John Denver",
+      "song": "Take Me Home, Country Roads",
+      "explicit": false,
+      "appleMusicId": "1482520559",
+      "offset": 12,
+      "weight": 4,
+      "year": 1971
+    },
+    {
+      "artist": "Van Halen",
+      "song": "Jump",
+      "explicit": false,
+      "appleMusicId": "976832495",
+      "offset": 0,
+      "weight": 3,
+      "year": 1984
+    },
+    {
+      "artist": "Bon Jovi",
+      "song": "Livin' on a Prayer",
+      "explicit": false,
+      "appleMusicId": "1422955211",
+      "offset": 22,
+      "weight": 4,
+      "year": 1986
+    },
+    {
+      "artist": "AC/DC",
+      "song": "You Shook Me All Night Long",
+      "explicit": false,
+      "appleMusicId": "576003085",
+      "offset": 19,
+      "weight": 3,
+      "year": 1980
+    },
+    {
+      "artist": "The Rolling Stones",
+      "song": "Start Me Up",
+      "explicit": false,
+      "appleMusicId": "1584861495",
+      "offset": 0,
+      "weight": 3,
+      "year": 1981
+    },
+    {
+      "artist": "KISS",
+      "song": "Rock and Roll All Nite",
+      "explicit": false,
+      "appleMusicId": "1843771261",
+      "offset": 0,
+      "weight": 3,
+      "year": 1975
+    },
+    {
+      "artist": "Dropkick Murphys",
+      "song": "Shipping Up to Boston",
+      "explicit": false,
+      "appleMusicId": "1485050464",
+      "offset": 2,
+      "weight": 4,
+      "year": 2005
+    },
+    {
+      "artist": "The White Stripes",
+      "song": "Seven Nation Army",
+      "explicit": false,
+      "appleMusicId": "1533513537",
+      "offset": 0,
+      "weight": 5,
+      "year": 2003
+    },
+    {
+      "artist": "Golden Earring",
+      "song": "Twilight Zone",
+      "explicit": false,
+      "appleMusicId": "98590213",
+      "offset": 10,
+      "weight": 2,
+      "year": 1982
+    },
+    {
+      "artist": "Scorpions",
+      "song": "Rock You Like a Hurricane",
+      "explicit": false,
+      "appleMusicId": "1425261763",
+      "offset": 0,
+      "weight": 3,
+      "year": 1984
+    },
+    {
+      "artist": "Def Leppard",
+      "song": "Pour Some Sugar on Me",
+      "explicit": false,
+      "appleMusicId": "1438626355",
+      "offset": 16,
+      "weight": 3,
+      "year": 1987
+    },
+    {
+      "artist": "Europe",
+      "song": "The Final Countdown",
+      "explicit": false,
+      "appleMusicId": "196480329",
+      "offset": 0,
+      "weight": 3,
+      "year": 1986
+    },
+    {
+      "artist": "Mötley Crüe",
+      "song": "Kickstart My Heart",
+      "explicit": false,
+      "appleMusicId": "1764396024",
+      "offset": 0,
+      "weight": 3,
+      "year": 1989
+    },
+    {
+      "artist": "Styx",
+      "song": "Renegade",
+      "explicit": false,
+      "appleMusicId": "1440911577",
+      "offset": 2,
+      "weight": 3,
+      "year": 1978
+    },
+    {
+      "artist": "Eminem",
+      "song": "Lose Yourself",
+      "explicit": true,
+      "appleMusicId": "1440903439",
+      "offset": 21,
+      "weight": 4,
+      "year": 2002
+    },
+    {
+      "artist": "DJ Khaled",
+      "song": "All I Do Is Win",
+      "explicit": true,
+      "appleMusicId": "353859978",
+      "offset": 10,
+      "weight": 4,
+      "year": 2010
+    },
+    {
+      "artist": "T.I. ft. Rihanna",
+      "song": "Live Your Life",
+      "explicit": false,
+      "appleMusicId": "1258981727",
+      "offset": 23,
+      "weight": 4,
+      "year": 2008
+    },
+    {
+      "artist": "BABYMETAL",
+      "song": "RATATATA",
+      "explicit": true,
+      "appleMusicId": "1746116468",
+      "offset": 29,
+      "weight": 4,
+      "year": 2023
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "HUMBLE.",
+      "explicit": true,
+      "appleMusicId": "1440882165",
+      "offset": 3,
+      "weight": 3,
+      "year": 2017
+    },
+    {
+      "artist": "Kanye West",
+      "song": "Stronger",
+      "explicit": true,
+      "appleMusicId": "1442846328",
+      "offset": 44,
+      "weight": 3,
+      "year": 2007
+    },
+    {
+      "artist": "House of Pain",
+      "song": "Jump Around",
+      "explicit": true,
+      "appleMusicId": "1604628161",
+      "offset": 2,
+      "weight": 4,
+      "year": 1992
+    },
+    {
+      "artist": "Macklemore & Ryan Lewis",
+      "song": "Can't Hold Us",
+      "explicit": true,
+      "appleMusicId": "560097694",
+      "offset": 21,
+      "weight": 3,
+      "year": 2011
+    },
+    {
+      "artist": "Travis Scott",
+      "song": "Sicko Mode",
+      "explicit": true,
+      "appleMusicId": "1421658123",
+      "offset": 21,
+      "weight": 3,
+      "year": 2018
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "DNA.",
+      "explicit": true,
+      "appleMusicId": "1440881990",
+      "offset": 0,
+      "weight": 3,
+      "year": 2017
+    },
+    {
+      "artist": "Drake",
+      "song": "Nonstop",
+      "explicit": true,
+      "appleMusicId": "1406109777",
+      "offset": 6,
+      "weight": 2,
+      "year": 2018
+    },
+    {
+      "artist": "Drake",
+      "song": "Started from the Bottom",
+      "explicit": true,
+      "appleMusicId": "1440821277",
+      "offset": 0,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Waka Flocka Flame",
+      "song": "No Hands",
+      "explicit": true,
+      "appleMusicId": "1851592293",
+      "offset": 6,
+      "weight": 2,
+      "year": 2010
+    },
+    {
+      "artist": "Eminem",
+      "song": "'Till I Collapse",
+      "explicit": true,
+      "appleMusicId": "1440821843",
+      "offset": 6,
+      "weight": 3,
+      "year": 2002
+    },
+    {
+      "artist": "Disturbed",
+      "song": "Down with the Sickness",
+      "explicit": true,
+      "appleMusicId": "310530469",
+      "offset": 5,
+      "weight": 3,
+      "year": 2000
+    },
+    {
+      "artist": "Pop Smoke",
+      "song": "Welcome to the Party",
+      "explicit": true,
+      "appleMusicId": "1836115359",
+      "offset": 4,
+      "weight": 2,
+      "year": 2019
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "Money Trees",
+      "explicit": true,
+      "appleMusicId": "1440860400",
+      "offset": 6,
+      "weight": 2,
+      "year": 2012
+    },
+    {
+      "artist": "Darude",
+      "song": "Sandstorm",
+      "explicit": false,
+      "appleMusicId": "338349243",
+      "offset": 9,
+      "weight": 5,
+      "year": 1999
+    },
+    {
+      "artist": "Avicii",
+      "song": "Levels",
+      "explicit": false,
+      "appleMusicId": "1440787349",
+      "offset": 26,
+      "weight": 4,
+      "year": 2011
+    },
+    {
+      "artist": "Zombie Nation",
+      "song": "Kernkraft 400",
+      "explicit": false,
+      "appleMusicId": "391798993",
+      "offset": 15,
+      "weight": 5,
+      "year": 1999
+    },
+    {
+      "artist": "Skrillex",
+      "song": "Bangarang",
+      "explicit": false,
+      "appleMusicId": "1731889049",
+      "offset": 10,
+      "weight": 3,
+      "year": 2011
+    },
+    {
+      "artist": "David Guetta",
+      "song": "Titanium",
+      "explicit": false,
+      "appleMusicId": "693226464",
+      "offset": 22,
+      "weight": 3,
+      "year": 2011
+    },
+    {
+      "artist": "DJ Snake",
+      "song": "Turn Down for What",
+      "explicit": true,
+      "appleMusicId": "786489670",
+      "offset": 4,
+      "weight": 4,
+      "year": 2013
+    },
+    {
+      "artist": "Major Lazer",
+      "song": "Lean On",
+      "explicit": false,
+      "appleMusicId": "1696639397",
+      "offset": 10,
+      "weight": 3,
+      "year": 2015
+    },
+    {
+      "artist": "Martin Garrix",
+      "song": "Animals",
+      "explicit": false,
+      "appleMusicId": "1670593167",
+      "offset": 12,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Knife Party",
+      "song": "Bonfire",
+      "explicit": false,
+      "appleMusicId": "530207563",
+      "offset": 14,
+      "weight": 2,
+      "year": 2012
+    },
+    {
+      "artist": "Kid Cudi",
+      "song": "Pursuit of Happiness",
+      "explicit": true,
+      "appleMusicId": "1443484271",
+      "offset": 10,
+      "weight": 2,
+      "year": 2009
+    },
+    {
+      "artist": "Zedd",
+      "song": "Spectrum",
+      "explicit": false,
+      "appleMusicId": "1440861908",
+      "offset": 16,
+      "weight": 2,
+      "year": 2012
+    },
+    {
+      "artist": "The Killers",
+      "song": "Mr. Brightside",
+      "explicit": false,
+      "appleMusicId": "1440891171",
+      "offset": 11,
+      "weight": 4,
+      "year": 2003
+    },
+    {
+      "artist": "Walk the Moon",
+      "song": "Shut Up and Dance",
+      "explicit": false,
+      "appleMusicId": "961298418",
+      "offset": 11,
+      "weight": 3,
+      "year": 2014
+    },
+    {
+      "artist": "Mark Ronson",
+      "song": "Uptown Funk",
+      "explicit": false,
+      "appleMusicId": "943946671",
+      "offset": 21,
+      "weight": 4,
+      "year": 2014
+    },
+    {
+      "artist": "Pharrell Williams",
+      "song": "Happy",
+      "explicit": false,
+      "appleMusicId": "863835363",
+      "offset": 10,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Justin Timberlake",
+      "song": "Can't Stop the Feeling",
+      "explicit": false,
+      "appleMusicId": "1154239184",
+      "offset": 14,
+      "weight": 3,
+      "year": 2016
+    },
+    {
+      "artist": "Fall Out Boy",
+      "song": "Centuries",
+      "explicit": false,
+      "appleMusicId": "1440826614",
+      "offset": 4,
+      "weight": 3,
+      "year": 2014
+    },
+    {
+      "artist": "Fall Out Boy",
+      "song": "My Songs Know What You Did in the Dark",
+      "explicit": false,
+      "appleMusicId": "1440862694",
+      "offset": 10,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Fall Out Boy",
+      "song": "Sugar, We're Goin Down",
+      "explicit": false,
+      "appleMusicId": "1440799364",
+      "offset": 12,
+      "weight": 3,
+      "year": 2005
+    },
+    {
+      "artist": "Jimmy Eat World",
+      "song": "The Middle",
+      "explicit": false,
+      "appleMusicId": "1450030115",
+      "offset": 0,
+      "weight": 3,
+      "year": 2001
+    },
+    {
+      "artist": "Smash Mouth",
+      "song": "All Star",
+      "explicit": false,
+      "appleMusicId": "1440915693",
+      "offset": 0,
+      "weight": 3,
+      "year": 1999
+    },
+    {
+      "artist": "OutKast",
+      "song": "Hey Ya!",
+      "explicit": false,
+      "appleMusicId": "1032178989",
+      "offset": 6,
+      "weight": 3,
+      "year": 2003
+    },
+    {
+      "artist": "Taio Cruz",
+      "song": "Dynamite",
+      "explicit": false,
+      "appleMusicId": "1443147095",
+      "offset": 12,
+      "weight": 3,
+      "year": 2010
+    },
+    {
+      "artist": "Usher",
+      "song": "Yeah!",
+      "explicit": false,
+      "appleMusicId": "386153478",
+      "offset": 6,
+      "weight": 3,
+      "year": 2004
+    },
+    {
+      "artist": "LMFAO",
+      "song": "Party Rock Anthem",
+      "explicit": false,
+      "appleMusicId": "1443124961",
+      "offset": 4,
+      "weight": 4,
+      "year": 2011
+    },
+    {
+      "artist": "Black Eyed Peas",
+      "song": "I Gotta Feeling",
+      "explicit": false,
+      "appleMusicId": "1440769310",
+      "offset": 0,
+      "weight": 3,
+      "year": 2009
+    },
+    {
+      "artist": "Black Eyed Peas",
+      "song": "Boom Boom Pow",
+      "explicit": false,
+      "appleMusicId": "1443060256",
+      "offset": 4,
+      "weight": 3,
+      "year": 2009
+    },
+    {
+      "artist": "Black Eyed Peas",
+      "song": "Let's Get It Started",
+      "explicit": false,
+      "appleMusicId": "1561392684",
+      "offset": 6,
+      "weight": 5,
+      "year": 2004
+    },
+    {
+      "artist": "Maroon 5",
+      "song": "Moves Like Jagger",
+      "explicit": false,
+      "appleMusicId": "1440859510",
+      "offset": 12,
+      "weight": 3,
+      "year": 2011
+    },
+    {
+      "artist": "OneRepublic",
+      "song": "Counting Stars",
+      "explicit": false,
+      "appleMusicId": "1471704175",
+      "offset": 10,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Thunder",
+      "explicit": false,
+      "appleMusicId": "1411629089",
+      "offset": 10,
+      "weight": 3,
+      "year": 2017
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Whatever It Takes",
+      "explicit": false,
+      "appleMusicId": "1411628148",
+      "offset": 12,
+      "weight": 2,
+      "year": 2017
+    },
+    {
+      "artist": "The Script",
+      "song": "Hall of Fame",
+      "explicit": false,
+      "appleMusicId": "563641976",
+      "offset": 16,
+      "weight": 2,
+      "year": 2012
+    },
+    {
+      "artist": "Rachel Platten",
+      "song": "Fight Song",
+      "explicit": false,
+      "appleMusicId": "1061182684",
+      "offset": 14,
+      "weight": 2,
+      "year": 2015
+    },
+    {
+      "artist": "Katy Perry",
+      "song": "Roar",
+      "explicit": false,
+      "appleMusicId": "1440818897",
+      "offset": 12,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Katy Perry",
+      "song": "Firework",
+      "explicit": false,
+      "appleMusicId": "716192625",
+      "offset": 19,
+      "weight": 3,
+      "year": 2010
+    },
+    {
+      "artist": "Blur",
+      "song": "Song 2",
+      "explicit": false,
+      "appleMusicId": "1764544820",
+      "offset": 3,
+      "weight": 3,
+      "year": 1997
+    },
+    {
+      "artist": "Nirvana",
+      "song": "Smells Like Teen Spirit",
+      "explicit": true,
+      "appleMusicId": "1440783625",
+      "offset": 0,
+      "weight": 3,
+      "year": 1991
+    },
+    {
+      "artist": "Foo Fighters",
+      "song": "Everlong",
+      "explicit": false,
+      "appleMusicId": "362133505",
+      "offset": 16,
+      "weight": 3,
+      "year": 1997
+    },
+    {
+      "artist": "Foo Fighters",
+      "song": "My Hero",
+      "explicit": false,
+      "appleMusicId": "362133488",
+      "offset": 14,
+      "weight": 2,
+      "year": 1997
+    },
+    {
+      "artist": "Foo Fighters",
+      "song": "The Pretender",
+      "explicit": false,
+      "appleMusicId": "262743414",
+      "offset": 16,
+      "weight": 3,
+      "year": 2007
+    },
+    {
+      "artist": "Papa Roach",
+      "song": "Last Resort",
+      "explicit": true,
+      "appleMusicId": "1442907630",
+      "offset": 0,
+      "weight": 3,
+      "year": 2000
+    },
+    {
+      "artist": "Drowning Pool",
+      "song": "Bodies",
+      "explicit": true,
+      "appleMusicId": "1440777727",
+      "offset": 10,
+      "weight": 3,
+      "year": 2001
+    },
+    {
+      "artist": "System of a Down",
+      "song": "Chop Suey!",
+      "explicit": true,
+      "appleMusicId": "273714640",
+      "offset": 2,
+      "weight": 3,
+      "year": 2001
+    },
+    {
+      "artist": "Rise Against",
+      "song": "Prayer of the Refugee",
+      "explicit": false,
+      "appleMusicId": "1440858616",
+      "offset": 10,
+      "weight": 2,
+      "year": 2006
+    },
+    {
+      "artist": "Linkin Park",
+      "song": "Given Up",
+      "explicit": true,
+      "appleMusicId": "1622308445",
+      "offset": 0,
+      "weight": 2,
+      "year": 2007
+    },
+    {
+      "artist": "The Weeknd",
+      "song": "Blinding Lights",
+      "explicit": false,
+      "appleMusicId": "1488408568",
+      "offset": 0,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "Franz Ferdinand",
+      "song": "Take Me Out",
+      "explicit": false,
+      "appleMusicId": "315844084",
+      "offset": 8,
+      "weight": 3,
+      "year": 2004
+    },
+    {
+      "artist": "The Fratellis",
+      "song": "Chelsea Dagger",
+      "explicit": false,
+      "appleMusicId": "1440665911",
+      "offset": 14,
+      "weight": 4,
+      "year": 2006
+    },
+    {
+      "artist": "Jet",
+      "song": "Are You Gonna Be My Girl",
+      "explicit": false,
+      "appleMusicId": "1778048261",
+      "offset": 0,
+      "weight": 3,
+      "year": 2003
+    },
+    {
+      "artist": "Wolfmother",
+      "song": "Joker and the Thief",
+      "explicit": false,
+      "appleMusicId": "1440749497",
+      "offset": 0,
+      "weight": 2,
+      "year": 2005
+    },
+    {
+      "artist": "Ram Jam",
+      "song": "Black Betty",
+      "explicit": false,
+      "appleMusicId": "216088341",
+      "offset": 0,
+      "weight": 3,
+      "year": 1977
+    },
+    {
+      "artist": "Beastie Boys",
+      "song": "Sabotage",
+      "explicit": true,
+      "appleMusicId": "724971921",
+      "offset": 0,
+      "weight": 3,
+      "year": 1994
+    },
+    {
+      "artist": "Beastie Boys",
+      "song": "Intergalactic",
+      "explicit": false,
+      "appleMusicId": "721224385",
+      "offset": 0,
+      "weight": 2,
+      "year": 1998
+    },
+    {
+      "artist": "Led Zeppelin",
+      "song": "Kashmir",
+      "explicit": false,
+      "appleMusicId": "580708059",
+      "offset": 0,
+      "weight": 2,
+      "year": 1975
+    },
+    {
+      "artist": "Led Zeppelin",
+      "song": "Immigrant Song",
+      "explicit": false,
+      "appleMusicId": "580708280",
+      "offset": 0,
+      "weight": 3,
+      "year": 1970
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Industry Baby",
+      "explicit": true,
+      "appleMusicId": "1577414972",
+      "offset": 0,
+      "weight": 3,
+      "year": 2021
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Montero",
+      "explicit": true,
+      "appleMusicId": "1559318719",
+      "offset": 10,
+      "weight": 3,
+      "year": 2021
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Old Town Road",
+      "explicit": false,
+      "appleMusicId": "1468166468",
+      "offset": 3,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "Dua Lipa",
+      "song": "Levitating",
+      "explicit": false,
+      "appleMusicId": "1538003843",
+      "offset": 10,
+      "weight": 3,
+      "year": 2020
+    },
+    {
+      "artist": "The Weeknd",
+      "song": "Save Your Tears",
+      "explicit": false,
+      "appleMusicId": "1505683980",
+      "offset": 16,
+      "weight": 3,
+      "year": 2020
+    },
+    {
+      "artist": "Olivia Rodrigo",
+      "song": "good 4 u",
+      "explicit": true,
+      "appleMusicId": "1582277652",
+      "offset": 10,
+      "weight": 3,
+      "year": 2021
+    },
+    {
+      "artist": "Taylor Swift",
+      "song": "Anti-Hero",
+      "explicit": false,
+      "appleMusicId": "1649434293",
+      "offset": 14,
+      "weight": 3,
+      "year": 2022
+    },
+    {
+      "artist": "BTS",
+      "song": "2.0",
+      "explicit": false,
+      "appleMusicId": "1885720394",
+      "offset": 12,
+      "weight": 5,
+      "year": 2025
+    },
+    {
+      "artist": "Harry Styles",
+      "song": "As It Was",
+      "explicit": false,
+      "appleMusicId": "1615585008",
+      "offset": 0,
+      "weight": 3,
+      "year": 2022
+    },
+    {
+      "artist": "Glass Animals",
+      "song": "Heat Waves",
+      "explicit": false,
+      "appleMusicId": "1508562516",
+      "offset": 22,
+      "weight": 3,
+      "year": 2020
+    },
+    {
+      "artist": "Justin Bieber",
+      "song": "Peaches",
+      "explicit": false,
+      "appleMusicId": "1556170101",
+      "offset": 10,
+      "weight": 2,
+      "year": 2021
+    },
+    {
+      "artist": "BTS",
+      "song": "Butter",
+      "explicit": false,
+      "appleMusicId": "1598666350",
+      "offset": 0,
+      "weight": 2,
+      "year": 2021
+    },
+    {
+      "artist": "Harry Styles",
+      "song": "Watermelon Sugar",
+      "explicit": false,
+      "appleMusicId": "1485802967",
+      "offset": 12,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "The Alan Parsons Project",
+      "song": "Sirius",
+      "explicit": false,
+      "appleMusicId": "216347563",
+      "offset": 0,
+      "weight": 3,
+      "year": 1982
+    },
+    {
+      "artist": "Bruce Springsteen",
+      "song": "Glory Days",
+      "explicit": false,
+      "appleMusicId": "203709191",
+      "offset": 10,
+      "weight": 3,
+      "year": 1984
+    },
+    {
+      "artist": "Bruce Springsteen",
+      "song": "Born to Run",
+      "explicit": false,
+      "appleMusicId": "1045058681",
+      "offset": 0,
+      "weight": 3,
+      "year": 1975
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Hells Bells",
+      "explicit": false,
+      "appleMusicId": "574050495",
+      "offset": 0,
+      "weight": 3,
+      "year": 1980
+    },
+    {
+      "artist": "Metallica",
+      "song": "For Whom the Bell Tolls",
+      "explicit": false,
+      "appleMusicId": "579149036",
+      "offset": 0,
+      "weight": 3,
+      "year": 1984
+    },
+    {
+      "artist": "Lupe Fiasco",
+      "song": "The Show Goes On",
+      "explicit": false,
+      "appleMusicId": "418673708",
+      "offset": 0,
+      "weight": 2,
+      "year": 2011
+    },
+    {
+      "artist": "Dr. Dre",
+      "song": "Forgot About Dre",
+      "explicit": true,
+      "appleMusicId": "1440869013",
+      "offset": 4,
+      "weight": 3,
+      "year": 1999
+    },
+    {
+      "artist": "Dr. Dre",
+      "song": "Still D.R.E.",
+      "explicit": true,
+      "appleMusicId": "1444156738",
+      "offset": 0,
+      "weight": 3,
+      "year": 1999
+    },
+    {
+      "artist": "Pedro Capó",
+      "song": "Calma",
+      "explicit": false,
+      "appleMusicId": "1412993945",
+      "offset": 6,
+      "weight": 2,
+      "year": 2018
+    },
+    {
+      "artist": "J Balvin",
+      "song": "Mi Gente",
+      "explicit": false,
+      "appleMusicId": "1368816792",
+      "offset": 6,
+      "weight": 2,
+      "year": 2017
+    },
+    {
+      "artist": "Daft Punk",
+      "song": "Stronger",
+      "explicit": false,
+      "appleMusicId": "697195787",
+      "offset": 44,
+      "weight": 3,
+      "year": 2007
+    },
+    {
+      "artist": "Daft Punk",
+      "song": "Get Lucky",
+      "explicit": false,
+      "appleMusicId": "617154366",
+      "offset": 0,
+      "weight": 3,
+      "year": 2013
+    },
+    {
+      "artist": "Daft Punk",
+      "song": "One More Time",
+      "explicit": false,
+      "appleMusicId": "697195462",
+      "offset": 0,
+      "weight": 3,
+      "year": 2000
+    },
+    {
+      "artist": "Nelly",
+      "song": "Ride Wit Me",
+      "explicit": true,
+      "appleMusicId": "1445122892",
+      "offset": 6,
+      "weight": 2,
+      "year": 2000
+    },
+    {
+      "artist": "Nelly",
+      "song": "Hot in Herre",
+      "explicit": true,
+      "appleMusicId": "1440735156",
+      "offset": 4,
+      "weight": 3,
+      "year": 2002
+    },
+    {
+      "artist": "50 Cent",
+      "song": "In Da Club",
+      "explicit": true,
+      "appleMusicId": "1440907550",
+      "offset": 0,
+      "weight": 3,
+      "year": 2003
+    },
+    {
+      "artist": "Kanye West",
+      "song": "Gold Digger",
+      "explicit": true,
+      "appleMusicId": "1440763833",
+      "offset": 0,
+      "weight": 3,
+      "year": 2005
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Congratulations",
+      "explicit": false,
+      "appleMusicId": "1698224411",
+      "offset": 10,
+      "weight": 2,
+      "year": 2016
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Rockstar",
+      "explicit": true,
+      "appleMusicId": "1373506170",
+      "offset": 8,
+      "weight": 3,
+      "year": 2017
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Sunflower",
+      "explicit": false,
+      "appleMusicId": "1445949267",
+      "offset": 8,
+      "weight": 3,
+      "year": 2018
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Wow.",
+      "explicit": true,
+      "appleMusicId": "1477887497",
+      "offset": 6,
+      "weight": 2,
+      "year": 2018
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "Locked Out of Heaven",
+      "explicit": false,
+      "appleMusicId": "573962551",
+      "offset": 10,
+      "weight": 3,
+      "year": 2012
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "24K Magic",
+      "explicit": false,
+      "appleMusicId": "1161504024",
+      "offset": 0,
+      "weight": 3,
+      "year": 2016
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "Treasure",
+      "explicit": false,
+      "appleMusicId": "581806439",
+      "offset": 8,
+      "weight": 2,
+      "year": 2012
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "That's What I Like",
+      "explicit": false,
+      "appleMusicId": "1161504043",
+      "offset": 10,
+      "weight": 3,
+      "year": 2016
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "Finesse",
+      "explicit": false,
+      "appleMusicId": "1161504065",
+      "offset": 10,
+      "weight": 2,
+      "year": 2016
+    },
+    {
+      "artist": "Ricky Martin",
+      "song": "Livin' La Vida Loca",
+      "explicit": false,
+      "appleMusicId": "192821659",
+      "offset": 14,
+      "weight": 3,
+      "year": 1999
+    },
+    {
+      "artist": "Reel 2 Real",
+      "song": "I Like to Move It",
+      "explicit": false,
+      "appleMusicId": "1398464319",
+      "offset": 0,
+      "weight": 3,
+      "year": 1994
+    },
+    {
+      "artist": "Backstreet Boys",
+      "song": "Everybody",
+      "explicit": false,
+      "appleMusicId": "308611114",
+      "offset": 0,
+      "weight": 3,
+      "year": 1997
+    },
+    {
+      "artist": "Chumbawamba",
+      "song": "Tubthumping",
+      "explicit": false,
+      "appleMusicId": "713773457",
+      "offset": 50,
+      "weight": 3,
+      "year": 1997
+    },
+    {
+      "artist": "Rednex",
+      "song": "Cotton Eye Joe",
+      "explicit": false,
+      "appleMusicId": "255961201",
+      "offset": 0,
+      "weight": 3,
+      "year": 1994
+    },
+    {
+      "artist": "Kool & The Gang",
+      "song": "Celebration",
+      "explicit": false,
+      "appleMusicId": "1444107530",
+      "offset": 0,
+      "weight": 3,
+      "year": 1980
+    },
+    {
+      "artist": "The Beatles",
+      "song": "Twist and Shout",
+      "explicit": false,
+      "appleMusicId": "1441165136",
+      "offset": 0,
+      "weight": 3,
+      "year": 1963
+    },
+    {
+      "artist": "The Isley Brothers",
+      "song": "Shout",
+      "explicit": false,
+      "appleMusicId": "285753034",
+      "offset": 0,
+      "weight": 3,
+      "year": 1959
+    },
+    {
+      "artist": "Wilson Pickett",
+      "song": "Land of 1000 Dances",
+      "explicit": false,
+      "appleMusicId": "281713757",
+      "offset": 0,
+      "weight": 2,
+      "year": 1966
+    },
+    {
+      "artist": "Cupid",
+      "song": "Cupid Shuffle",
+      "explicit": false,
+      "appleMusicId": "263059061",
+      "offset": 0,
+      "weight": 2,
+      "year": 2007
+    },
+    {
+      "artist": "ABBA",
+      "song": "Dancing Queen",
+      "explicit": false,
+      "appleMusicId": "1422648513",
+      "offset": 0,
+      "weight": 3,
+      "year": 1976
+    },
+    {
+      "artist": "2 Unlimited",
+      "song": "Get Ready for This",
+      "explicit": false,
+      "appleMusicId": "389498081",
+      "offset": 0,
+      "weight": 5,
+      "year": 1991
+    },
+    {
+      "artist": "The Cranberries",
+      "song": "Zombie",
+      "explicit": false,
+      "appleMusicId": "1828830887",
+      "offset": 14,
+      "weight": 2,
+      "year": 1994
+    },
+    {
+      "artist": "Muse",
+      "song": "Uprising",
+      "explicit": false,
+      "appleMusicId": "992627891",
+      "offset": 0,
+      "weight": 3,
+      "year": 2009
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Run the World (Girls)",
+      "explicit": false,
+      "appleMusicId": "626203421",
+      "offset": 0,
+      "weight": 3,
+      "year": 2011
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Crazy in Love",
+      "explicit": false,
+      "appleMusicId": "201274644",
+      "offset": 0,
+      "weight": 3,
+      "year": 2003
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Single Ladies",
+      "explicit": false,
+      "appleMusicId": "296016899",
+      "offset": 0,
+      "weight": 3,
+      "year": 2008
+    },
+    {
+      "artist": "Missy Elliott",
+      "song": "Lose Control",
+      "explicit": true,
+      "appleMusicId": "73240545",
+      "offset": 0,
+      "weight": 2,
+      "year": 2005
+    },
+    {
+      "artist": "Missy Elliott",
+      "song": "Work It",
+      "explicit": true,
+      "appleMusicId": "1264527",
+      "offset": 0,
+      "weight": 2,
+      "year": 2002
+    },
+    {
+      "artist": "PSY",
+      "song": "Gangnam Style",
+      "explicit": false,
+      "appleMusicId": "1445144527",
+      "offset": 6,
+      "weight": 3,
+      "year": 2012
+    },
+    {
+      "artist": "Tame Impala",
+      "song": "Feels Like We Only Go Backwards",
+      "explicit": false,
+      "appleMusicId": "1440826088",
+      "offset": 12,
+      "weight": 1,
+      "year": 2012
+    },
+    {
+      "artist": "a-ha",
+      "song": "Take on Me",
+      "explicit": false,
+      "appleMusicId": "380907765",
+      "offset": 0,
+      "weight": 3,
+      "year": 1985
+    },
+    {
+      "artist": "Kenny Loggins",
+      "song": "Danger Zone",
+      "explicit": false,
+      "appleMusicId": "387193955",
+      "offset": 0,
+      "weight": 3,
+      "year": 1986
+    },
+    {
+      "artist": "Kenny Loggins",
+      "song": "Footloose",
+      "explicit": false,
+      "appleMusicId": "405600299",
+      "offset": 0,
+      "weight": 3,
+      "year": 1984
+    },
+    {
+      "artist": "Katrina and the Waves",
+      "song": "Walking on Sunshine",
+      "explicit": false,
+      "appleMusicId": "723501674",
+      "offset": 0,
+      "weight": 3,
+      "year": 1985
+    },
+    {
+      "artist": "Drake",
+      "song": "NICE FOR WHAT",
+      "explicit": true,
+      "appleMusicId": "1406109896",
+      "offset": 10,
+      "weight": 4,
+      "year": 2018
+    },
+    {
+      "artist": "Drake",
+      "song": "God's Plan",
+      "explicit": true,
+      "appleMusicId": "1406109863",
+      "offset": 8,
+      "weight": 4,
+      "year": 2018
+    },
+    {
+      "artist": "Juice WRLD",
+      "song": "Lucid Dreams",
+      "explicit": true,
+      "appleMusicId": "1571797456",
+      "offset": 12,
+      "weight": 3,
+      "year": 2018
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Circles",
+      "explicit": false,
+      "appleMusicId": "1477880561",
+      "offset": 9,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "Billie Eilish",
+      "song": "Bad Guy",
+      "explicit": false,
+      "appleMusicId": "1450695739",
+      "offset": 0,
+      "weight": 4,
+      "year": 2019
+    },
+    {
+      "artist": "Marshmello",
+      "song": "Happier",
+      "explicit": false,
+      "appleMusicId": "1706010428",
+      "offset": 16,
+      "weight": 3,
+      "year": 2018
+    },
+    {
+      "artist": "Halsey",
+      "song": "Without Me",
+      "explicit": false,
+      "appleMusicId": "1481418646",
+      "offset": 14,
+      "weight": 3,
+      "year": 2018
+    },
+    {
+      "artist": "Jonas Brothers",
+      "song": "Sucker",
+      "explicit": false,
+      "appleMusicId": "1461478389",
+      "offset": 0,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "Panic! At The Disco",
+      "song": "High Hopes",
+      "explicit": false,
+      "appleMusicId": "1361152303",
+      "offset": 16,
+      "weight": 4,
+      "year": 2018
+    },
+    {
+      "artist": "J. Cole",
+      "song": "Middle Child",
+      "explicit": true,
+      "appleMusicId": "1450406398",
+      "offset": 0,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "Travis Scott",
+      "song": "HIGHEST IN THE ROOM",
+      "explicit": true,
+      "appleMusicId": "1482217453",
+      "offset": 10,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "Maroon 5",
+      "song": "Memories",
+      "explicit": false,
+      "appleMusicId": "1479600902",
+      "offset": 0,
+      "weight": 3,
+      "year": 2019
+    },
+    {
+      "artist": "BTS",
+      "song": "Dynamite",
+      "explicit": false,
+      "appleMusicId": "1597024424",
+      "offset": 14,
+      "weight": 4,
+      "year": 2020
+    },
+    {
+      "artist": "Olivia Rodrigo",
+      "song": "Deja Vu",
+      "explicit": false,
+      "appleMusicId": "1560735847",
+      "offset": 25,
+      "weight": 3,
+      "year": 2021
+    },
+    {
+      "artist": "Walker Hayes",
+      "song": "Fancy Like",
+      "explicit": false,
+      "appleMusicId": "1595928077",
+      "offset": 11,
+      "weight": 3,
+      "year": 2021
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "MONTERO (Call Me By Your Name)",
+      "explicit": true,
+      "appleMusicId": "1559318719",
+      "offset": 0,
+      "weight": 4,
+      "year": 2021
+    },
+    {
+      "artist": "Justin Bieber",
+      "song": "Ghost",
+      "explicit": false,
+      "appleMusicId": "1556170100",
+      "offset": 16,
+      "weight": 3,
+      "year": 2021
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Enemy",
+      "explicit": false,
+      "appleMusicId": "1591640885",
+      "offset": 22,
+      "weight": 4,
+      "year": 2021
+    },
+    {
+      "artist": "Ed Sheeran",
+      "song": "Shivers",
+      "explicit": false,
+      "appleMusicId": "1581087034",
+      "offset": 0,
+      "weight": 4,
+      "year": 2021
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Break My Soul",
+      "explicit": false,
+      "appleMusicId": "1630005854",
+      "offset": 20,
+      "weight": 4,
+      "year": 2022
+    },
+    {
+      "artist": "Steve Lacy",
+      "song": "Bad Habit",
+      "explicit": false,
+      "appleMusicId": "6788150545",
+      "offset": 33,
+      "weight": 3,
+      "year": 2022
+    },
+    {
+      "artist": "Charlie Puth",
+      "song": "Left and Right",
+      "explicit": false,
+      "appleMusicId": "1633318759",
+      "offset": 20,
+      "weight": 3,
+      "year": 2022
+    },
+    {
+      "artist": "Drake",
+      "song": "Rich Flex",
+      "explicit": true,
+      "appleMusicId": "1653012565",
+      "offset": 0,
+      "weight": 4,
+      "year": 2022
+    },
+    {
+      "artist": "Miley Cyrus",
+      "song": "Flowers",
+      "explicit": false,
+      "appleMusicId": "1674691586",
+      "offset": 0,
+      "weight": 5,
+      "year": 2023
+    },
+    {
+      "artist": "SZA",
+      "song": "Kill Bill",
+      "explicit": true,
+      "appleMusicId": "1657869393",
+      "offset": 16,
+      "weight": 3,
+      "year": 2023
+    },
+    {
+      "artist": "Taylor Swift",
+      "song": "Cruel Summer",
+      "explicit": false,
+      "appleMusicId": "1468058171",
+      "offset": 25,
+      "weight": 5,
+      "year": 2019
+    },
+    {
+      "artist": "Taylor Swift",
+      "song": "Shake It Off",
+      "explicit": false,
+      "appleMusicId": "1440933651",
+      "offset": 33,
+      "weight": 4,
+      "year": 2014
+    },
+    {
+      "artist": "Taylor Swift",
+      "song": "Blank Space",
+      "explicit": false,
+      "appleMusicId": "1708308993",
+      "offset": 27,
+      "weight": 4,
+      "year": 2014
+    },
+    {
+      "artist": "Eslabon Armado",
+      "song": "Ella Baila Sola",
+      "explicit": true,
+      "appleMusicId": "1677446410",
+      "offset": 0,
+      "weight": 3,
+      "year": 2023
+    },
+    {
+      "artist": "Olivia Rodrigo",
+      "song": "Vampire",
+      "explicit": false,
+      "appleMusicId": "1736995100",
+      "offset": 42,
+      "weight": 4,
+      "year": 2023
+    },
+    {
+      "artist": "Rema",
+      "song": "Calm Down",
+      "explicit": false,
+      "appleMusicId": "1614063459",
+      "offset": 11,
+      "weight": 4,
+      "year": 2022
+    },
+    {
+      "artist": "Sam Smith",
+      "song": "Unholy",
+      "explicit": true,
+      "appleMusicId": "1643168566",
+      "offset": 20,
+      "weight": 3,
+      "year": 2022
+    },
+    {
+      "artist": "SZA",
+      "song": "Snooze",
+      "explicit": false,
+      "appleMusicId": "1658650499",
+      "offset": 32,
+      "weight": 3,
+      "year": 2022
+    },
+    {
+      "artist": "Tate McRae",
+      "song": "Greedy",
+      "explicit": false,
+      "appleMusicId": "1719661252",
+      "offset": 0,
+      "weight": 4,
+      "year": 2023
+    },
+    {
+      "artist": "David Kushner",
+      "song": "Daylight",
+      "explicit": false,
+      "appleMusicId": "1796004433",
+      "offset": 33,
+      "weight": 4,
+      "year": 2023
+    },
+    {
+      "artist": "Doja Cat",
+      "song": "Paint The Town Red",
+      "explicit": true,
+      "appleMusicId": "1721657253",
+      "offset": 0,
+      "weight": 4,
+      "year": 2023
+    },
+    {
+      "artist": "Jain",
+      "song": "Makeba",
+      "explicit": false,
+      "appleMusicId": "1175094463",
+      "offset": 0,
+      "weight": 3,
+      "year": 2015
+    },
+    {
+      "artist": "Chris Stapleton",
+      "song": "Tennessee Whiskey",
+      "explicit": false,
+      "appleMusicId": "1440827492",
+      "offset": 33,
+      "weight": 3,
+      "year": 2015
+    },
+    {
+      "artist": "Dasha",
+      "song": "Austin",
+      "explicit": false,
+      "appleMusicId": "1737331683",
+      "offset": 16,
+      "weight": 3,
+      "year": 2023
+    },
+    {
+      "artist": "Benson Boone",
+      "song": "Beautiful Things",
+      "explicit": false,
+      "appleMusicId": "1724488124",
+      "offset": 25,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "Sabrina Carpenter",
+      "song": "Espresso",
+      "explicit": false,
+      "appleMusicId": "1746801012",
+      "offset": 0,
+      "weight": 5,
+      "year": 2024
+    },
+    {
+      "artist": "Sabrina Carpenter",
+      "song": "Please Please Please",
+      "explicit": false,
+      "appleMusicId": "1795513492",
+      "offset": 8,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "Chappell Roan",
+      "song": "Pink Pony Club",
+      "explicit": false,
+      "appleMusicId": "1675173768",
+      "offset": 33,
+      "weight": 3,
+      "year": 2020
+    },
+    {
+      "artist": "Sabrina Carpenter",
+      "song": "Taste",
+      "explicit": false,
+      "appleMusicId": "1750307079",
+      "offset": 0,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "Not Like Us",
+      "explicit": true,
+      "appleMusicId": "1781353929",
+      "offset": 25,
+      "weight": 5,
+      "year": 2024
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "Luther",
+      "explicit": false,
+      "appleMusicId": "1781270323",
+      "offset": 0,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "ROSÉ",
+      "song": "APT.",
+      "explicit": false,
+      "appleMusicId": "1773452221",
+      "offset": 0,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "Tommy Richman",
+      "song": "Million Dollar Baby",
+      "explicit": true,
+      "appleMusicId": "1749616863",
+      "offset": 0,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "Hozier",
+      "song": "Too Sweet",
+      "explicit": false,
+      "appleMusicId": "1735414394",
+      "offset": 33,
+      "weight": 4,
+      "year": 2024
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "TEXAS HOLD 'EM",
+      "explicit": false,
+      "appleMusicId": "1730410734",
+      "offset": 16,
+      "weight": 4,
+      "year": 2024
+    }
+  ],
+  "suggestions": [
+    {
+      "artist": "Metallica",
+      "song": "Enter Sandman",
+      "explicit": false,
+      "appleMusicId": "1572051818",
+      "offset": 0,
+      "vibe": "The opening guitar hits — Mariano Rivera's legendary closer walk-out"
+    },
+    {
+      "artist": "Ozzy Osbourne",
+      "song": "Crazy Train",
+      "explicit": false,
+      "appleMusicId": "1531535287",
+      "offset": 0,
+      "vibe": "Iconic opening riff, Chipper Jones made this a walk-up classic"
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Hells Bells",
+      "explicit": false,
+      "appleMusicId": "574050495",
+      "offset": 0,
+      "vibe": "The bell tolls — Trevor Hoffman's all-time closer entrance"
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Thunderstruck",
+      "explicit": false,
+      "appleMusicId": "575998661",
+      "offset": 0,
+      "vibe": "Lightning-fast guitar intro, pure adrenaline"
+    },
+    {
+      "artist": "Guns N' Roses",
+      "song": "Welcome to the Jungle",
+      "explicit": false,
+      "appleMusicId": "1377826728",
+      "offset": 0,
+      "vibe": "Slash's opening screech, instant intensity"
+    },
+    {
+      "artist": "Dropkick Murphys",
+      "song": "Shipping Up to Boston",
+      "explicit": false,
+      "appleMusicId": "1485050464",
+      "offset": 5,
+      "vibe": "Fiddle riff that owns Fenway Park"
+    },
+    {
+      "artist": "The White Stripes",
+      "song": "Seven Nation Army",
+      "explicit": false,
+      "appleMusicId": "1533513537",
+      "offset": 0,
+      "vibe": "The bass riff every stadium chants"
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Back in Black",
+      "explicit": false,
+      "appleMusicId": "574050602",
+      "offset": 0,
+      "vibe": "Opening drums then that riff — all-time classic"
+    },
+    {
+      "artist": "John Fogerty",
+      "song": "Centerfield",
+      "explicit": false,
+      "appleMusicId": "1830553343",
+      "offset": 0,
+      "vibe": "THE baseball song — 'Put me in, coach'"
+    },
+    {
+      "artist": "The Alan Parsons Project",
+      "song": "Sirius",
+      "explicit": false,
+      "appleMusicId": "216347563",
+      "offset": 0,
+      "vibe": "The Chicago Bulls intro — pure arena energy"
+    },
+    {
+      "artist": "DMX",
+      "song": "X Gon' Give It to Ya",
+      "explicit": true,
+      "appleMusicId": "1500500509",
+      "offset": 5,
+      "vibe": "DMX barking over that beat — pure menace"
+    },
+    {
+      "artist": "Eminem",
+      "song": "Lose Yourself",
+      "explicit": true,
+      "appleMusicId": "1440903439",
+      "offset": 0,
+      "vibe": "The opening guitar riff, one shot one opportunity"
+    },
+    {
+      "artist": "Eminem",
+      "song": "'Till I Collapse",
+      "explicit": true,
+      "appleMusicId": "1440821843",
+      "offset": 15,
+      "vibe": "The beat drops and you feel unstoppable"
+    },
+    {
+      "artist": "Fort Minor",
+      "song": "Remember the Name",
+      "explicit": false,
+      "appleMusicId": "1345120958",
+      "offset": 25,
+      "vibe": "'This is ten percent luck, twenty percent skill'"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "HUMBLE.",
+      "explicit": true,
+      "appleMusicId": "1440882165",
+      "offset": 7,
+      "vibe": "The piano hits and Kendrick demands respect"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "DNA.",
+      "explicit": true,
+      "appleMusicId": "1440881990",
+      "offset": 0,
+      "vibe": "Aggressive beat, championship DNA energy"
+    },
+    {
+      "artist": "DJ Khaled",
+      "song": "All I Do Is Win",
+      "explicit": true,
+      "appleMusicId": "353859978",
+      "offset": 25,
+      "vibe": "'All I do is win win win' — the hook"
+    },
+    {
+      "artist": "House of Pain",
+      "song": "Jump Around",
+      "explicit": true,
+      "appleMusicId": "1604628161",
+      "offset": 3,
+      "vibe": "The horn hit that makes every stadium bounce"
+    },
+    {
+      "artist": "50 Cent",
+      "song": "In Da Club",
+      "explicit": true,
+      "appleMusicId": "1440907550",
+      "offset": 0,
+      "vibe": "'Go shorty, it's your birthday' — instant swagger"
+    },
+    {
+      "artist": "Queen",
+      "song": "We Will Rock You",
+      "explicit": false,
+      "appleMusicId": "6781074741",
+      "offset": 0,
+      "vibe": "STOMP STOMP CLAP — the crowd does the work"
+    },
+    {
+      "artist": "Survivor",
+      "song": "Eye of the Tiger",
+      "explicit": false,
+      "appleMusicId": "254685026",
+      "offset": 0,
+      "vibe": "The Rocky theme — stepping up to fight"
+    },
+    {
+      "artist": "Europe",
+      "song": "The Final Countdown",
+      "explicit": false,
+      "appleMusicId": "196480329",
+      "offset": 0,
+      "vibe": "Synth fanfare, feels like a boss entrance"
+    },
+    {
+      "artist": "Blur",
+      "song": "Song 2",
+      "explicit": false,
+      "appleMusicId": "1764544820",
+      "offset": 0,
+      "vibe": "'WOO-HOO!' — two seconds in and the crowd explodes"
+    },
+    {
+      "artist": "Darude",
+      "song": "Sandstorm",
+      "explicit": false,
+      "appleMusicId": "338349243",
+      "offset": 22,
+      "vibe": "The synth drop that owns every arena"
+    },
+    {
+      "artist": "Zombie Nation",
+      "song": "Kernkraft 400",
+      "explicit": false,
+      "appleMusicId": "391798993",
+      "offset": 37,
+      "vibe": "The stadium organ riff — dun dun dun dun"
+    },
+    {
+      "artist": "2 Unlimited",
+      "song": "Get Ready for This",
+      "explicit": false,
+      "appleMusicId": "389498081",
+      "offset": 0,
+      "vibe": "The ultimate PA hype-up intro"
+    },
+    {
+      "artist": "DJ Snake",
+      "song": "Turn Down for What",
+      "explicit": true,
+      "appleMusicId": "786489670",
+      "offset": 10,
+      "vibe": "Bass drops, crowd goes wild"
+    },
+    {
+      "artist": "Avicii",
+      "song": "Levels",
+      "explicit": false,
+      "appleMusicId": "1440787349",
+      "offset": 63,
+      "vibe": "The vocal sample drop — pure euphoria"
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Industry Baby",
+      "explicit": true,
+      "appleMusicId": "1577414972",
+      "offset": 0,
+      "vibe": "Horns blazing, unapologetic confidence"
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Old Town Road",
+      "explicit": false,
+      "appleMusicId": "1468166468",
+      "offset": 11,
+      "vibe": "'I got the horses in the back' — instant fun"
+    },
+    {
+      "artist": "The Weeknd",
+      "song": "Blinding Lights",
+      "explicit": false,
+      "appleMusicId": "1488408568",
+      "offset": 0,
+      "vibe": "Synth-wave sprint to the plate"
+    },
+    {
+      "artist": "Farruko",
+      "song": "Pepas (Tiësto Remix)",
+      "explicit": false,
+      "appleMusicId": null,
+      "offset": 59,
+      "vibe": "Tiësto's drop hits like a home run — pure stadium energy"
+    },
+    {
+      "artist": "BTS",
+      "song": "BTS 2.0",
+      "explicit": false,
+      "appleMusicId": "1885720394",
+      "offset": 30,
+      "vibe": "K-pop powerhouse energy, crowd-ready anthem"
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Believer",
+      "explicit": false,
+      "appleMusicId": "1411628233",
+      "offset": 50,
+      "vibe": "'First things first' — pounding drums"
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Natural",
+      "explicit": false,
+      "appleMusicId": "1437948973",
+      "offset": 35,
+      "vibe": "'You're a natural' — born for the moment"
+    },
+    {
+      "artist": "Fall Out Boy",
+      "song": "Centuries",
+      "explicit": false,
+      "appleMusicId": "1440826614",
+      "offset": 10,
+      "vibe": "'Remember me for centuries' — legacy energy"
+    },
+    {
+      "artist": "Olivia Rodrigo",
+      "song": "good 4 u",
+      "explicit": true,
+      "appleMusicId": "1582277652",
+      "offset": 25,
+      "vibe": "Pop-punk explosion, pure attitude"
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Sunflower",
+      "explicit": false,
+      "appleMusicId": "1445949267",
+      "offset": 20,
+      "vibe": "Chill swagger, smooth walk to the plate"
+    },
+    {
+      "artist": "Post Malone",
+      "song": "Rockstar",
+      "explicit": true,
+      "appleMusicId": "1373506170",
+      "offset": 20,
+      "vibe": "'I've been feelin' like a star' — big energy"
+    },
+    {
+      "artist": "Rage Against the Machine",
+      "song": "Bulls on Parade",
+      "explicit": true,
+      "appleMusicId": null,
+      "offset": 0,
+      "vibe": "Tom Morello's wah pedal — confrontational energy"
+    },
+    {
+      "artist": "Disturbed",
+      "song": "Down with the Sickness",
+      "explicit": true,
+      "appleMusicId": "310530469",
+      "offset": 13,
+      "vibe": "The 'OH-WAH-AH-AH-AH' moment"
+    },
+    {
+      "artist": "Beastie Boys",
+      "song": "Sabotage",
+      "explicit": true,
+      "appleMusicId": "724971921",
+      "offset": 0,
+      "vibe": "Blistering guitar and screaming — chaos energy"
+    },
+    {
+      "artist": "Mötley Crüe",
+      "song": "Kickstart My Heart",
+      "explicit": false,
+      "appleMusicId": "1764396024",
+      "offset": 0,
+      "vibe": "Revving engine then full throttle"
+    },
+    {
+      "artist": "Drowning Pool",
+      "song": "Bodies",
+      "explicit": true,
+      "appleMusicId": "1440777727",
+      "offset": 25,
+      "vibe": "'Let the bodies hit the floor' — intimidation"
+    },
+    {
+      "artist": "Def Leppard",
+      "song": "Pour Some Sugar on Me",
+      "explicit": false,
+      "appleMusicId": "1438626355",
+      "offset": 40,
+      "vibe": "The chorus hits like a stadium anthem"
+    },
+    {
+      "artist": "Bon Jovi",
+      "song": "Livin' on a Prayer",
+      "explicit": false,
+      "appleMusicId": "1422955211",
+      "offset": 55,
+      "vibe": "'WOAH, we're halfway there' — singalong magic"
+    },
+    {
+      "artist": "Daddy Yankee",
+      "song": "Gasolina",
+      "explicit": false,
+      "appleMusicId": "1786000124",
+      "offset": 10,
+      "vibe": "Reggaeton fire — the beat that changed music"
+    },
+    {
+      "artist": "J Balvin",
+      "song": "Mi Gente",
+      "explicit": false,
+      "appleMusicId": "1368816792",
+      "offset": 15,
+      "vibe": "Global anthem energy, hips moving"
+    },
+    {
+      "artist": "Pedro Capó",
+      "song": "Calma",
+      "explicit": false,
+      "appleMusicId": "1412993945",
+      "offset": 15,
+      "vibe": "Smooth island vibe, effortless cool"
+    },
+    {
+      "artist": "Dr. Dre",
+      "song": "Still D.R.E.",
+      "explicit": true,
+      "appleMusicId": "1444156738",
+      "offset": 0,
+      "vibe": "The piano riff — instant West Coast swagger"
+    },
+    {
+      "artist": "T.I. ft. Rihanna",
+      "song": "Live Your Life",
+      "explicit": false,
+      "appleMusicId": "1258981727",
+      "offset": 23,
+      "vibe": "Rihanna's hook drops at 23s — pure arena energy"
+    },
+    {
+      "artist": "BABYMETAL",
+      "song": "RATATATA",
+      "explicit": false,
+      "appleMusicId": "1746116468",
+      "offset": 29,
+      "vibe": "Metal meets J-pop chaos — the drop hits at 29s"
+    },
+    {
+      "artist": "Bruce Springsteen",
+      "song": "Glory Days",
+      "explicit": false,
+      "appleMusicId": "203709191",
+      "offset": 25,
+      "vibe": "'Glory days, well they'll pass you by' — born for baseball"
+    },
+    {
+      "artist": "John Denver",
+      "song": "Take Me Home, Country Roads",
+      "explicit": false,
+      "appleMusicId": "1482520559",
+      "offset": 30,
+      "vibe": "The whole crowd sings along — pure feel-good Americana"
+    }
+  ]
+}

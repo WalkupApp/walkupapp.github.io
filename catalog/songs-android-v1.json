@@ -1,0 +1,1330 @@
+{
+  "format": "walkupsongs.songs.v1",
+  "version": 1,
+  "updated": "2026-10-16T16:00:00Z",
+  "minAppVersion": "1.0.0",
+  "inningBreak": [
+    {
+      "artist": "Queen",
+      "song": "We Will Rock You",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=PYadlIf01Ww",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Thunderstruck",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=p_6BJC-OWk0",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "Neil Diamond",
+      "song": "Sweet Caroline",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=4F_RCWVoL4s",
+      "offset": 24,
+      "weight": 5
+    },
+    {
+      "artist": "The White Stripes",
+      "song": "Seven Nation Army",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CBEJo18auXE",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "Darude",
+      "song": "Sandstorm",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=UdWRghH6EzY",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "Zombie Nation",
+      "song": "Kernkraft 400",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=gE2Cs7Ks2Zg",
+      "offset": 15,
+      "weight": 5
+    },
+    {
+      "artist": "Metallica",
+      "song": "Enter Sandman",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=XZuM4zFg-60",
+      "offset": 10.5,
+      "weight": 5
+    },
+    {
+      "artist": "Survivor",
+      "song": "Eye of the Tiger",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=kI-TBmie1Yc",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "Dropkick Murphys",
+      "song": "Shipping Up to Boston",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=Ldf7T6TlV-o",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "House of Pain",
+      "song": "Jump Around",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=bz_1DsPF1qw",
+      "offset": 13.5,
+      "weight": 5
+    },
+    {
+      "artist": "Ozzy Osbourne",
+      "song": "Crazy Train",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=Djrl6fu8myo",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "Guns N' Roses",
+      "song": "Welcome to the Jungle",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=vQcGyfUbHJw",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "The Alan Parsons Project",
+      "song": "Sirius",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=OkC_oi0ksuw",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "2 Unlimited",
+      "song": "Get Ready for This",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=-PY5rQY4J1I",
+      "offset": 13.5,
+      "weight": 5
+    },
+    {
+      "artist": "Tag Team",
+      "song": "Whoomp! (There It Is)",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=L6mNa_QZVHg",
+      "offset": 2,
+      "weight": 5
+    },
+    {
+      "artist": "Kool & The Gang",
+      "song": "Celebration",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=1Qu6Dyn-c6M",
+      "offset": 0,
+      "weight": 5
+    },
+    {
+      "artist": "Journey",
+      "song": "Don't Stop Believin'",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=1k8craCGpgs",
+      "offset": 148.5,
+      "weight": 5
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Back in Black",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=kYzbBPzyWrc",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "AC/DC",
+      "song": "T.N.T.",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CiJeSSzu9Bo",
+      "offset": 11,
+      "weight": 4
+    },
+    {
+      "artist": "Queen",
+      "song": "We Are the Champions",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=62v4y43D-3k",
+      "offset": 46.5,
+      "weight": 4
+    },
+    {
+      "artist": "Bon Jovi",
+      "song": "Livin' on a Prayer",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=lDK9QqIzhwk",
+      "offset": 57,
+      "weight": 4
+    },
+    {
+      "artist": "Van Halen",
+      "song": "Jump",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=ggJI9dKBk48",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "Europe",
+      "song": "The Final Countdown",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=4hj8M8XZpis",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "The Fratellis",
+      "song": "Chelsea Dagger",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=cHde73avRuQ",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "DJ Khaled",
+      "song": "All I Do Is Win",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=4n9Pan2khf0",
+      "offset": 10.5,
+      "weight": 4
+    },
+    {
+      "artist": "Fall Out Boy",
+      "song": "Centuries",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=x1ckRXQFvdk",
+      "offset": 34,
+      "weight": 4
+    },
+    {
+      "artist": "Fort Minor",
+      "song": "Remember the Name",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=dTUqtsKPEK4",
+      "offset": 4,
+      "weight": 4
+    },
+    {
+      "artist": "Eminem",
+      "song": "Lose Yourself",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=8_uUQxC5X-c",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "Blur",
+      "song": "Song 2",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=Bz4l9_bzfZM",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Hells Bells",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=j-jBGJ-5XhQ",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "AC/DC",
+      "song": "You Shook Me All Night Long",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=3FWARCNwK5E",
+      "offset": 9,
+      "weight": 4
+    },
+    {
+      "artist": "KISS",
+      "song": "Rock and Roll All Nite",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=UXYfAOCpaww",
+      "offset": 33,
+      "weight": 4
+    },
+    {
+      "artist": "Guns N' Roses",
+      "song": "Paradise City",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=LwfMqgpZe5U",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "Bill Conti",
+      "song": "Gonna Fly Now",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=AxWejrVYcCg",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "John Fogerty",
+      "song": "Centerfield",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=x1nHle6nCeQ",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "DJ Snake",
+      "song": "Turn Down for What",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=OzhgEg_I1ac",
+      "offset": 11,
+      "weight": 4
+    },
+    {
+      "artist": "Mark Ronson",
+      "song": "Uptown Funk",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=0p5Clbtmd8M",
+      "offset": 41,
+      "weight": 4
+    },
+    {
+      "artist": "Rednex",
+      "song": "Cotton Eye Joe",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=UGK40D6hNhE",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "LMFAO",
+      "song": "Party Rock Anthem",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=zIh5AHxh-Ok",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "The Beatles",
+      "song": "Twist and Shout",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=2RicaUqd9Hg",
+      "offset": 0,
+      "weight": 4
+    },
+    {
+      "artist": "The Killers",
+      "song": "Mr. Brightside",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=lf-FmahLbck",
+      "offset": 10,
+      "weight": 3
+    },
+    {
+      "artist": "Kanye West",
+      "song": "Stronger",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=vxAAvdTLUHw",
+      "offset": 4,
+      "weight": 3
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "HUMBLE.",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=jrkIjuJVLAo",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Eminem",
+      "song": "'Till I Collapse",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=89qrKvoriuU",
+      "offset": 15,
+      "weight": 3
+    },
+    {
+      "artist": "Macklemore & Ryan Lewis",
+      "song": "Can't Hold Us",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=Op9SyKOlWXg",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Martin Garrix",
+      "song": "Animals",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CkRyaG4Mjik",
+      "offset": 22.5,
+      "weight": 3
+    },
+    {
+      "artist": "Avicii",
+      "song": "Levels",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=wDuoOapZ9Z0",
+      "offset": 25,
+      "weight": 3
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Believer",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=IhP3J0j9JmY",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Natural",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=9BPfyhhv7-c",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Walk the Moon",
+      "song": "Shut Up and Dance",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=nbcCG7PkI18",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Pharrell Williams",
+      "song": "Happy",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CiA4iWUht1s",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Earth, Wind & Fire",
+      "song": "September",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=AWXub7E5moM",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "The Black Eyed Peas",
+      "song": "I Gotta Feeling",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=YpPeOZZNQ9c",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "The Weeknd",
+      "song": "Blinding Lights",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=fHI8X4OXluQ",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "The Rolling Stones",
+      "song": "Start Me Up",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=SGyOaCXr8Lw",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Mötley Crüe",
+      "song": "Kickstart My Heart",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=y5Qkk42iYQE",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Styx",
+      "song": "Renegade",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=E9eLz4DrwF8",
+      "offset": 43.5,
+      "weight": 3
+    },
+    {
+      "artist": "Def Leppard",
+      "song": "Pour Some Sugar on Me",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=Rqs4cMyMLnY",
+      "offset": 31.5,
+      "weight": 3
+    },
+    {
+      "artist": "Scorpions",
+      "song": "Rock You Like a Hurricane",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=kdqkA3CE6nA",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Metallica",
+      "song": "For Whom the Bell Tolls",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=B_HSa1dEL9s",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Dr. Dre",
+      "song": "Still D.R.E.",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=7RTDoBtjajw",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "50 Cent",
+      "song": "In Da Club",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=c7SXj96svfw",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "Locked Out of Heaven",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=kBZh7kmgVho",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "24K Magic",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=f9imDgsjxXc",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Bruce Springsteen",
+      "song": "Glory Days",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=sjGVGIcre3o",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Ram Jam",
+      "song": "Black Betty",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=4cn_woPvjQI",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "DMX",
+      "song": "X Gon' Give It to Ya",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=dVGUTYZyTrI",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "PSY",
+      "song": "Gangnam Style",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CVxMTl6cUSE",
+      "offset": 31.5,
+      "weight": 3
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Old Town Road",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=pZQjjEvOMYg",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "OutKast",
+      "song": "Hey Ya!",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=JzqYDWBkX_Q",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Beastie Boys",
+      "song": "Sabotage",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=aNQO94En8Tc",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Disturbed",
+      "song": "Down with the Sickness",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=MS38BhLrfUk",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Franz Ferdinand",
+      "song": "Take Me Out",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=7dfBmjrN5W0",
+      "offset": 18,
+      "weight": 3
+    },
+    {
+      "artist": "Jet",
+      "song": "Are You Gonna Be My Girl",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=aMJ_OxqDCR8",
+      "offset": 0,
+      "weight": 3
+    },
+    {
+      "artist": "Skrillex",
+      "song": "Bangarang",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=WGY1lvYDpNM",
+      "offset": 26,
+      "weight": 2
+    },
+    {
+      "artist": "David Guetta",
+      "song": "Titanium",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=P-gWGlf_VrY",
+      "offset": 31.5,
+      "weight": 2
+    },
+    {
+      "artist": "Major Lazer",
+      "song": "Lean On",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=4ZxFyXV7w0c",
+      "offset": 21,
+      "weight": 2
+    },
+    {
+      "artist": "Avicii",
+      "song": "Wake Me Up",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=rjCwarHsrdk",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Swedish House Mafia",
+      "song": "Don't You Worry Child",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=vRqbSgp8w38",
+      "offset": 49,
+      "weight": 2
+    },
+    {
+      "artist": "Justin Timberlake",
+      "song": "Can't Stop the Feeling",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=KbyPok-3dio",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Taylor Swift",
+      "song": "Shake It Off",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=1Vo8AjxiBV0",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "American Authors",
+      "song": "Best Day of My Life",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=wutzv7JjX7k",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Smash Mouth",
+      "song": "All Star",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=SWFA0d2vIUk",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Thunder",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=4AqjqOqNrjw",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Radioactive",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=fCVGQJJNuUs",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Katy Perry",
+      "song": "Roar",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=zoJAcgmOS4Q",
+      "offset": 25.5,
+      "weight": 2
+    },
+    {
+      "artist": "Kelly Clarkson",
+      "song": "Stronger",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=avYxiIRG4xQ",
+      "offset": 32,
+      "weight": 2
+    },
+    {
+      "artist": "Rage Against the Machine",
+      "song": "Bulls on Parade",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=LUhi41iZvSg",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Foo Fighters",
+      "song": "Everlong",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=hq0rZ3IiyWw",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Foo Fighters",
+      "song": "The Pretender",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=nLjVtDtyDlY",
+      "offset": 44,
+      "weight": 2
+    },
+    {
+      "artist": "Led Zeppelin",
+      "song": "Immigrant Song",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=P3Y8OWkiUts",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Bruce Springsteen",
+      "song": "Born to Run",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=Wu4_zVxmufY",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Daft Punk",
+      "song": "Stronger",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=yydNF8tuVmU",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Daft Punk",
+      "song": "Get Lucky",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=M7VTByl6WqA",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Daft Punk",
+      "song": "One More Time",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=A2VpR8HahKc",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Bruno Mars",
+      "song": "Treasure",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=pRSjF6W6WHY",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Ricky Martin",
+      "song": "Livin' La Vida Loca",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CN5hQOI__10",
+      "offset": 36,
+      "weight": 2
+    },
+    {
+      "artist": "Backstreet Boys",
+      "song": "Everybody",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=eV7qXmqYs9E",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "NSYNC",
+      "song": "Bye Bye Bye",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=C27NShgTQE4",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "The Jackson 5",
+      "song": "I Want You Back",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=UvynvnxZJ3Q",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Crazy in Love",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=M2hbDKOBl44",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Dua Lipa",
+      "song": "Levitating",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=6LRxGIzdQC8",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "The Weeknd",
+      "song": "Save Your Tears",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=PI24GuSLUxE",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Lil Nas X",
+      "song": "Industry Baby",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=e23Khheb7bo",
+      "offset": 38,
+      "weight": 2
+    },
+    {
+      "artist": "Muse",
+      "song": "Uprising",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=OqPVz101nd0",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Kenny Loggins",
+      "song": "Danger Zone",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=yK0P1Bk8Cx4",
+      "offset": 0,
+      "weight": 2
+    },
+    {
+      "artist": "Golden Earring",
+      "song": "Twilight Zone",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=9HdRASmYA4E",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "DNA.",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=8XTSx6_LfmU",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Drake",
+      "song": "Nonstop",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=lbo_I0PFQ2M",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Drake",
+      "song": "Started from the Bottom",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=ZBhx5C4bAzY",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Travis Scott",
+      "song": "Sicko Mode",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=Nhsb4MXunMo",
+      "offset": 12,
+      "weight": 1
+    },
+    {
+      "artist": "The Script",
+      "song": "Hall of Fame",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=lM3UKnzbviA",
+      "offset": 38,
+      "weight": 1
+    },
+    {
+      "artist": "Rachel Platten",
+      "song": "Fight Song",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=EEDzeZuawRY",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Nirvana",
+      "song": "Smells Like Teen Spirit",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=BMnytqA8Q98",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Led Zeppelin",
+      "song": "Kashmir",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=ww9484EM2OQ",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Olivia Rodrigo",
+      "song": "good 4 u",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=wZA6ZojCwK8",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Taylor Swift",
+      "song": "Anti-Hero",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=t58f0CxkuTc",
+      "offset": 33,
+      "weight": 1
+    },
+    {
+      "artist": "Harry Styles",
+      "song": "As It Was",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=V1Z586zoeeE",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Glass Animals",
+      "song": "Heat Waves",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=GOZEE6N8TT4",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "The Kid LAROI",
+      "song": "Stay",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=rkYlZnIbe2E",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "BTS",
+      "song": "Butter",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=wpj3MoU3fus",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Chumbawamba",
+      "song": "Tubthumping",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=rStPlVn8D04",
+      "offset": 3,
+      "weight": 1
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Run the World (Girls)",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=JECNHRf-V_c",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "a-ha",
+      "song": "Take on Me",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=gRTm0Ej2mq8",
+      "offset": 0,
+      "weight": 1
+    },
+    {
+      "artist": "Katrina and the Waves",
+      "song": "Walking on Sunshine",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=Tupa92GUDNI",
+      "offset": 0,
+      "weight": 1
+    }
+  ],
+  "suggestions": [
+    {
+      "artist": "AC/DC",
+      "song": "Thunderstruck",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=v2AC41dglnM",
+      "offset": 49,
+      "vibe": "Guitar riff opener"
+    },
+    {
+      "artist": "Metallica",
+      "song": "Enter Sandman",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=CD-E-LDc384",
+      "offset": 13,
+      "vibe": "The closer's theme"
+    },
+    {
+      "artist": "Guns N' Roses",
+      "song": "Welcome to the Jungle",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=o1tj2zJ2Wvg",
+      "offset": 0,
+      "vibe": "Wild card energy"
+    },
+    {
+      "artist": "Survivor",
+      "song": "Eye of the Tiger",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=btPJPFnesV4",
+      "offset": 0,
+      "vibe": "Champion's march"
+    },
+    {
+      "artist": "Queen",
+      "song": "Don't Stop Me Now",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=HgzGwKwLmgM",
+      "offset": 0,
+      "vibe": "Pure unstoppable energy"
+    },
+    {
+      "artist": "Queen",
+      "song": "We Are the Champions",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=04854XqcfCY",
+      "offset": 43,
+      "vibe": "Victory lap vibes"
+    },
+    {
+      "artist": "AC/DC",
+      "song": "Back in Black",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=pAgnJDJN4VA",
+      "offset": 0,
+      "vibe": "Heavy hitter entrance"
+    },
+    {
+      "artist": "Bon Jovi",
+      "song": "Living on a Prayer",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=lDK9QqIzhwk",
+      "offset": 108,
+      "vibe": "Crowd sing-along"
+    },
+    {
+      "artist": "Van Halen",
+      "song": "Jump",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=SwYN7mTi6HM",
+      "offset": 0,
+      "vibe": "Classic 80s pump-up"
+    },
+    {
+      "artist": "The Who",
+      "song": "Baba O'Riley",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=x2KRpRMSu4g",
+      "offset": 0,
+      "vibe": "Iconic intro build"
+    },
+    {
+      "artist": "Beyoncé",
+      "song": "Crazy in Love",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=ViwtNLUqkMY",
+      "offset": 0,
+      "vibe": "Power hitter energy"
+    },
+    {
+      "artist": "DJ Khaled",
+      "song": "All I Do Is Win",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=GGXzlRoNtHU",
+      "offset": 13,
+      "vibe": "Winning mentality"
+    },
+    {
+      "artist": "Drake",
+      "song": "Started from the Bottom",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=RubBzkZzpUA",
+      "offset": 0,
+      "vibe": "Underdog triumph"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "song": "HUMBLE.",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=tvTRZJ-4EyI",
+      "offset": 0,
+      "vibe": "Quiet dominance"
+    },
+    {
+      "artist": "Drake",
+      "song": "God's Plan",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
+      "offset": 43,
+      "vibe": "Steady confidence"
+    },
+    {
+      "artist": "Sheck Wes",
+      "song": "Mo Bamba",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=VWoIpDVkOH0",
+      "offset": 24,
+      "vibe": "Hype anthem"
+    },
+    {
+      "artist": "The Script",
+      "song": "Hall of Fame",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=mk48xRzuNvA",
+      "offset": 64,
+      "vibe": "Inspirational closer"
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Radioactive",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=ktvTqknDobU",
+      "offset": 46,
+      "vibe": "Dark horse energy"
+    },
+    {
+      "artist": "Imagine Dragons",
+      "song": "Believer",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=7wtfhZwyrcc",
+      "offset": 0,
+      "vibe": "Comeback kid"
+    },
+    {
+      "artist": "Fall Out Boy",
+      "song": "Centuries",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=LBr7kECsjcQ",
+      "offset": 0,
+      "vibe": "Legacy walk-up"
+    },
+    {
+      "artist": "Macklemore & Ryan Lewis",
+      "song": "Can't Hold Us",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=2zNSgSzhBfM",
+      "offset": 61,
+      "vibe": "Stadium anthem"
+    },
+    {
+      "artist": "Eminem",
+      "song": "Till I Collapse",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=Obim8BYGnOE",
+      "offset": 0,
+      "vibe": "Pure intensity"
+    },
+    {
+      "artist": "Eminem",
+      "song": "Not Afraid",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=j5-yKhDd64s",
+      "offset": 26,
+      "vibe": "Standing tall"
+    },
+    {
+      "artist": "Eminem",
+      "song": "Lose Yourself",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=_Yhyp-_hX2s",
+      "offset": 52,
+      "vibe": "One shot, one opportunity"
+    },
+    {
+      "artist": "The White Stripes",
+      "song": "Seven Nation Army",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=0J2QdDbelmY",
+      "offset": 0,
+      "vibe": "Crowd chant starter"
+    },
+    {
+      "artist": "Beastie Boys",
+      "song": "Sabotage",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=z5rRZdiu1UE",
+      "offset": 4,
+      "vibe": "Explosive intro"
+    },
+    {
+      "artist": "Hank Williams Jr.",
+      "song": "Country Boy Can Survive",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=3cQNkIrg-Tk",
+      "offset": 0,
+      "vibe": "Gritty toughness"
+    },
+    {
+      "artist": "Luis Fonsi",
+      "song": "Despacito",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+      "offset": 13,
+      "vibe": "Smooth strut"
+    },
+    {
+      "artist": "Daddy Yankee",
+      "song": "Con Calma",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=DiItGE3eAyQ",
+      "offset": 0,
+      "vibe": "Cool confidence"
+    },
+    {
+      "artist": "Dropkick Murphys",
+      "song": "Shipping Up to Boston",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=9BMv4kecwEQ",
+      "offset": 0,
+      "vibe": "Blue-collar grit"
+    },
+    {
+      "artist": "Zombie Nation",
+      "song": "Kernkraft 400",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=z5LW07FTJbI",
+      "offset": 54,
+      "vibe": "Stadium crowd staple"
+    },
+    {
+      "artist": "DMX",
+      "song": "X Gon' Give It to Ya",
+      "explicit": true,
+      "youtube": "https://www.youtube.com/watch?v=fGx6K90TmCI",
+      "offset": 1,
+      "vibe": "Intimidation factor"
+    },
+    {
+      "artist": "Rachel Platten",
+      "song": "Fight Song",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=xo1VInw-SKc",
+      "offset": 31,
+      "vibe": "Comeback anthem"
+    },
+    {
+      "artist": "Fort Minor",
+      "song": "Remember the Name",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=VDvr08sCPOc",
+      "offset": 17,
+      "vibe": "Ten percent luck"
+    },
+    {
+      "artist": "Kanye West",
+      "song": "Stronger",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=PsO6ZnUZI0g",
+      "offset": 17,
+      "vibe": "What doesn't kill me..."
+    },
+    {
+      "artist": "Woodkid",
+      "song": "Run Boy Run",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=lmc21V-zBq0",
+      "offset": 13,
+      "vibe": "Epic cinematic build"
+    },
+    {
+      "artist": "Queen",
+      "song": "We Will Rock You",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=-tJYN-eG1zk",
+      "offset": 0,
+      "vibe": "Crowd stomp and clap"
+    },
+    {
+      "artist": "AC/DC",
+      "song": "T.N.T.",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=LADzLojLRCU",
+      "offset": 0,
+      "vibe": "Explosive opener"
+    },
+    {
+      "artist": "House of Pain",
+      "song": "Jump Around",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=XhzpxjuwZy0",
+      "offset": 2,
+      "vibe": "Get the crowd moving"
+    },
+    {
+      "artist": "The Weeknd",
+      "song": "Blinding Lights",
+      "explicit": false,
+      "youtube": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
+      "offset": 67,
+      "vibe": "Unstoppable drive"
+    }
+  ]
+}
