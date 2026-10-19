@@ -1,7 +1,7 @@
 {
   "format": "walkupsongs.songs.v1",
-  "version": 1,
-  "updated": "2026-10-16T16:00:00Z",
+  "version": 2,
+  "updated": "2026-10-19T02:07:33Z",
   "minAppVersion": "1.0.0",
   "inningBreak": [
     {
@@ -1169,7 +1169,7 @@
     {
       "artist": "Macklemore & Ryan Lewis",
       "song": "Can't Hold Us",
-      "explicit": false,
+      "explicit": true,
       "youtube": "https://www.youtube.com/watch?v=2zNSgSzhBfM",
       "offset": 61,
       "vibe": "Stadium anthem"
@@ -1193,7 +1193,7 @@
     {
       "artist": "Eminem",
       "song": "Lose Yourself",
-      "explicit": false,
+      "explicit": true,
       "youtube": "https://www.youtube.com/watch?v=_Yhyp-_hX2s",
       "offset": 52,
       "vibe": "One shot, one opportunity"
@@ -1209,7 +1209,7 @@
     {
       "artist": "Beastie Boys",
       "song": "Sabotage",
-      "explicit": false,
+      "explicit": true,
       "youtube": "https://www.youtube.com/watch?v=z5rRZdiu1UE",
       "offset": 4,
       "vibe": "Explosive intro"
@@ -1281,7 +1281,7 @@
     {
       "artist": "Kanye West",
       "song": "Stronger",
-      "explicit": false,
+      "explicit": true,
       "youtube": "https://www.youtube.com/watch?v=PsO6ZnUZI0g",
       "offset": 17,
       "vibe": "What doesn't kill me..."
@@ -1313,7 +1313,7 @@
     {
       "artist": "House of Pain",
       "song": "Jump Around",
-      "explicit": false,
+      "explicit": true,
       "youtube": "https://www.youtube.com/watch?v=XhzpxjuwZy0",
       "offset": 2,
       "vibe": "Get the crowd moving"
