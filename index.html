@@ -29,7 +29,7 @@
       "alternateName": ["Walk Up Songs App", "Walk Out Song App", "Walkup Music App"],
       "operatingSystem": "iOS, Android",
       "applicationCategory": "SportsApplication",
-      "description": "Set walk-up songs and announcer intros for every player in your youth baseball or softball lineup. Supports Apple Music, YouTube, and local files.",
+      "description": "Set walk-up songs and announcer intros for every player in your youth baseball or softball lineup. iPhone: Apple Music, your music library, and audio files. Android: YouTube and audio files.",
       "url": "https://walkupsongs.app",
       "downloadUrl": "https://apps.apple.com/app/walk-up-songs/id6760240442",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -340,6 +340,44 @@
         }
         .details p:last-child { margin-bottom: 0; }
         .details a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+        .sources-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .source-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.25rem 1rem;
+        }
+        .source-card h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+        .source-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .source-card li {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+        .source-card li strong { color: var(--text); }
+        .details .source-no {
+            font-size: 0.88rem;
+            margin-bottom: 0;
+        }
+        @media (max-width: 640px) {
+            .sources-grid { grid-template-columns: 1fr; }
+        }
         .details-note {
             margin-top: 1.25rem;
             font-size: 0.92rem;
@@ -629,7 +667,7 @@
 <div class="proof-bar">
     <span class="stars">★★★★★</span>&ensp;
     Loved by coaches and parents &nbsp;·&nbsp;
-    Apple Music &amp; YouTube &nbsp;·&nbsp;
+    Apple Music on iPhone &nbsp;·&nbsp; YouTube on Android &nbsp;·&nbsp;
     Free to download &nbsp;·&nbsp;
     iOS &amp; Android
 </div>
@@ -639,7 +677,7 @@
     <div class="setup-inner">
         <div class="setup-header">
             <h2>Ready for game day in three steps.</h2>
-            <p class="feat-body">Create your teams, build your lineup, and pick walk-up songs from Apple Music, YouTube, or your own library — no complicated setup required.</p>
+            <p class="feat-body">Create your teams, build your lineup, and pick walk-up songs from Apple Music on iPhone, YouTube on Android, or your own audio files — no complicated setup required.</p>
         </div>
         <div class="promo-trio">
             <div class="promo-trio-item">
@@ -694,16 +732,41 @@
             <h2>How it works</h2>
             <ol>
                 <li>Build your lineup — add players with their name, number, and position.</li>
-                <li>Pick a walk-up song for each player from Apple Music, YouTube, or <a href="/local-files/">your own files</a>.</li>
+                <li>Pick a walk-up song for each player: Apple Music on iPhone, YouTube on Android, or <a href="/local-files/">your own files</a> on either. See <a href="#music-sources">which sources each phone supports</a>.</li>
                 <li>On game day, tap a player's name to instantly play their walk-up song through your speaker.</li>
                 <li>Add AI announcer intros, soundboard effects, and inning-break DJ sets to complete the experience.</li>
             </ol>
             <p class="details-note">Tip: <a href="/local-files/">Local files</a> are often best for game day — offline, no streaming fee, and better fade control.</p>
         </div>
+        <div class="details-block music-sources" id="music-sources">
+            <h2>Where your songs come from</h2>
+            <p>The music sources depend on your phone.</p>
+            <div class="sources-grid">
+                <div class="source-card">
+                    <h3>iPhone and iPad</h3>
+                    <ul>
+                        <li><strong>Apple Music</strong> — needs an Apple Music subscription.</li>
+                        <li><strong>Your music library</strong> — songs you own in the Music app.</li>
+                        <li><strong>Audio files</strong> — MP3 or M4A files in the Files app.</li>
+                        <li><strong>Spotify</strong> — for Premium members: turn it on in Advanced Settings. Needs Spotify Premium. <a href="/spotify/">Spotify setup</a></li>
+                    </ul>
+                    <p class="source-no">YouTube isn't available on iPhone.</p>
+                </div>
+                <div class="source-card">
+                    <h3>Android</h3>
+                    <ul>
+                        <li><strong>YouTube</strong> — search for any song inside the app.</li>
+                        <li><strong>Audio files</strong> — MP3 or other audio files on your phone.</li>
+                    </ul>
+                    <p class="source-no">Apple Music and Spotify aren't available on Android.</p>
+                </div>
+            </div>
+            <p class="details-note">Sharing a team between an iPhone and an Android phone? <a href="/local-files/">Audio files</a> play on both. Apple Music songs play only on iPhone, and YouTube songs only on Android.</p>
+        </div>
         <div class="details-block why-section">
             <h2>Why WalkUp Songs?</h2>
             <p>Every kid deserves a big-league moment stepping up to the plate. WalkUp Songs makes it easy for coaches and parents to set up personalized walk-up music and announcer intros for every player on the team — no DJ experience required. Works great for little league, youth baseball leagues, travel ball, T-ball, and any team using GameChanger.</p>
-            <p>Whether you're running a youth baseball league, a travel softball team, or a rec league, WalkUp Songs turns game day into an event. Pick from Apple Music, YouTube, or local audio files — whatever your players love.</p>
+            <p>Whether you're running a youth baseball league, a travel softball team, or a rec league, WalkUp Songs turns game day into an event. Pick from Apple Music on iPhone, YouTube on Android, or local audio files on either — whatever your players love.</p>
             <p>Beyond walk-up songs, add AI-generated announcer intros, a soundboard for crowd effects, and curated inning-break DJ sets to keep the energy high from first pitch to last out.</p>
         </div>
     </div>
@@ -739,7 +802,7 @@
 <!-- CTA -->
 <section class="cta" id="download">
     <h2>Make game day<br>unforgettable.</h2>
-    <p>Free to download. Works with Apple Music, YouTube, and your own music library.</p>
+    <p>Free to download. Apple Music on iPhone, YouTube on Android, and your own audio files on both.</p>
     <div class="badges" style="justify-content:center">
         <a href="https://apps.apple.com/app/walk-up-songs/id6760240442" target="_blank" rel="noopener">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
