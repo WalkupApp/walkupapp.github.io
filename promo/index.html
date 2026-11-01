@@ -194,9 +194,9 @@
 
     <script>
     // ============================================================
-    // CONFIGURATION — Set your Google Apps Script URL here
+    // CONFIGURATION — address of the promo code service (Cloudflare Worker, see ../promo-service/)
     // ============================================================
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTnAQqXnvCqRHv04CHc7sQX9VsJvXpLPkHBMJ78OSse5Ti8KeZSRFusPWmvcq-rQ2n/exec';
+    var SCRIPT_URL = '';
 
     var APP_ID = '6760240442';
 
@@ -222,7 +222,7 @@
         result.className = 'result';
         result.innerHTML = '';
 
-        fetch(SCRIPT_URL + '?action=claim', { redirect: 'follow' })
+        fetch(SCRIPT_URL + '/claim', { method: 'POST' })
             .then(function(r) { return r.json(); })
             .then(function(data) {
                 if (data.success && data.code) {
@@ -242,6 +242,11 @@
                         '<p class="code-hint">This link opens the App Store to redeem your code.</p>';
                     result.className = 'result show';
                     btn.style.display = 'none';
+                } else if (data.error === 'limit') {
+                    result.innerHTML = '<p class="error-msg">You\'ve already claimed codes today. Please try again tomorrow.</p>';
+                    result.className = 'result show';
+                    btn.disabled = true;
+                    btn.textContent = 'Limit Reached';
                 } else if (data.error === 'exhausted') {
                     result.innerHTML = '<p class="error-msg">All promo codes have been claimed. Check back later!</p>';
                     result.className = 'result show';
