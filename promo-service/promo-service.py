@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TOKEN_FILE = os.path.expanduser("~/.config/macserver/cloudflare.token")
 API = "https://api.cloudflare.com/client/v4"
 DB_NAME = "walkup-promo"
-SCRIPT = "walkup-promo"
+SCRIPT = "walkupsongspromo"
 
 
 def token():
