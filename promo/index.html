@@ -158,6 +158,42 @@
             color: rgba(255,255,255,0.6);
             margin-top: -8px;
         }
+        .platform-picker {
+            display: flex;
+            gap: 8px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 4px;
+            margin: 16px 0;
+        }
+        .platform-btn {
+            flex: 1;
+            border: 0;
+            border-radius: 9px;
+            padding: 10px 8px;
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            background: transparent;
+            cursor: pointer;
+        }
+        .platform-btn[aria-checked="true"] {
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+        }
+        .notes {
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 16px;
+        }
+        .notes p { margin: 0 0 8px; }
+        .notes p:last-child { margin-bottom: 0; }
+        .notes strong { color: #fff; }
         .setup-notice {
             background: rgba(248,113,113,0.1);
             border: 1px solid rgba(248,113,113,0.2);
@@ -178,8 +214,23 @@
 
         <div class="card">
             <h2>Claim Your Free Code</h2>
-            <p>Tap below to get a code for one free year of Walk-Up Songs Premium on iPhone and iPad. One code per person.</p>
-            <p class="fine-print">Already subscribed? Your next yearly renewal is free. New to Premium? Your first year is free, then it renews at the regular yearly price unless you cancel in your App Store settings. Own lifetime Premium? You already have everything, so you don't need a code.</p>
+            <p>Pick your phone, then tap below to get a code for one free year of Walk-Up Songs Premium. One code per person.</p>
+
+            <div class="platform-picker" role="radiogroup" aria-label="Your phone">
+                <button type="button" class="platform-btn" id="pick-ios" role="radio" onclick="pickPlatform('ios')">iPhone &amp; iPad</button>
+                <button type="button" class="platform-btn" id="pick-android" role="radio" onclick="pickPlatform('android')">Android</button>
+            </div>
+
+            <div class="notes" id="notes-ios">
+                <p><strong>Automatic renewal stays on.</strong> The code gives you a free year of the Walk-Up Songs yearly subscription. When the free year ends, it renews at the regular yearly price unless you cancel. To cancel, open Settings, tap your name, then Subscriptions, at least 24 hours before the year ends.</p>
+                <p>Already subscribed? Your next yearly renewal is free, and your subscription carries on after that.</p>
+                <p>Own lifetime Premium? You already have everything, so you don't need a code.</p>
+            </div>
+            <div class="notes" id="notes-android" hidden>
+                <p><strong>Automatic renewal stays on.</strong> The code gives you a free year of the Walk-Up Songs yearly subscription. When the free year ends, it renews at the regular yearly price unless you cancel. To cancel, open the Play Store app, tap your profile picture, then Payments &amp; subscriptions, then Subscriptions.</p>
+                <p>Google Play codes work only if you don't have a Walk-Up Songs subscription right now.</p>
+                <p>Own lifetime Premium? You already have everything, so you don't need a code.</p>
+            </div>
 
             <div class="setup-notice" id="setupNotice">
                 Promo codes are not configured yet. Check back soon!
@@ -205,13 +256,55 @@
     var SCRIPT_URL = 'https://walkupsongspromo.aquacadet.workers.dev';
 
     var APP_ID = '6760240442';
+    var platform = /android/i.test(navigator.userAgent) ? 'android' : 'ios';
+    var STORE = {
+        ios: { key: 'walkup_promo', label: 'Redeem on App Store', hint: 'This link opens the App Store to redeem your code.' },
+        android: { key: 'walkup_promo_android', label: 'Redeem on Google Play', hint: 'This link opens Google Play to redeem your code. You can also type it in the Play Store app under Payments & subscriptions, Redeem code.' }
+    };
+
+    function esc(text) {
+        return String(text).replace(/[&<>"']/g, function(c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+    }
+
+    function codeHTML(heading, code, url) {
+        var s = STORE[platform];
+        return heading +
+            '<div class="code-display">' + esc(code) + '</div>' +
+            '<a class="redeem-link" href="' + esc(url) + '" target="_blank" rel="noopener">' + s.label + ' &rarr;</a>' +
+            '<p class="code-hint">' + s.hint + '</p>';
+    }
+
+    function resetButton() {
+        var btn = document.getElementById('claimBtn');
+        btn.style.display = '';
+        btn.disabled = false;
+        btn.textContent = 'Get My Free Code';
+    }
+
+    function pickPlatform(p) {
+        platform = p;
+        ['ios', 'android'].forEach(function(name) {
+            document.getElementById('pick-' + name).setAttribute('aria-checked', name === p ? 'true' : 'false');
+            document.getElementById('notes-' + name).hidden = name !== p;
+        });
+        var result = document.getElementById('result');
+        result.className = 'result';
+        result.innerHTML = '';
+        resetButton();
+        var saved = localStorage.getItem(STORE[p].key);
+        if (saved) {
+            try { showSavedCode(JSON.parse(saved)); } catch (e) {}
+        }
+    }
 
     function claimCode() {
         var btn = document.getElementById('claimBtn');
         var result = document.getElementById('result');
 
         // Check if already claimed in this browser
-        var saved = localStorage.getItem('walkup_promo');
+        var saved = localStorage.getItem(STORE[platform].key);
         if (saved) {
             showSavedCode(JSON.parse(saved));
             return;
@@ -222,30 +315,30 @@
             return;
         }
 
-        // Show loading state
+        var asked = platform;
         btn.disabled = true;
         btn.innerHTML = '<span class="spinner"></span>Claiming...';
         result.className = 'result';
         result.innerHTML = '';
 
-        fetch(SCRIPT_URL + '/claim', { method: 'POST' })
+        fetch(SCRIPT_URL + '/claim', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ platform: asked })
+        })
             .then(function(r) { return r.json(); })
             .then(function(data) {
+                if (asked !== platform) return;  // the visitor switched phones while waiting
                 if (data.success && data.code) {
-                    var redeemURL = data.url || ('https://apps.apple.com/redeem?ctx=offercodes&id=' + APP_ID + '&code=' + data.code);
-                    // Save to localStorage
-                    localStorage.setItem('walkup_promo', JSON.stringify({
+                    var redeemURL = data.url || (asked === 'android'
+                        ? 'https://play.google.com/redeem?code=' + encodeURIComponent(data.code)
+                        : 'https://apps.apple.com/redeem?ctx=offercodes&id=' + APP_ID + '&code=' + encodeURIComponent(data.code));
+                    localStorage.setItem(STORE[asked].key, JSON.stringify({
                         code: data.code,
                         url: redeemURL,
                         claimedAt: new Date().toISOString()
                     }));
-
-                    result.innerHTML =
-                        '<p class="success-msg">Your code is ready!</p>' +
-                        '<div class="code-display">' + data.code + '</div>' +
-                        '<a class="redeem-link" href="' + redeemURL + '" target="_blank">' +
-                        'Redeem on App Store &rarr;</a>' +
-                        '<p class="code-hint">This link opens the App Store to redeem your code.</p>';
+                    result.innerHTML = codeHTML('<p class="success-msg">Your code is ready!</p>', data.code, redeemURL);
                     result.className = 'result show';
                     btn.style.display = 'none';
                 } else if (data.error === 'limit') {
@@ -254,45 +347,33 @@
                     btn.disabled = true;
                     btn.textContent = 'Limit Reached';
                 } else if (data.error === 'exhausted') {
-                    result.innerHTML = '<p class="error-msg">All promo codes have been claimed. Check back later!</p>';
+                    result.innerHTML = asked === 'android'
+                        ? '<p class="error-msg">No Android codes are available right now. Check back later!</p>'
+                        : '<p class="error-msg">All promo codes have been claimed. Check back later!</p>';
                     result.className = 'result show';
                     btn.disabled = true;
                     btn.textContent = 'No Codes Available';
                 } else {
                     result.innerHTML = '<p class="error-msg">Something went wrong. Please try again.</p>';
                     result.className = 'result show';
-                    btn.disabled = false;
-                    btn.textContent = 'Get My Free Code';
+                    resetButton();
                 }
             })
             .catch(function(err) {
                 result.innerHTML = '<p class="error-msg">Could not connect. Please try again later.</p>';
                 result.className = 'result show';
-                btn.disabled = false;
-                btn.textContent = 'Get My Free Code';
+                resetButton();
             });
     }
 
     function showSavedCode(saved) {
-        var btn = document.getElementById('claimBtn');
         var result = document.getElementById('result');
-        btn.style.display = 'none';
-        result.innerHTML =
-            '<div class="already-claimed"><p>You already claimed a code!</p></div>' +
-            '<div class="code-display">' + saved.code + '</div>' +
-            '<a class="redeem-link" href="' + saved.url + '" target="_blank">' +
-            'Redeem on App Store &rarr;</a>' +
-            '<p class="code-hint">This link opens the App Store to redeem your code.</p>';
+        document.getElementById('claimBtn').style.display = 'none';
+        result.innerHTML = codeHTML('<div class="already-claimed"><p>You already claimed a code!</p></div>', saved.code, saved.url);
         result.className = 'result show';
     }
 
-    // On load, check if already claimed
-    (function() {
-        var saved = localStorage.getItem('walkup_promo');
-        if (saved) {
-            try { showSavedCode(JSON.parse(saved)); } catch(e) {}
-        }
-    })();
+    pickPlatform(platform);
     </script>
 </body>
 </html>

@@ -1,8 +1,9 @@
 // Walk-Up Songs promo code service (Cloudflare Worker + D1).
 // Replaces the Google Apps Script + Google Sheet backend of walkupsongs.app/promo/.
 //
-//   POST /claim   -> {success:true, code, url, remaining} | {success:false, error:"exhausted"|"limit"}
-//   GET  /status  -> {total, claimed, remaining}
+//   POST /claim  {"platform":"ios"|"android"}  (no body = ios)
+//                 -> {success:true, code, url, platform, remaining} | {success:false, error:"exhausted"|"limit"}
+//   GET  /status  -> {total, claimed, remaining, ios:{...}, android:{...}}
 //
 // Codes are added and exported from the Mac with promo-service.sh (D1 API), so the Worker has no admin routes.
 
@@ -33,12 +34,24 @@ async function clientHash(request) {
   return [...new Uint8Array(digest)].slice(0, 12).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-async function remaining(env) {
-  const row = await env.DB.prepare("SELECT COUNT(*) AS n FROM codes WHERE claimed_at IS NULL").first();
+const PLATFORMS = ["ios", "android"];
+
+async function remaining(env, platform) {
+  const row = await env.DB.prepare(
+    "SELECT COUNT(*) AS n FROM codes WHERE claimed_at IS NULL AND platform = ?1").bind(platform).first();
   return row ? row.n : 0;
 }
 
+async function requestedPlatform(request) {
+  try {
+    const body = await request.json();
+    if (body && PLATFORMS.includes(body.platform)) return body.platform;
+  } catch (e) {}
+  return "ios";
+}
+
 async function claim(request, env) {
+  const platform = await requestedPlatform(request);
   const client = await clientHash(request);
   const since = new Date(Date.now() - 86400000).toISOString();
   const used = await env.DB.prepare(
@@ -49,16 +62,22 @@ async function claim(request, env) {
   const now = new Date().toISOString();
   const row = await env.DB.prepare(
     `UPDATE codes SET claimed_at = ?1, client = ?2
-       WHERE code = (SELECT code FROM codes WHERE claimed_at IS NULL ORDER BY rowid LIMIT 1)
-     RETURNING code, url`).bind(now, client).first();
-  if (!row) return json(request, { success: false, error: "exhausted" });
-  return json(request, { success: true, code: row.code, url: row.url, remaining: await remaining(env) });
+       WHERE code = (SELECT code FROM codes WHERE claimed_at IS NULL AND platform = ?3 ORDER BY rowid LIMIT 1)
+     RETURNING code, url`).bind(now, client, platform).first();
+  if (!row) return json(request, { success: false, error: "exhausted", platform });
+  return json(request, { success: true, code: row.code, url: row.url, platform, remaining: await remaining(env, platform) });
 }
 
 async function status(request, env) {
-  const row = await env.DB.prepare(
-    "SELECT COUNT(*) AS total, COUNT(claimed_at) AS claimed FROM codes").first();
-  return json(request, { total: row.total, claimed: row.claimed, remaining: row.total - row.claimed });
+  const { results } = await env.DB.prepare(
+    "SELECT platform, COUNT(*) AS total, COUNT(claimed_at) AS claimed FROM codes GROUP BY platform").all();
+  const out = { total: 0, claimed: 0, remaining: 0 };
+  for (const p of PLATFORMS) out[p] = { total: 0, claimed: 0, remaining: 0 };
+  for (const r of results) {
+    out[r.platform] = { total: r.total, claimed: r.claimed, remaining: r.total - r.claimed };
+    out.total += r.total; out.claimed += r.claimed; out.remaining += r.total - r.claimed;
+  }
+  return json(request, out);
 }
 
 export default {

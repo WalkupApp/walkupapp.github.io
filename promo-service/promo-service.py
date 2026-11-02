@@ -4,15 +4,17 @@
   ./promo-service.py set-token          type a Cloudflare API token at a hidden prompt (saved 600, never shown)
   ./promo-service.py deploy             create the database if needed, apply schema.sql, upload worker.js,
                                         turn on its workers.dev address, and print that address
-  ./promo-service.py import FILE.csv    add codes: one per line, "code[,redeem URL[,claimed time]]";
-                                        codes already in the database are skipped
+  ./promo-service.py import FILE.csv [--platform ios|android]
+                                        add codes: one per line, "code[,redeem URL[,claimed time]]";
+                                        codes already in the database are skipped; default platform ios;
+                                        Android codes without a URL get https://play.google.com/redeem?code=<code>
   ./promo-service.py status             total, claimed, remaining
   ./promo-service.py export             all codes as CSV (code,url,added_at,claimed_at) on stdout
 
 Token permissions needed: Account > Workers Scripts > Edit, Account > D1 > Edit,
 Account > Account Settings > Read (to find the account), and Account > Workers Subdomain... see README.md.
 """
-import csv, getpass, json, os, sys, urllib.error, urllib.request, uuid
+import csv, getpass, json, os, sys, urllib.error, urllib.parse, urllib.request, uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOKEN_FILE = os.path.expanduser("~/.config/macserver/cloudflare.token")
@@ -70,6 +72,9 @@ def deploy():
     acct = account()
     db = database(acct, create=True)
     query(acct, db, open(os.path.join(HERE, "schema.sql")).read())
+    cols = [c["name"] for c in query(acct, db, "PRAGMA table_info(codes)")[0]["results"]]
+    if "platform" not in cols:  # databases made before codes had a platform: every code so far is iOS
+        query(acct, db, "ALTER TABLE codes ADD COLUMN platform TEXT NOT NULL DEFAULT 'ios'")
     boundary = uuid.uuid4().hex
     meta = {"main_module": "worker.js", "compatibility_date": "2026-10-01",
             "bindings": [{"type": "d1", "name": "DB", "id": db}]}
@@ -92,21 +97,25 @@ def deploy():
     print(f"Deployed: https://{SCRIPT}.{sub}.workers.dev  (database {DB_NAME})")
 
 
-def import_codes(path):
+def import_codes(path, platform="ios"):
+    if platform not in ("ios", "android"):
+        sys.exit("--platform must be ios or android")
     rows = []
     for r in csv.reader(open(path, newline="")):
         if not r or not r[0].strip() or r[0].strip().lower() == "code":
             continue
         code = r[0].strip()
         url = r[1].strip() if len(r) > 1 else ""
+        if not url and platform == "android":
+            url = "https://play.google.com/redeem?code=" + urllib.parse.quote(code)
         claimed = (r[2].strip() or None) if len(r) > 2 else None
         rows.append((code, url, claimed))
     acct = account(); db = database(acct)
     before = query(acct, db, "SELECT COUNT(*) AS n FROM codes")[0]["results"][0]["n"]
     for i in range(0, len(rows), 30):  # D1 allows at most 100 bound values per statement
         chunk = rows[i:i + 30]
-        sql = "INSERT OR IGNORE INTO codes (code, url, claimed_at) VALUES " + ",".join(["(?,?,?)"] * len(chunk))
-        query(acct, db, sql, [v for row in chunk for v in row])
+        sql = "INSERT OR IGNORE INTO codes (code, url, claimed_at, platform) VALUES " + ",".join(["(?,?,?,?)"] * len(chunk))
+        query(acct, db, sql, [v for row in chunk for v in (*row, platform)])
     after = query(acct, db, "SELECT COUNT(*) AS n FROM codes")[0]["results"][0]["n"]
     print(f"Read {len(rows)} codes; added {after - before}, skipped {len(rows) - (after - before)} already there.")
     status()
@@ -114,8 +123,12 @@ def import_codes(path):
 
 def status():
     acct = account(); db = database(acct)
-    r = query(acct, db, "SELECT COUNT(*) AS total, COUNT(claimed_at) AS claimed FROM codes")[0]["results"][0]
-    print(f"total {r['total']}, claimed {r['claimed']}, remaining {r['total'] - r['claimed']}")
+    rows = query(acct, db, "SELECT platform, COUNT(*) AS total, COUNT(claimed_at) AS claimed "
+                           "FROM codes GROUP BY platform ORDER BY platform")[0]["results"]
+    if not rows:
+        print("no codes")
+    for r in rows:
+        print(f"{r['platform']}: total {r['total']}, claimed {r['claimed']}, remaining {r['total'] - r['claimed']}")
 
 
 def export():
@@ -141,7 +154,7 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "set-token": set_token()
     elif cmd == "deploy": deploy()
-    elif cmd == "import" and len(sys.argv) > 2: import_codes(sys.argv[2])
+    elif cmd == "import" and len(sys.argv) > 2: import_codes(sys.argv[2], sys.argv[sys.argv.index("--platform") + 1] if "--platform" in sys.argv else "ios")
     elif cmd == "status": status()
     elif cmd == "export": export()
     else: sys.exit(__doc__)
