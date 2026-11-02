@@ -102,7 +102,7 @@ def import_codes(path, platform="ios"):
         sys.exit("--platform must be ios or android")
     rows = []
     for r in csv.reader(open(path, newline="")):
-        if not r or not r[0].strip() or r[0].strip().lower() == "code":
+        if not r or not r[0].strip() or r[0].strip().lower() in ("code", "promotion code", "promo code"):
             continue
         code = r[0].strip()
         url = r[1].strip() if len(r) > 1 else ""
@@ -112,8 +112,8 @@ def import_codes(path, platform="ios"):
         rows.append((code, url, claimed))
     acct = account(); db = database(acct)
     before = query(acct, db, "SELECT COUNT(*) AS n FROM codes")[0]["results"][0]["n"]
-    for i in range(0, len(rows), 30):  # D1 allows at most 100 bound values per statement
-        chunk = rows[i:i + 30]
+    for i in range(0, len(rows), 24):  # D1 allows at most 100 bound values per statement (4 per row)
+        chunk = rows[i:i + 24]
         sql = "INSERT OR IGNORE INTO codes (code, url, claimed_at, platform) VALUES " + ",".join(["(?,?,?,?)"] * len(chunk))
         query(acct, db, sql, [v for row in chunk for v in (*row, platform)])
     after = query(acct, db, "SELECT COUNT(*) AS n FROM codes")[0]["results"][0]["n"]

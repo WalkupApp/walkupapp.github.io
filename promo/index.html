@@ -210,11 +210,11 @@
     <div class="container">
         <div class="icon">&#9918;</div>
         <h1>Walk-Up Songs</h1>
-        <p class="subtitle">A free year of Premium</p>
+        <p class="subtitle" id="subtitle">A free year of Premium</p>
 
         <div class="card">
             <h2>Claim Your Free Code</h2>
-            <p>Pick your phone, then tap below to get a code for one free year of Walk-Up Songs Premium. One code per person.</p>
+            <p>Pick your phone, then tap below to get a code for free Walk-Up Songs Premium: a year on iPhone and iPad, 90 days on Android. One code per person.</p>
 
             <div class="platform-picker" role="radiogroup" aria-label="Your phone">
                 <button type="button" class="platform-btn" id="pick-ios" role="radio" onclick="pickPlatform('ios')">iPhone &amp; iPad</button>
@@ -227,7 +227,7 @@
                 <p>Own lifetime Premium? You already have everything, so you don't need a code.</p>
             </div>
             <div class="notes" id="notes-android" hidden>
-                <p><strong>Automatic renewal stays on.</strong> The code gives you a free year of the Walk-Up Songs yearly subscription. When the free year ends, it renews at the regular yearly price unless you cancel. To cancel, open the Play Store app, tap your profile picture, then Payments &amp; subscriptions, then Subscriptions.</p>
+                <p><strong>Automatic renewal stays on.</strong> The code gives you a 90-day free trial of the Walk-Up Songs yearly subscription. When the 90 days end, it renews at the regular yearly price unless you cancel. To cancel, open the Play Store app, tap your profile picture, then Payments &amp; subscriptions, then Subscriptions.</p>
                 <p>Google Play codes work only if you don't have a Walk-Up Songs subscription right now.</p>
                 <p>Own lifetime Premium? You already have everything, so you don't need a code.</p>
             </div>
@@ -258,8 +258,8 @@
     var APP_ID = '6760240442';
     var platform = /android/i.test(navigator.userAgent) ? 'android' : 'ios';
     var STORE = {
-        ios: { key: 'walkup_promo', label: 'Redeem on App Store', hint: 'This link opens the App Store to redeem your code.' },
-        android: { key: 'walkup_promo_android', label: 'Redeem on Google Play', hint: 'This link opens Google Play to redeem your code. You can also type it in the Play Store app under Payments & subscriptions, Redeem code.' }
+        ios: { key: 'walkup_promo', subtitle: 'A free year of Premium', label: 'Redeem on App Store', hint: 'This link opens the App Store to redeem your code.' },
+        android: { key: 'walkup_promo_android', subtitle: '90 days of free Premium', label: 'Redeem on Google Play', hint: 'This link opens Google Play to redeem your code. You can also type it in the Play Store app under Payments & subscriptions, Redeem code.' }
     };
 
     function esc(text) {
@@ -285,6 +285,7 @@
 
     function pickPlatform(p) {
         platform = p;
+        document.getElementById('subtitle').textContent = STORE[p].subtitle;
         ['ios', 'android'].forEach(function(name) {
             document.getElementById('pick-' + name).setAttribute('aria-checked', name === p ? 'true' : 'false');
             document.getElementById('notes-' + name).hidden = name !== p;
